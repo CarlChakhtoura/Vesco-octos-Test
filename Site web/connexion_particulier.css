@@ -90,6 +90,7 @@ button{
  color: white;
  background-color: #0A84C6;
  border: none;
+ cursor: pointer;
 }
 .Compte-non-existant{
  width: calc(100% - 40px);
