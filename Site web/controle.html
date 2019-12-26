@@ -9,10 +9,15 @@
 	<script>
 			function shownavebar() {
 				var sidebar=document.getElementById('test');
+				var img = document.getElementById("nav");
 				if(sidebar.style.display=='block') {
+					img.setAttribute("class", "rotated-image");
 					sidebar.style.display ='none';
+  					
 				} else {
+					img.setAttribute("class", ".normal-image");
 					sidebar.style.display ='block';
+					
 				}
 				
 				console.log('test');
@@ -28,8 +33,9 @@
 		<div class="bgimg">
 			<div class="header">
 				<div class="elementsduheader">
-					<div class="contenudulogo" onclick="shownavebar()">
+					<div class="contenudulogo" >
 						<h1>ABILITY <span>TEST</span></h1>
+						<img id="nav" src="sidebar.png" onclick="shownavebar()">
 					</div>
 					<div class="menu-deroulant-profile">
 						<img src="file:///C:/Users/mathi/Downloads/images/2.jpg" alt="User Image">
@@ -40,13 +46,13 @@
 					<div class="wrapper">
 					    <div class="sidebar" id='test'>
 					        <ul>
-								<li><a href="controle.html"><i class="fas fa-user"></i>Controle</a></li>
+								<li class="active"><a href="controle.html">Controle</a></li>
 								<li><a href="test1.html"><i class="fas fa-home"></i>Test</a></li>
-								<li><a href="lesresultats.html"><i class="fas fa-home"></i>Resultat</a></li>
-					            <li><a href="lesstatistiques.html"><i class="fas fa-home"></i>Statistique</a></li>
-					            <li><a href="site_profile.html"><i class="fas fa-user"></i>Profil</a></li>
-								<li><a href="forum.php"><i class="fas fa-user"></i>Forum</a></li>
-								<li><a href="faq.html"><i class="fas fa-user"></i>Faq</a></li>
+								<li><a href="lesresultats.html">Resultat</a></li>
+					            <li><a href="lesstatistiques.html"></i>Statistique</a></li>
+					            <li><a href="site_profile.html">Profil</a></li>
+								<li><a href="forum.php">Forum</a></li>
+								<li><a href="faq.html">Faq</a></li>
 					        </ul> 
 					        <div class="social_media">
 					          <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -59,31 +65,31 @@
 						<br><h2>CONTROLE FORCE DE L'ORDRE</h2>
 						<form action="connexion_particulier.php" method="post">
 						 <div>
-						  <input type="nom" name="nom" class="inputbox" placeholder="Nom">
+						  <input type="nom" required name="nom" class="inputbox" placeholder="Nom">
 						 </div>
 						 <br>
 						<div>
-						  <input type="prenom" name="prenom" class="inputbox" placeholder="Prénom">
+						  <input type="prenom" required name="prenom" class="inputbox" placeholder="Prénom">
 						 </div>
 						 <br>
 						 <div>
-						  <input type="num_permis" name="num_permis" class="inputbox" placeholder="numéro de votre permis de conduire">
+						  <input type="num_permis" required name="num_permis" class="inputbox" placeholder="numéro de votre permis de conduire">
 						 </div>
 						 <br>
 							<div>
-						  <input type="lieu" name="lieu" class="inputbox" placeholder="adresse du contrôle">
+						  <input type="lieu" required name="lieu" class="inputbox" placeholder="adresse du contrôle">
 						 </div>
 						 <br>
 							<div>
-						  <input type="date " name="date" class="inputbox" placeholder="date: jour/mois/année">
+						  <input type="date " required name="date" class="inputbox" placeholder="date: jour/mois/année">
 						 </div>
 						 <br>
 							<div>
-						  <input type="numpolice" name="numpolice" class="inputbox" placeholder="numéro d'identification du policier">
+						  <input type="numpolice" required name="numpolice" class="inputbox" placeholder="numéro d'identification du policier">
 						 </div>
 						 <br>
 						 <div>
-						  <button class="boutton1" type="submit"> valider les informations </button>
+						  <button class="boutton1" type="submit"> Valider les informations </button>
 						 </div>
 						</form>
 						
