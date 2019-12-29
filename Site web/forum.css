@@ -202,18 +202,23 @@ button{
 	position: absolute;
 	margin-left: 35%;
 	margin-top: 10%;
+	color: white;
 }
 .contenu button{
 	margin-left:80%;
+	margin-top: -5%;
 	position: absolute;
 	top: -30%;
-	background-color: darkblue;
+	background-color: #0A84C6;
+	padding: 8px;
+	border-radius: 50px;
+	cursor: pointer;
 	text-align: center;
 	color: white;
 }
 
 a{
-	color:red;
+	color:#8A2BE2;
 	text-style:bold;
 }
 }

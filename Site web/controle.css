@@ -12,6 +12,7 @@ button{
   text-align: center;
   font-size: 16px;
   font-family: Arial,Helvetica,sans-serif;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 200px) and (max-width: 2000px) {
@@ -27,7 +28,7 @@ button{
 	display: block;
 	background-color: black;
 }
-
+ 
 .elementsduheader{
 	width: 1000px;
 	height: 100%;
@@ -83,7 +84,7 @@ button{
 	list-style: none;
 	position: absolute;
 	text-align: center;
-	width: 200px;
+	width: 150px;
 	top: 25px;
 	right: 0;
 	padding: 10px;
@@ -119,6 +120,7 @@ button{
 .wrapper{
   display: flex;
   position: relative;
+
 }
 
 .wrapper .sidebar{
@@ -164,27 +166,6 @@ button{
     
 .wrapper .sidebar ul li:hover a{
   color: #fff;
-}
- 
-.wrapper .sidebar .social_media{
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.wrapper .sidebar .social_media a{
-  display: block;
-  width: 40px;
-  background: #594f8d;
-  height: 40px;
-  line-height: 45px;
-  text-align: center;
-  margin: 0 5px;
-  color: #bdb8d7;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 
 .centerdiv{
@@ -239,11 +220,37 @@ button{
 h1 {
   font: Montserrat;
   font-size: 40px;
-  margin-left: 29%;
+  margin-left: 10%;
   margin-top: 10px;
   text-align: center;
   display: inline-block;
   color: black;
   text-decoration: none;
   text-align: center;
+}
+img{
+  width: 40%;
+  margin-top: 3px;
+  display: block;
+  margin-left: -330px;
+  margin-right: auto;
+  overflow: hidden;
+  transition-duration: 0.6s;
+  transition-property: transform;
+}
+
+.rotated-image {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.normal-image {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg)
+}
+.active {
+  background-color: #a64ca6;
+}
+
+
 }

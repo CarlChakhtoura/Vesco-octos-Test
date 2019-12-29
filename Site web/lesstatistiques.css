@@ -187,39 +187,32 @@ button{
   border-top-right-radius: 5px;
 }
 
-.box_aa{position: absolute;}
-.box_aa{left: 55%;
-        top: 26%;
-        z-index: 5;}
-
 .aa{
-    position: fixed;
-    left: 38%;
-    top: 15%;
-    color: red;
+   text-align: center;
+    left: 40%;
+    width: 60%;
+    color: #8A2BE2;
     text-decoration: overline;
     text-decoration: underline;
-}
-
-.boxe_menu_vertical{
-    position: absolute;
-    top: 42%;
-    left: 87%;
-}
-
-
-.resultat_test{
-    color: crimson;
-    text-align: center;
+    margin-top: 2%;
+    margin-left: 19%;
 }
 
 .boxe8 {
-    width: 950px;
-    height: 500px;
+    width: 55%;
+    height: 65%;
     background: linear-gradient( black 12% ,0.5%, #0076FB 88% );
     margin:10px auto;
     position: fixed;
-    left: 26%;
-    top: 15%;
+    left: 30.3%;
+    top: 25%;
     z-index: auto;
+
+}
+
+.text_in_8{
+    font-size: 60px;
+    position: absolute;
+    top: 30%;
+    left: 18%;
 }

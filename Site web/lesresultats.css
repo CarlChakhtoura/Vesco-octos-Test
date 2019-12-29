@@ -187,31 +187,15 @@ button{
   border-top-right-radius: 5px;
 }
 
-.box_aa{position: relative;
-		top: 40%;
-		left: 20%;
-        z-index: 5;}
-
 .aa{
-    position: fixed;
+   text-align: center;
     left: 40%;
-    width: 50%;
-    color: red;
+    width: 60%;
+    color: #8A2BE2;
     text-decoration: overline;
     text-decoration: underline;
-}
-
-.boxe_menu_vertical{
-    position: absolute;
-    top: 42%;
-    left: 50%;
-	display: block;
-}
-
-
-.resultat_test{
-    color: crimson;
-    text-align: center;
+    margin-top: 2%;
+    margin-left: 19%;
 }
 
 .boxe8 {
@@ -223,6 +207,7 @@ button{
     left: 30.3%;
     top: 25%;
     z-index: auto;
+
 }
 
 .text_in_8{
