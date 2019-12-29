@@ -199,12 +199,14 @@ button{
 }
 
 .creersujet{
+	margin-top: 2%;
 	margin-left: 30%;
 	
 }
 
 .creersujet label{
-	color: red;
+	color: #8A2BE2;
+
 	display: block;
 	
 }
@@ -215,12 +217,14 @@ button{
 	width: 50%;
 	position: absolute;
 	height: 40%;
-	margin-top: 1%;
+	margin-top: 4%;
 }
 
 .creersujet validersujet{
+
 	background-color: darkblue;
 	color: white;
 	margin-left: 20%;
+	margin-top: 5%;
 }
 }

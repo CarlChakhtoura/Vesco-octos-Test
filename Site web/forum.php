@@ -79,7 +79,7 @@
 			<?php }
 		?>
 				</article>
-						<button onclick="location.href='creersujet.html'";class="creersujet">+ Creer un sujet</button>
+						<button onclick="location.href='creersujet.html'";class="creersujet">Creer un sujet</button>
 						<!--Syntaxe necessaire ici-->
 					</div>
 		</div>
