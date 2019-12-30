@@ -1,0 +1,86 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body, html { 
+  background: url(https://3.bp.blogspot.com/-Omhd-48_gLI/XFi18cs-MfI/AAAAAAAAFf4/coQ9UZZSZc4xWb2sIBnfPU8C2rGJGncHQCHMYCw/s1600/blue-gradient-background-debbie-lynn-grace.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Tahoma, Geneva, sans-serif;
+  line-height: 1.5;
+}
+
+.contour{
+     width: 350px;
+     height: 550px;
+     position: absolute;
+     margin-left: 50%;
+     margin-top: 20%;
+     padding: 0 auto;
+     background-color: red;
+     background: url(https://3.bp.blogspot.com/-Omhd-48_gLI/XFi18cs-MfI/AAAAAAAAFf4/coQ9UZZSZc4xWb2sIBnfPU8C2rGJGncHQCHMYCw/s1600/blue-gradient-background-debbie-lynn-grace.jpg) no-repeat center center fixed;
+     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.infofooter{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+.contour h2{
+	color: white;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 10%;
+}
+
+.buttons {
+	background-color: #4694C8;
+	border: none;
+	color: white;
+	padding: 15px 5%;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	margin-top: 20%;
+	margin-left: 40%;
+}
+
+@media only screen and (max-width: 555px) {
+	.contour{
+		position: fixed;
+		width: 30%;
+		height: 70%;
+		bottom: 15%;
+		margin-left: 40%;
+	}
+
+	.buttons{
+		margin-left: 17%;
+		margin-top: 40%;
+	}
+}
+
+@media only screen and (min-width: 556px) {
+	.contour{
+		position: fixed;
+		width: 30%;
+		height: 70%;
+		bottom: 15%;
+		margin-left: 35%;
+		margin-right: 40%;
+	}
+
+	.buttons{
+		margin-left: 34%;
+	}
+}
