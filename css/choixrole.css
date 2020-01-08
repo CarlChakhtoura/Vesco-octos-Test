@@ -13,18 +13,54 @@ body, html {
   line-height: 1.5;
 }
 
-.contour{
-     width: 350px;
-     height: 550px;
-     position: absolute;
-     margin-left: 50%;
-     margin-top: 20%;
-     padding: 0 auto;
-     background-color: red;
-     background: url(https://3.bp.blogspot.com/-Omhd-48_gLI/XFi18cs-MfI/AAAAAAAAFf4/coQ9UZZSZc4xWb2sIBnfPU8C2rGJGncHQCHMYCw/s1600/blue-gradient-background-debbie-lynn-grace.jpg) no-repeat center center fixed;
-     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+h2{
+	position: absolute;
+	top: 30%;
+	left: 46%;
+	transform: translate(-30%, 42%);
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: white;
+	font-size: 22px;
+	letter-spacing: 1px;
 }
 
+.box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.box select{
+	background: #0563af;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	font-family: "Courier New", Courier, monospace;
+	width: 250px;
+	height: 50px;
+	border: none;
+	font-size: 20px;
+	box-shadow: 0 5px 25px rgba(0,0,0,.5);
+	-webkit-appearance: button;
+	outline: none;
+}
+.box:before{
+	content: '\f358';
+	font-family: "Font Awesome 5 Free";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	background: #007ce0;
+	pointer-events: none;
+}
+.box:hover:before{
+	background: #0472ca;
+}
 .infofooter{
 	position: fixed;
 	left: 0;
@@ -33,54 +69,15 @@ body, html {
 	color: white;
 	text-align: center;
 }
-
-.contour h2{
-	color: white;
-	font-family: "Arial Black", Gadget, sans-serif;
-	font-size: 15px;
-	text-align: center;
-	padding-top: 10%;
-}
-
-.buttons {
-	background-color: #4694C8;
-	border: none;
-	color: white;
-	padding: 15px 5%;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 13px;
-	margin-top: 20%;
-	margin-left: 40%;
-}
-
-@media only screen and (max-width: 555px) {
-	.contour{
-		position: fixed;
-		width: 30%;
-		height: 70%;
-		bottom: 15%;
-		margin-left: 40%;
-	}
-
-	.buttons{
-		margin-left: 17%;
-		margin-top: 40%;
+@media only screen and (max-height: 550px) {
+	h2{
+		font-size: 15px;
+		top: 34vh;
+		left: 43%;
 	}
 }
-
-@media only screen and (min-width: 556px) {
-	.contour{
-		position: fixed;
-		width: 30%;
-		height: 70%;
-		bottom: 15%;
-		margin-left: 35%;
-		margin-right: 40%;
-	}
-
-	.buttons{
-		margin-left: 34%;
+@media only screen and (max-height: 355px) {
+	h2{
+		display: none;
 	}
 }
