@@ -20,16 +20,17 @@
 			      </picture>
 			    </div>
 			    <div class="login-form">
+				<form method="POST" action="connexion_particulier.php">
 			      <div class="title">
 			          Connexion particulier
 			      </div>
 			      <div class="input-fields">
 			        <label class="label">Adresse mail</label>
-			        <input type="text" class="input">
+			        <input type="text" class="input" name="eMail">
 			      </div>
 			      <div class="input-fields">
 			        <label class="label">Mot de passe</label>
-			        <input type="password" class="input">
+			        <input type="password" class="input" name="motDePasse">
 			      </div>
 			      <div class="forgot">
 			        <p>• Mot de passe <a href="">oublié?</p></a>
@@ -37,9 +38,10 @@
 			      <div class="inscription">
 			      	 <p>• Vous n'avez pas de compte? <a href="">Inscrivez-vous</p></a>
 			      </div>
-			      <div class="btn">
+			      <input type="Submit" value="Se connecter">
 			        Se connecter
 			      </div>
+				  </form>
 			    </div>
 			  </div>
 		</div>	
