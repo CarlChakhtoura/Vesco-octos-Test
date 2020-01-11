@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<?php session_start();
+?>
 <html>
 	<head>
 		<meta charset="utf-8/">
 		<title> Ability Test </title>
-		<link media="screen" rel="stylesheet" href="css/accueil.css" >
+		<link media="screen" rel="stylesheet" href="css/sujetsforum.css" >
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ability Test </title>
@@ -28,44 +30,49 @@
 			</div>
 
 			<div class="contenusite">
-
-				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
-
-			      <div class="slides">
-			        <input type="radio" name="r" id="r1" checked>
-			        <input type="radio" name="r" id="r2">
-			        <input type="radio" name="r" id="r3">
-			        <div class="slide s1">
-			          <img src="images/1.jpg" alt="">
+				
+				
+				<?php
+				//******************
+					$baseDonneeForum=new PDO('mysql:host=localhost; dbname=forum','mathieu','ariane5');
+					$req=$baseDonneeForum->query('SELECT * FROM liste_sujet ORDER BY dateCreation DESC');
+					
+				?>	
+					<button class="btn"><a href='creersujet.php'>Créer un sujet</a></button>
+					
+				<?php
+					$i=1;
+					while($donnee=$req->fetch()){
+						
+				?>
+			        <div class="item">
+			        	<h1><?php echo $donnee['topicSubject'];
+						echo " ";
+						echo $i; ?></h1>
+			          <?php
+					  //content
+					  echo $donnee['Content'];
+					  ?>
+					  <a href="lireSujetForum.php?sujet=<?php echo $donnee['topicSubject'];?>">Lire</a>
 			        </div>
-			        <div class="slide">
-			          <img src="images/2.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/3.jpg" alt="">
-			        </div>
-			      </div>
-
-			      <div class="navigation">
-			        <label for="r1" class="bar"></label>
-			        <label for="r2" class="bar"></label>
-			        <label for="r3" class="bar"></label>
-			      </div>
-			    </div>--> 
+			       
+				</div>
+				<?php }
+		?>
+	
 
 			</div>
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.html">Controle</a>
-			    <a href="lestests.html">Test</a>
-			    <a href="resultats.html">Resultats</a>
-			    <a href="statistiques.html">Statistiques</a>
-			    <a href="sujetsforum.html">Forum</a>
-			    <a href="faq.html">F.A.Q</a>
-			    <a href="profile.html">Mon Profile</a>
+			    <a href="controle.php">Controle</a>
+			    <a href="lestests.php">Test</a>
+			    <a href="resultats.php">Resultats</a>
+			    <a href="statistiques.php">Statistiques</a>
+			    <a href="sujetsforum.php">Forum</a>
+			    <a href="faq.php">F.A.Q</a>
+			    <a href="profile.php">Mon Profile</a>
 			  </div>
-
 
 			  <script>
 			    function openSlideMenu(){

@@ -6,21 +6,24 @@
 		$req=$baseDeDonnee->prepare("SELECT * FROM particulier WHERE Email=?");
 		$req->execute(array($_POST["eMail"]));
 		$donnee=$req->fetch();
+		
+		$motDePassePourEdition=htmlspecialchars($_POST["motDePasse"]);
 		/*$motDePasse=$_POST["motDePasse"];
 		$motDePasseHache=hash('sha256', $motDePasse);*/
-		if($donnee['password']==$_POST["motDePasse"]){
+		if($donnee['password']==sha1($_POST["motDePasse"])){
 			//echo "Connexion reussie";
 			$_SESSION['UserId']=$donnee['Userid'];
 			$_SESSION['Lastname']=$donnee['Lastname'];
 			$_SESSION['Firstname']=$donnee['Firstname'];
 			$_SESSION['Email']=$donnee['Email'];
-			$_SESSION['motDePasse']=$donnee['password'];
+			$_SESSION['motDePasse']=$motDePassePourEdition;
+			$_SESSION['sexe']=$donnee['Sexe'];//*************
 			$_SESSION['nationalite']=$donnee['nationalite'];
 			$_SESSION['pays_residence']=$donnee['pays_residence'];
 			$_SESSION['adresse']=$donnee['code_postal'];
-			$_SESSION['code_postal']=$donnee['telphone'];
+			$_SESSION['telephone']=$donnee['telephone'];
 			
-			header("Location: lestests.html");
+			header("Location: lestests.php");
 		}
 		else{
 			//echo "echec";

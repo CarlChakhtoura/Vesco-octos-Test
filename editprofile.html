@@ -34,52 +34,19 @@
 			            <img src="./images/saif.png" alt="Profile Image" class="profile-img">
 			        </div>
 			        <div class="card-body">
-			            <label for="adressemail">Adresse mail: </label>
- 							<input type="mail" id="email" name="email">
-			            <label for="motdepassee">Mot de passe: </label>
- 							<input type="password" id="motdepasse" name="motdepasse">
-			            <label for="payss">Pays: </label>
- 							<select name="payss" id="pays-naissance">
-							    <option value="">--Choisissez votre pays--</option>
-							    <option value="morocco">Maroc</option>
-							</select>
-						<label for="biog">Biographie: </label>
- 							<input type="biogra" id="biographhie" name="biographhie">		     
-			        </div>
-			        <div class="card-footer">
-			            <div class="col vr">
-			                <a href="#">Confirmer</a>
-			            </div>
+					<form method="POST" action="siteProfileModification.php">
+						<label>Nom</label><input type="text" name="nom" value="<?php echo $_SESSION['Lastname'] ?>"/><br>
+						<label>Prenom</label><input type="text" name="prenom" value="<?php echo $_SESSION['Firstname'] ?>" /><br>
+						<label>Mot de Passe</label><input type="password" name="motDePasse" value="<?php echo $_SESSION['motDePasse'] ?>" /><br>
+						<label>Confirmation du mot de passe</label><input type="password" name="confirmationMotDePasse" value="<?php echo $_SESSION['motDePasse'] ?>" /><br>
+						<label>Email</label><input type="text" name="email" value="<?php echo $_SESSION['Email'] ?>"/><br>
+						<input type="Submit" value="Confirmer"/>
+					</form>
 			            <div class="col">
 			               <a href="accueil.html">Retour à l'accueil</a>
 			            </div>
 			        </div>
 			    </div>
-
-				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
-
-			      <div class="slides">
-			        <input type="radio" name="r" id="r1" checked>
-			        <input type="radio" name="r" id="r2">
-			        <input type="radio" name="r" id="r3">
-			        <div class="slide s1">
-			          <img src="images/1.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/2.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/3.jpg" alt="">
-			        </div>
-			      </div>
-
-			      <div class="navigation">
-			        <label for="r1" class="bar"></label>
-			        <label for="r2" class="bar"></label>
-			        <label for="r3" class="bar"></label>
-			      </div>
-			    </div>--> 
-
 			</div>
 
 			<div id="side-menu" class="side-nav">

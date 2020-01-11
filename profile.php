@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
 	<head>
 		<meta charset="utf-8/">
 		<title> Ability Test </title>
-		<link media="screen" rel="stylesheet" href="css/statistiques.css" >
+		<link media="screen" rel="stylesheet" href="css/profile.css" >
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ability Test </title>
@@ -28,15 +29,36 @@
 			</div>
 
 			<div class="contenusite">
-
-				<div class="stats-form">
-					<h1>Les statistiques</h1>
-
-					<p> Les statistiques s'affichent içi..</p>
-					<p> Les statistiques s'affichent içi..</p>
-					<p> Les statistiques s'affichent içi..</p>
-
-				</div>
+				<h2>Votre profil<h2>
+				<div class="card">
+			        <div class="card-header">
+			            <img src="./images/saif.png" alt="Profile Image" class="profile-img">
+			        </div>
+			        <div class="card-body">
+			            <p class="full-name"><?php echo $_SESSION['Lastname'];
+													echo " "; 
+													echo $_SESSION['Firstname']; ?>
+											</p>
+			            <p class="username">@<?php echo $_SESSION['Lastname'];?></p>
+			            <p class="city"><?php echo $_SESSION['pays_residence'];?></p>
+			            <p class="desc">Je suis un developpeur web chez Ability Test.</p>		     
+			        </div>
+			        <div class="skillbar">
+			        	<p>Votre barre</p>
+			        	<p>50%</p>
+			        	<div class="skill_pourcentage">
+			        		<div class="skill_level" style="width: 50%"></div><?php //*********************?>
+			        	</div>
+			        </div>
+			        <div class="card-footer">
+			            <div class="col vr">
+			                <a href="editprofile.php">Edition profil</a>
+			            </div>
+			            <div class="col">
+			               <a href="accueil.php">Retour à l'accueil</a>
+			            </div>
+			        </div>
+			    </div>
 
 				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
 
@@ -66,13 +88,13 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.html">Controle</a>
-			    <a href="lestests.html">Test</a>
-			    <a href="resultats.html">Resultats</a>
-			    <a href="statistiques.html">Statistiques</a>
-			    <a href="sujetsforum.html">Forum</a>
-			    <a href="faq.html">F.A.Q</a>
-			    <a href="profile.html">Mon Profile</a>
+			    <a href="controle.php">Controle</a>
+			    <a href="lestests.php">Test</a>
+			    <a href="resultats.php">Resultats</a>
+			    <a href="statistiques.php">Statistiques</a>
+			    <a href="sujetsforum.php">Forum</a>
+			    <a href="faq.php">F.A.Q</a>
+			    <a href="profile.php">Mon Profile</a>
 			  </div>
 
 			  <script>

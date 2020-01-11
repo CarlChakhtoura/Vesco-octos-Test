@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php session_start(); 
+	casEchec($_SESSION["echec"]);
+	$_SESSION["echec"]=0;
+?>
 <html lang="en">
 <head>
     <meta charset="utf-8/">
@@ -88,3 +92,26 @@
 	
 </body>
 </html>
+<?php 
+	function casEchec($numeroDeLechec){
+		//echec mot de passe
+		if($numeroDeLechec==1){
+			?>
+			<script>
+				alert("votre mot de passe doit contenir: 8 caractères dont une minuscule, un caractere speciale (@-:!&) ou une majuscule, et un chiffre");
+			</script>
+			<?php
+		}
+		
+		//echec telephone
+		else if($numeroDeLechec==2){
+			?>
+			<script>
+				alert("votre numero de telephone non valide");
+			</script>
+			<?php
+		}
+		else{
+		}
+	}
+?>

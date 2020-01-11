@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
+<? session_start(); ?>
 <html>
 	<head>
 		<meta charset="utf-8/">
 		<title> Ability Test </title>
-		<link media="screen" rel="stylesheet" href="css/profile.css" >
+		<link media="screen" rel="stylesheet" href="css/lestests.css" >
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ability Test </title>
@@ -29,33 +29,39 @@
 			</div>
 
 			<div class="contenusite">
-				<h2>Votre profil<h2>
-				<div class="card">
-			        <div class="card-header">
-			            <img src="./images/saif.png" alt="Profile Image" class="profile-img">
-			        </div>
-			        <div class="card-body">
-			            <p class="full-name">Saifeddine El Ouazzani</p>
-			            <p class="username">@saifelouazzani</p>
-			            <p class="city">Maroc</p>
-			            <p class="desc">Je suis un developpeur web chez Ability Test.</p>		     
-			        </div>
-			        <div class="skillbar">
-			        	<p>Votre barre</p>
-			        	<p>50%</p>
-			        	<div class="skill_pourcentage">
-			        		<div class="skill_level" style="width: 50%"></div>
-			        	</div>
-			        </div>
-			        <div class="card-footer">
-			            <div class="col vr">
-			                <a href="editprofile.html">Edition profil</a>
-			            </div>
-			            <div class="col">
-			               <a href="accueil.html">Retour à l'accueil</a>
-			            </div>
-			        </div>
-			    </div>
+
+				<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+				<form id="msform">
+					<ul id="progressbar">
+						<li class="active">Etape 1</li>
+						<li>Etape 2</li>
+						<li>Etape 3</li>
+					</ul>
+				<fieldset>
+					<h2 class="fs-title">Etape 1</h2>
+					<h3 class="fs-subtitle">C'est l'étape 1</h3>
+					<input type="text" name="name" placeholder="Nom" />
+					<input type="text" name="lastname" placeholder="Prénom" />
+					<input type="button" name="text" class="next action-button" value="Suivant" />
+				</fieldset>
+				<fieldset>
+					<h2 class="fs-title">Etape 2</h2>
+					<h3 class="fs-subtitle">C'est l'étape 2</h3>
+					<input type="text" name="name" placeholder="Nom" />
+					<input type="text" name="lastname" placeholder="Prénom" />
+					<input type="button" name="text" class="previous action-button" value="Précedent" />
+					<input type="button" name="text" class="next action-button" value="Suivant" />
+				</fieldset>
+				<fieldset>
+					<h2 class="fs-title">Etape 3</h2>
+					<h3 class="fs-subtitle">C'est l'étape 3</h3>
+					<input type="text" name="name" placeholder="Nom" />
+					<input type="text" name="lastname" placeholder="Prénom" />
+					<input type="button" name="text" class="previous action-button" value="Précedent" />
+					<input type="submit" name="submit" class="submit action-button" value="Valider" />
+				</fieldset>
+				</form>
 
 				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
 
@@ -85,13 +91,13 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.html">Controle</a>
-			    <a href="lestests.html">Test</a>
-			    <a href="resultats.html">Resultats</a>
-			    <a href="statistiques.html">Statistiques</a>
-			    <a href="sujetsforum.html">Forum</a>
-			    <a href="faq.html">F.A.Q</a>
-			    <a href="profile.html">Mon Profile</a>
+			    <a href="controle.php">Controle</a>
+			    <a href="lestests.php">Test</a>
+			    <a href="resultats.php">Resultats</a>
+			    <a href="statistiques.php">Statistiques</a>
+			    <a href="sujetsforum.php">Forum</a>
+			    <a href="faq.php">F.A.Q</a>
+			    <a href="profile.php">Mon Profile</a>
 			  </div>
 
 			  <script>
@@ -111,7 +117,7 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contenu1</li>
+				      <a href="deconnexion.php"><li>deconnexion</li></a>
 				      <li>Contenu2</li>
 				      <li>Contenu3</li>
 				      <li>Contenu4</li>
@@ -166,6 +172,9 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+		<script src="js/tests.js"></script>
 	</body>
 
 </html>

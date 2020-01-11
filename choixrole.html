@@ -13,11 +13,14 @@
 	<body>
 		<h2>Se connecter en tant que</h2>
 		<div class="box">
-			<select>
-				<option>Particulier</option>
-				<option>Policier</option>
-				<option>Administrateur</option>
+			<form method="POST" action="choixrole.php">
+			<select name="role">
+				<option value="particulier">Particulier</option>
+				<option value="policier">Policier</option>
+				<option value="administrateur">Administrateur</option>
 			</select>
+			<input type="submit" value="envoyer">
+			</form>
 		</div>
 	</body>
 

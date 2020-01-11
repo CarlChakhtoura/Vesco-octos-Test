@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<?php session_start();?>
 <html>
 	<head>
 		<meta charset="utf-8/">
 		<title> Ability Test </title>
-		<link media="screen" rel="stylesheet" href="css/lestests.css" >
+		<link media="screen" rel="stylesheet" href="css/quisommenous.css" >
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ability Test </title>
@@ -27,40 +28,48 @@
 				</div>
 			</div>
 
-			<div class="contenusite">
+		<div class="contenusite">
 
-				<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+			<div class="team-section">
+				<div class="inner-width">
+					<h1>Rencontez notre équipe</h1>
+					<div class="pers">
 
-				<form id="msform">
-					<ul id="progressbar">
-						<li class="active">Etape 1</li>
-						<li>Etape 2</li>
-						<li>Etape 3</li>
-					</ul>
-				<fieldset>
-					<h2 class="fs-title">Etape 1</h2>
-					<h3 class="fs-subtitle">C'est l'étape 1</h3>
-					<input type="text" name="name" placeholder="Nom" />
-					<input type="text" name="lastname" placeholder="Prénom" />
-					<input type="button" name="text" class="next action-button" value="Suivant" />
-				</fieldset>
-				<fieldset>
-					<h2 class="fs-title">Etape 2</h2>
-					<h3 class="fs-subtitle">C'est l'étape 2</h3>
-					<input type="text" name="name" placeholder="Nom" />
-					<input type="text" name="lastname" placeholder="Prénom" />
-					<input type="button" name="text" class="previous action-button" value="Précedent" />
-					<input type="button" name="text" class="next action-button" value="Suivant" />
-				</fieldset>
-				<fieldset>
-					<h2 class="fs-title">Etape 3</h2>
-					<h3 class="fs-subtitle">C'est l'étape 3</h3>
-					<input type="text" name="name" placeholder="Nom" />
-					<input type="text" name="lastname" placeholder="Prénom" />
-					<input type="button" name="text" class="previous action-button" value="Précedent" />
-					<input type="submit" name="submit" class="submit action-button" value="Valider" />
-				</fieldset>
-				</form>
+						<div class="pe">
+							<img src="images/saif.png" alt="">
+							<div class="p-name">Saifeddine El Ouazzani</div>
+							<div class="p-des">Développeur Web</div>
+						</div>
+
+						<div class="pe">
+							<img src="images/carl.png" alt="">
+							<div class="p-name">Carl Chakhtoura</div>
+							<div class="p-des">Commercial</div>
+						</div>
+
+						<div class="pe">
+							<img src="images/math.png" alt="">
+							<div class="p-name">Mathieu Pavaut</div>
+							<div class="p-des">Electronique</div>
+						</div>
+
+						<div class="pe">
+							<img src="images/gustave.png" alt="">
+							<div class="p-name">Gustave Faure</div>
+							<div class="p-des">Sécurité</div>
+						</div>
+
+						<div class="pe">
+							<img src="images/clem.png" alt="">
+							<div class="p-name">Clément Brisse</div>
+							<div class="p-des">Logiciel</div>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+
 
 				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
 
@@ -90,13 +99,13 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.html">Controle</a>
-			    <a href="lestests.html">Test</a>
-			    <a href="resultats.html">Resultats</a>
-			    <a href="statistiques.html">Statistiques</a>
-			    <a href="sujetsforum.html">Forum</a>
-			    <a href="faq.html">F.A.Q</a>
-			    <a href="profile.html">Mon Profile</a>
+			    <a href="controle.php">Controle</a>
+			    <a href="lestests.php">Test</a>
+			    <a href="resultats.php">Resultats</a>
+			    <a href="statistiques.php">Statistiques</a>
+			    <a href="sujetsforum.php">Forum</a>
+			    <a href="faq.php">F.A.Q</a>
+			    <a href="profile.php">Mon Profile</a>
 			  </div>
 
 			  <script>
@@ -171,9 +180,6 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
-
-		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
-		<script src="js/tests.js"></script>
 	</body>
 
 </html>
