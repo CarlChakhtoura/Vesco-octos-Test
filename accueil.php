@@ -4,8 +4,8 @@
 ?>
 <html>
 	<head>
-		<meta charset="utf-8/">
 		<title> Ability Test </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!--Pour que les accents s'affichent correctement-->
 		<link media="screen" rel="stylesheet" href="css/accueil.css" >
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">

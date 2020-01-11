@@ -10,7 +10,7 @@
 }
 
 body, html { 
-  background: url(https://3.bp.blogspot.com/-Omhd-48_gLI/XFi18cs-MfI/AAAAAAAAFf4/coQ9UZZSZc4xWb2sIBnfPU8C2rGJGncHQCHMYCw/s1600/blue-gradient-background-debbie-lynn-grace.jpg) no-repeat center center fixed; 
+  background-image: linear-gradient(27deg, #004E95 50%, #013A6B 50%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,6 +21,7 @@ body, html {
 
 .container {
   padding: 0 20px;
+
 }
 
 .sub-container {
