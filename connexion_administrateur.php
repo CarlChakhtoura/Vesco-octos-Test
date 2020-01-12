@@ -3,12 +3,12 @@
 	//header("Location:connexion_administrateur.html");
 	if((isset($_POST['motDePasse']) && isset($_POST['eMail'])) && (!empty($_POST['motDePasse']) && !empty($_POST['eMail']))){
 		$req=$baseDeDonnee->prepare("SELECT emailAdmin, password FROM administrateur WHERE emailAdmin=?");
-		$req->execute(array($_POST["eMail"]));
+		$req->execute(array(htmlspecialchars($_POST["eMail"])));
 		$donnee=$req->fetch();
 		
 		if($donnee['password']==$_POST["motDePasse"]){
 			//echo "Connexion reussie";
-			header("Location:temporaire.html");
+			header("Location:administrateur_gestion.php");
 		}
 		else{
 			//echo "echec";
@@ -16,9 +16,9 @@
 		}
 		
 	}
-	//actuellement c'est lui qui bloque
+	//actuellement c'est lui qui bloque****
 	else{
-		//header("Location:connexion_administrateur.html");
+		header("Location:connexion_administrateur.html");
 	}
 	
 ?>

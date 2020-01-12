@@ -20,7 +20,8 @@
 			$_SESSION['sexe']=$donnee['Sexe'];//*************
 			$_SESSION['nationalite']=$donnee['nationalite'];
 			$_SESSION['pays_residence']=$donnee['pays_residence'];
-			$_SESSION['adresse']=$donnee['code_postal'];
+			$_SESSION['code_postal']=$donnee['code_postal'];
+			$_SESSION['adresse']=$donnee['adresse'];
 			$_SESSION['telephone']=$donnee['telephone'];
 			
 			header("Location: lestests.php");
