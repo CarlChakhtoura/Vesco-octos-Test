@@ -3,12 +3,19 @@
 	$baseDeDonnee=new PDO('mysql:host=localhost;dbname=APP;charset=utf8', 'mathieu','ariane5');
 
 	if((isset($_POST['motDePasse']) && isset($_POST['eMail'])) && (!empty($_POST['motDePasse']) && !empty($_POST['eMail']))){
-		$req=$baseDeDonnee->prepare("SELECT emailCop, password FROM policier WHERE emailCop=?");
-		$req->execute(array($_POST["eMail"]));
+		$req=$baseDeDonnee->prepare("SELECT * FROM policier WHERE emailCop=?");
+		$req->execute(array(htmlspecialchars($_POST["eMail"])));
 		$donnee=$req->fetch();
 		
-		if($donnee['password']==$_POST["motDePasse"]){
+		if($donnee['password']==sha1(htmlspecialchars($_POST["motDePasse"]))){
 			//echo "Connexion reussie";
+			$_SESSION['UserId']=$donnee['idCop'];
+			$_SESSION['Lastname']=$donnee['lastNameCop'];
+			$_SESSION['Firstname']=$donnee['firstNameCop'];
+			$_SESSION['Email']=$donnee['emailCop'];
+			$_SESSION['motDePasse']=$donnee['password'];			
+			$_SESSION['policeStation']=$donnee['policeStation'];
+			$_SESSION['telephone']=$donnee['telephoneCop'];
 			
 			header("Location:controle.html");
 		}

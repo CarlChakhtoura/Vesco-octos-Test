@@ -4,13 +4,13 @@
 
 	if((isset($_POST['motDePasse']) && isset($_POST['eMail'])) && (!empty($_POST['motDePasse']) && !empty($_POST['eMail']))){
 		$req=$baseDeDonnee->prepare("SELECT * FROM particulier WHERE Email=?");
-		$req->execute(array($_POST["eMail"]));
+		$req->execute(array(htmlspecialchars($_POST["eMail"])));
 		$donnee=$req->fetch();
 		
 		$motDePassePourEdition=htmlspecialchars($_POST["motDePasse"]);
 		/*$motDePasse=$_POST["motDePasse"];
 		$motDePasseHache=hash('sha256', $motDePasse);*/
-		if($donnee['password']==sha1($_POST["motDePasse"])){
+		if($donnee['password']==sha1(htmlspecialchars($_POST["motDePasse"]))){
 			//echo "Connexion reussie";
 			$_SESSION['UserId']=$donnee['Userid'];
 			$_SESSION['Lastname']=$donnee['Lastname'];
