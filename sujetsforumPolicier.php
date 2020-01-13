@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <?php session_start();
+if(is_null($_SESSION["certificat"])==false){
+		header("Location: connexion_policier.html");
+	}
 ?>
 <html>
 	<head>
@@ -12,7 +15,13 @@
 	</head>
 
 	<body>
-			<div class="header">
+		<?php
+		if(isset($_GET["cert"])==false || $_GET["cert"]!=5){
+		header("Location=connexion_particulier.html");
+		}
+		else{
+			?>
+		<div class="header">
 				<div class="elementsduheader">
 					<span class="open-slide">
 						      <a href="#" onclick="openSlideMenu()">
@@ -146,6 +155,9 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		<?php
+			}
+		?>
 	</body>
 
 </html>

@@ -13,6 +13,12 @@
 	</head>
 
 	<body>
+		<?php
+			if(isset($_GET["cert"])==false || $_GET["cert"]!=5){
+				header("Location=connexion_particulier.html");
+			}
+			else{
+		?>
 			<div class="header">
 				<div class="elementsduheader">
 					<span class="open-slide">
@@ -60,13 +66,13 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php">Controle</a>
-			    <a href="lestests.php">Test</a>
-			    <a href="resultats.php">Resultats</a>
-			    <a href="statistiques.php">Statistiques</a>
-			    <a href="sujetsforum.php">Forum</a>
-			    <a href="faq.php">F.A.Q</a>
-			    <a href="profile.php">Mon Profile</a>
+			    <a href="controle.php?cert=5">Controle</a>
+			    <a href="lestests.php?cert=5">Test</a>
+			    <a href="resultats.php?cert=5">Resultats</a>
+			    <a href="statistiques.php?cert=5">Statistiques</a>
+			    <a href="sujetsforum.php?cert=5">Forum</a>
+			    <a href="faq.php?cert=5">F.A.Q</a>
+			    <a href="profile.php?cert=5">Mon Profile</a>
 			  </div>
 
 
@@ -142,6 +148,9 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		<?php
+			}
+		?>
 	</body>
 
 </html>

@@ -35,7 +35,7 @@
 			        </div>
 			        <div class="card-body">
 					<form method="POST" action="siteProfileModification.php">
-						<label>Nom</label><input type="text" name="nom" value="<?php echo $_SESSION['Lastname'] ?>"/><br>
+						<label>Nom</label><input type="text" name="nom" value="<?php echo  $_SESSION['Lastname'] ?>"/><br>
 						<label>Prenom</label><input type="text" name="prenom" value="<?php echo $_SESSION['Firstname'] ?>" /><br>
 						<label>Mot de Passe</label><input type="password" name="motDePasse" value="<?php echo $_SESSION['motDePasse'] ?>" /><br>
 						<label>Confirmation du mot de passe</label><input type="password" name="confirmationMotDePasse" value="<?php echo $_SESSION['motDePasse'] ?>" /><br>

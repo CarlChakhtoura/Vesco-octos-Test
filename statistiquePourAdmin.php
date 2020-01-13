@@ -8,6 +8,7 @@
 	<link href="statistiquePourAdmin.css" rel="stylesheet"/>
 	</head>
 	<body>
+	
 	<img class="fond" src="fond_admininistrateur.png" alt="monfond"/>
 		<div class="premiere">
 		<table>
@@ -63,22 +64,22 @@
 					<td>Faire une recherche par nom/prenom/Email d un eventuel utilisateur</td>
 					<td>
 					<?php
-	$bdd= new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'mathieu', 'ariane5');
-	/*$tableParticulier=$bdd->query('SELECT * FROM particulier');
-	$tablePolicier=$bdd->query('SELECT * FROM policier');
-	$tableTestParticulier=$bdd->query('SELECT * FROM testparticulier');
-	$tableTestPolicier=$bdd->query('SELECT * FROM testpolicier');*/
+						$bdd= new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'mathieu', 'ariane5');
+						/*$tableParticulier=$bdd->query('SELECT * FROM particulier');
+						$tablePolicier=$bdd->query('SELECT * FROM policier');
+						$tableTestParticulier=$bdd->query('SELECT * FROM testparticulier');
+						$tableTestPolicier=$bdd->query('SELECT * FROM testpolicier');*/
 	
-	/*
-	Fonctionnnement du script le 1 sert a eviter la redondance & afficher que l on a aucun resultat dans la mesure
-	ou il y a un autre else
-	il permet surtout d eviter que je mette des redondances*
-	*/
-	/*
-	Fonctionne bien avec 2 clefs (2 mots dans la recherche)
-	ON peut faire des recherches en fonctions du nom/ prenom/mail...
-	Les mails sont decorreles des nom/prenom
-	*/
+						/*
+						Fonctionnnement du script le 1 sert a eviter la redondance & afficher que l on a aucun resultat dans la mesure
+						ou il y a un autre else
+						il permet surtout d eviter que je mette des redondances*
+						*/
+						/*
+						Fonctionne bien avec 2 clefs (2 mots dans la recherche)
+						ON peut faire des recherches en fonctions du nom/ prenom/mail...
+						Les mails sont decorreles des nom/prenom
+						*/
 	
 	$resultat=0;
 	?>
@@ -295,11 +296,11 @@
 			$requete3->closeCursor();
 			}
 		}
-	}
-	if($resultat==0){
-		echo "Aucun resultat";
-	}
-?>
+		}
+		if($resultat==0){
+			echo "Aucun resultat";
+		}
+		?>
 					</td>
 				</tr>
 		</table>
@@ -311,6 +312,6 @@
 				</tr>
 			</tr>
 		</table>
-		</div>s
+		</div>
 	</body>
 </html>

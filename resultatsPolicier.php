@@ -11,6 +11,12 @@
 	</head>
 
 	<body>
+		<?php
+			if(isset($_GET["cert"])==false || $_GET["cert"]!=5){
+				header("Location=connexion_particulier.html");
+			}
+			else{
+		?>
 			<div class="header">
 				<div class="elementsduheader">
 					<span class="open-slide">
@@ -184,6 +190,9 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		<?php
+			}
+		?>
 	</body>
 
 </html>

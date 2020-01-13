@@ -18,7 +18,7 @@
 			'nadresse'=>$_POST['adresse'] , 
 			'ncode_postal'=>$_POST['codePostal'] 
 			));
-		header('Location: profilePolicier.php');
+		header('Location: profilePolicier.php?cert=5');
 	}
 	
 	

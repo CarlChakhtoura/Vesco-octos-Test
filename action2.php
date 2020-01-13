@@ -16,5 +16,5 @@
 		author=>$author,
 		));
 	
-	header('Location:sujetsforum.php');
+	header('Location:sujetsforum.php?cert=5');
 ?>
