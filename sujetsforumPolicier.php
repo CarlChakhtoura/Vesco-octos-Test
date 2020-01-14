@@ -80,7 +80,7 @@ if(is_null($_SESSION["certificat"])==false){
 			    <a href="statistiquesPolicier.php">Statistiques</a>
 			    <a href="sujetsforumPolicier.php">Forum</a>
 			    <a href="faqPolicier.php">F.A.Q</a>
-			    <a href="profilePolicier.php">Mon Profile</a>
+			    <a href="profilePolicier.php">Mon Profil</a>
 			  </div>
 
 			  <script>

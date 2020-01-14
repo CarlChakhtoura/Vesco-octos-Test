@@ -5,7 +5,7 @@
 <html>
 	<head>
 	<meta charset="utf-8">
-	<link href="statistiquePourAdmin.css" rel="stylesheet"/>
+	<link href="css/statistiquePourAdmin.css" rel="stylesheet"/>
 	</head>
 	<body>
 	

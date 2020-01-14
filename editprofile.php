@@ -134,7 +134,7 @@
 			    <a href="statistiques.php?cert=5">Statistiques</a>
 			    <a href="sujetsforum.php?cert=5">Forum</a>
 			    <a href="faq.php?cert=5">F.A.Q</a>
-			    <a href="editprofile.php?cert=5">Mon Profile</a>
+			    <a href="editprofile.php?cert=5">Mon Profil</a>
 			  </div>
 
 			  <script>

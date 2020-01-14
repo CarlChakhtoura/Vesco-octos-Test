@@ -103,7 +103,7 @@
 			    <a href="statistiquesPolicier.php?cert=5">Statistiques</a>
 			    <a href="sujetsforumPolicier.php?cert=5">Forum</a>
 			    <a href="faqPolicier.php?cert=5">F.A.Q</a>
-			    <a href="profilePolicier.php?cert=5">Mon Profile</a>
+			    <a href="profilePolicier.php?cert=5">Mon Profil</a>
 			  </div>
 
 			  <script>
