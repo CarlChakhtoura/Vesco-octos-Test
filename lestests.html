@@ -1,15 +1,26 @@
 <!DOCTYPE html>
+<? session_start();
+?>	
+	
 <html>
 	<head>
+		<meta charset="utf-8/">
 		<title> Ability Test </title>
-		<link media="screen" rel="stylesheet" href="css/controle.css" >
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!--Pour que les accents s'affichent correctement-->
+		<link media="screen" rel="stylesheet" href="css/lestests.css" >
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ability Test </title>
 	</head>
 
 	<body>
+	<?php
+	
+	
+	if(isset($_GET["cert"])==false || $_GET["cert"]!=5){
+		header("Location=connexion_particulier.html");
+	}
+	else{
+		?>
 			<div class="header">
 				<div class="elementsduheader">
 					<span class="open-slide">
@@ -29,29 +40,46 @@
 
 			<div class="contenusite">
 
-				<div class="stats-form">
-					<h1>CONTROLE FORCE DE L'ORDRE</h1><br>
-					<label>Nom: </label>
-					<input type="nom" required name="nom" class="inputbox" placeholder="Nom">
-					<br>
-					<label>Prénom: </label>
-					<input type="prenom" required name="prenom" class="inputbox" placeholder="Prénom">
-					<br>
-					<label>Permis: </label>
-					<input type="num_permis" required name="num_permis" class="inputbox" placeholder="numéro de votre permis de conduire">
-					<br>
-					<label>Adresse: </label>
-					<input type="lieu" required name="lieu" class="inputbox" placeholder="adresse du contrôle">
-					<br>
-					<label>Date: </label>
-					<input type="date " required name="date" class="inputbox" placeholder="date: jour/mois/année">
-					<br>
-					<label>Numéro policier: </label>
-					<input type="numpolice" required name="numpolice" class="inputbox" placeholder="numéro d'identification du policier">
-					<br><br>
-					<a href="#" class="btnvalider">Valider</a>
+				<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-				</div>
+				<form id="msform">
+					<ul id="progressbar">
+						<li class="active">Etape 1</li>
+						<li>Etape 2</li>
+						<li>Etape 3</li>
+						<li>Etape 4</li>
+					</ul>
+				<fieldset>
+					<h2 class="fs-title">Etape 1</h2>
+					<h3 class="fs-subtitle">C'est l'étape 1</h3>
+					<img class="fs-images" src="images/coeur.png">
+			 		<h2 class="fs-title">Frequence Cardiaque</h2>
+					<input type="button" name="text" class="next action-button" value="Suivant" />
+				</fieldset>
+				<fieldset>
+					<h2 class="fs-title">Etape 2</h2>
+					<h3 class="fs-subtitle">C'est l'étape 2</h3>
+					<img class="fs-images" src="images/temperature.png">
+			 		<h2 class="fs-title">Température</h2>
+					<input type="button" name="text" class="previous action-button" value="Précedent" />
+					<input type="button" name="text" class="next action-button" value="Suivant" />
+				</fieldset>
+				<fieldset>
+					<h2 class="fs-title">Etape 3</h2>
+					<h3 class="fs-subtitle">C'est l'étape 3</h3>
+					<img class="fs-images" src="images/headphones.png">
+			 		<h2 class="fs-title">Test Sonore 1</h2>
+					<input type="button" name="text" class="previous action-button" value="Précedent" />
+					<input type="button" name="text" class="next action-button" value="Suivant" />
+				</fieldset>
+				<fieldset>
+					<h2 class="fs-title">Etape 4</h2>
+					<h3 class="fs-subtitle">C'est l'étape 4</h3>
+					<img class="fs-images" src="images/headphones.png">
+			 		<h2 class="fs-title">Test Sonore 2</h2>
+					<input type="submit" name="submit" class="submit action-button" value="Valider" />
+				</fieldset>
+				</form>
 
 				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
 
@@ -81,13 +109,13 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.html">Controle</a>
-			    <a href="lestests.html">Test</a>
-			    <a href="resultats.html">Resultats</a>
-			    <a href="statistiques.html">Statistiques</a>
-			    <a href="sujetsforum.html">Forum</a>
-			    <a href="faq.html">F.A.Q</a>
-			    <a href="profile.html">Mon Profile</a>
+			    <a href="controle.php?cert=5">Controle</a>
+			    <a href="lestests.php?cert=5">Test</a>
+			    <a href="resultats.php?cert=5">Resultats</a>
+			    <a href="statistiques.php?cert=5">Statistiques</a>
+			    <a href="sujetsforum.php?cert=5">Forum</a>
+			    <a href="faq.php?cert=5">F.A.Q</a>
+			    <a href="profile.php?cert=5">Mon Profile</a>
 			  </div>
 
 			  <script>
@@ -107,17 +135,7 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Produit</h1>
-				    <ul>
-				      <li>Contenu1</li>
+				      <a href="deconnexion.php"><li>deconnexion</li></a>
 				      <li>Contenu2</li>
 				      <li>Contenu3</li>
 				      <li>Contenu4</li>
@@ -162,7 +180,11 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+		<script src="js/tests.js"></script>
+	<?php }
+	?>
 	</body>
 
 </html>
-

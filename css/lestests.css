@@ -171,6 +171,10 @@ body, html {
   margin-bottom: 20px;
 }
 
+.fs-images{
+  max-width: 80px;
+}
+
 #progressbar{
   margin-bottom: 30px;
   overflow: hidden;

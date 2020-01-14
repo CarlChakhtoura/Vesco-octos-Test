@@ -51,8 +51,9 @@
 				<fieldset>
 					<h2 class="fs-title">Etape 1</h2>
 					<h3 class="fs-subtitle">C'est l'étape 1</h3>
-					<input type="text" name="name" placeholder="Nom" />
-					<input type="text" name="lastname" placeholder="Prénom" />
+					 <img src="coeur.png">
+			 		<h2>Frequence Cardiaque</h2>
+			 		<a href="test2.html" class="button">Test suivant</a>
 					<input type="button" name="text" class="next action-button" value="Suivant" />
 				</fieldset>
 				<fieldset>
