@@ -79,7 +79,7 @@
 			    <a href="statistiques.php">Statistiques</a>
 			    <a href="sujetsforum.php">Forum</a>
 			    <a href="faq.php">F.A.Q</a>
-			    <a href="profile.php">Mon Profile</a>
+			    <a href="profile.php">Mon Profil</a>
 			  </div>
 
 			  <script>
