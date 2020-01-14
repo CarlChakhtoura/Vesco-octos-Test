@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<?php session_start() ?>
+<?php session_start();
+	if(is_null($_SESSION['certificat'])==true){
+		header("Location: connexion_particulier.html");
+	}
+?>
 <html>
 	<head>
 		<meta charset="utf-8/">
@@ -11,6 +15,11 @@
 	</head>
 
 	<body>
+		<?php
+			if(isset($_GET["cert"])==false || $_GET["cert"]!=5){
+			}
+			else{
+		?>
 			<div class="header">
 				<div class="elementsduheader">
 					<span class="open-slide">
@@ -36,8 +45,8 @@
 			        </div>
 			        <div class="card-body">
 					<form method="POST" action="siteProfileModification.php">
-						<label>Nom</label><input type="text" name="nom" value="<?php echo $_SESSION['Lastname']; ?>"/><br>
-						<label>Prenom</label><input type="text" name="prenom" value="<?php echo $_SESSION['Firstname']; ?>" /><br>
+						<label>Nom</label><input type="text" name="nom" value="<?php echo decryptageDuNom($_SESSION['Lastname']); ?>"/><br>
+						<label>Prenom</label><input type="text" name="prenom" value="<?php echo decryptageDuNom($_SESSION['Firstname']); ?>" /><br>
 						<label>Mot de Passe</label><input type="password" name="motDePasse1" value="<?php echo $_SESSION['motDePasse']; ?>" /><br>
 						<label>Confirmation du mot de passe</label><input type="password" name="motDePasse2" value="<?php echo $_SESSION['motDePasse']; ?>" /><br>
 						<label>Email</label><input type="text" name="email" value="<?php echo $_SESSION['Email']; ?>"/><br>
@@ -86,7 +95,8 @@
 						
 						<label>Pays de residence</label>
 						<?php
-							if($_SESSION['pays_residence']=="France"){
+							$paysResidence=decryptageDeLAdresse($_SESSION['pays_residence']);
+							if($paysResidence=="France"){
 								?>
 							<select name="paysResidence">
 									<option value="male" selected>France</option>
@@ -110,7 +120,7 @@
 						<input type="Submit" value="Confirmer"/>
 					</form>
 			            <div class="col">
-			               <a href="accueil.html">Retour à l'accueil</a>
+			               <a href="accueil.php?cert=5">Retour à l'accueil</a>
 			            </div>
 			        </div>
 			    </div>
@@ -118,13 +128,13 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php">Controle</a>
-			    <a href="lestests.php">Test</a>
-			    <a href="resultats.php">Resultats</a>
-			    <a href="statistiques.php">Statistiques</a>
-			    <a href="sujetsforum.php">Forum</a>
-			    <a href="faq.php">F.A.Q</a>
-			    <a href="editprofile.php">Mon Profile</a>
+			    <a href="controle.php?cert=5">Controle</a>
+			    <a href="lestests.php?cert=5">Test</a>
+			    <a href="resultats.php?cert=5">Resultats</a>
+			    <a href="statistiques.php?cert=5">Statistiques</a>
+			    <a href="sujetsforum.php?cert=5">Forum</a>
+			    <a href="faq.php?cert=5">F.A.Q</a>
+			    <a href="editprofile.php?cert=5">Mon Profile</a>
 			  </div>
 
 			  <script>
@@ -158,7 +168,98 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		<?php 
+			}
+		?>
 	</body>
-
+	<?php //************************************?>
+	
+	
+	
+	<?php
+	function decryptageDeLAdresse($motAConvertir){
+			$monArray=array();
+			for( $i=0; $i<strlen($motAConvertir);$i++){
+				//derniers caracat
+				if(ord($motAConvertir[$i])==97){
+					array_push($monArray,122);//on met un a minuscule si on a v
+				}
+				else if(ord($motAConvertir[$i])==98){
+					array_push($monArray,121);
+				}
+				else if(ord($motAConvertir[$i])==99){
+					array_push($monArray,120);
+				}
+				else if(ord($motAConvertir[$i])==100){
+					array_push($monArray,119);
+				}
+				else if(ord($motAConvertir[$i])==101){
+					array_push($monArray,118);
+				}
+				else if(ord($motAConvertir[$i])==65){//on met un A maj en cas de V maj
+					array_push($monArray,90);
+				}
+				else if(ord($motAConvertir[$i])==66){
+					array_push($monArray,89);
+				}
+				else if(ord($motAConvertir[$i])==67){
+					array_push($monArray,88);
+				}
+				else if(ord($motAConvertir[$i])==68){
+					array_push($monArray,87);
+				}
+				else if(ord($motAConvertir[$i])==69){
+					array_push($monArray,86);
+				}
+				else if(ord($motAConvertir[$i])==37){//cas de l espace
+					array_push($monArray,37);
+				}
+				else{
+					array_push($monArray,ord($motAConvertir[$i])-5);
+				}
+			}
+			//maintenant on veut creer un string
+			$mot="";
+			$mot="";
+			for($j=0;$j<strlen($motAConvertir);$j++){
+				$mot=$mot.chr($monArray[$j]);
+			}
+			return $mot;
+		}
+	
+	
+	function decryptageDuNom($motAConvertir){
+			$monArray=array();
+			for( $i=0; $i<strlen($motAConvertir);$i++){
+				if(ord($motAConvertir[$i])==97){
+					array_push($monArray,122);//on met un a minuscule si on a v
+				}
+				else if(ord($motAConvertir[$i])==98){
+					array_push($monArray,121);
+				}
+				else if(ord($motAConvertir[$i])==99){
+					array_push($monArray,120);
+				}
+				else if(ord($motAConvertir[$i])==65){//on met un A maj en cas de V maj
+					array_push($monArray,98);
+				}
+				else if(ord($motAConvertir[$i])==66){
+					array_push($monArray,99);
+				}
+				else if(ord($motAConvertir[$i])==67){
+					array_push($monArray,100);
+				}
+				else{
+					array_push($monArray,ord($motAConvertir[$i])-3);
+				}
+			}
+			$mot="";
+			$mot="";
+			for($j=0;$j<strlen($motAConvertir);$j++){
+				$mot=$mot.chr($monArray[$j]);
+			}
+			return $mot;
+		}
+		?>
 </html>
 

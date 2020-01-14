@@ -62,6 +62,16 @@ h2{
 .box:hover:before{
 	background: #0472ca;
 }
+.GO{
+    position: absolute;
+    left: 88%;
+    top: 25%;
+    z-index: auto;
+    color: white;
+    z-index: inherit;
+    pointer-events: none;
+}
+
 .infofooter{
 	position: fixed;
 	left: 0;

@@ -22,20 +22,25 @@
 		if($tempon==true){
 			$tempon2=numeroDeTelephoneValide(htmlspecialchars($_POST['tel']));
 			if($tempon2==true){
+					$nom=htmlspecialchars($_POST['nom']);
+					$prenom=htmlspecialchars($_POST['prenom']);
+					$paysResidence=htmlspecialchars($_POST['nationalite']);
+					
+					
 					$requete=$baseDeDonnee->prepare('INSERT INTO particulier (Lastname, 
 					Firstname, Email, Sexe, password, nationalite, pays_residence, adresse, code_postal, telephone)
 					VALUES (:Lastname, 
 					:Firstname, :Email, :Sexe, :password, :nationalite, :pays_residence, :adresse, :code_postal, :telephone)');
 	
 					$requete->execute(array(
-					'Lastname'=> $_POST['nom'],
-					'Firstname'=>$_POST['prenom'],
-					'Email'=>$_POST['email'],
+					'Lastname'=> cryptageDuNom($nom),
+					'Firstname'=> cryptageDuNom($prenom),
+					'Email'=>$_POST['email']),
 					'Sexe'=>$Sexe,
 					'password'=>sha1($_POST['motDePasse1']),
 					'nationalite'=>$nationalite,
-					'pays_residence'=>$_POST['nationalite'],
-					'adresse'=>$_POST['adresse' ],
+					'pays_residence'=>cryptageDeLAdresse($paysResidence),
+					'adresse'=>$_POST['adresse'],
 					'code_postal'=>$_POST['codePostal'],
 					'telephone'=>$_POST['tel'],
 					)
@@ -144,4 +149,92 @@
 				return false;
 			}
 		}
+		
+		function cryptageDeLAdresse($motAConvertir){
+			$monArray=array();
+			for( $i=0; $i<strlen($motAConvertir);$i++){
+				//derniers caracat
+				if(ord($motAConvertir[$i])==118){
+					array_push($monArray,97);//on met un a minuscule si on a v
+				}
+				else if(ord($motAConvertir[$i])==119){
+					array_push($monArray,98);
+				}
+				else if(ord($motAConvertir[$i])==120){
+					array_push($monArray,99);
+				}
+				else if(ord($motAConvertir[$i])==121){
+					array_push($monArray,100);
+				}
+				else if(ord($motAConvertir[$i])==122){
+					array_push($monArray,101);
+				}
+				else if(ord($motAConvertir[$i])==86){//on met un A maj en cas de V maj
+					array_push($monArray,65);
+				}
+				else if(ord($motAConvertir[$i])==87){
+					array_push($monArray,66);
+				}
+				else if(ord($motAConvertir[$i])==88){
+					array_push($monArray,67);
+				}
+				else if(ord($motAConvertir[$i])==89){
+					array_push($monArray,68);
+				}
+				else if(ord($motAConvertir[$i])==90){
+					array_push($monArray,69);
+				}
+				else if(ord($motAConvertir[$i])==37){
+					array_push($monArray,32);
+				}
+				else{
+					array_push($monArray,ord($motAConvertir[$i])+5);
+				}
+			}
+			//maintenant on veut creer un string
+			$mot="";
+			$mot="";
+			for($j=0;$j<strlen($motAConvertir);$j++){
+				$mot=$mot.chr($monArray[$j]);
+			}
+			return $mot;
+		}
+		
+		function cryptageDuNom($motAConvertir){
+			$monArray=array();
+			for( $i=0; $i<strlen($motAConvertir);$i++){
+				if(ord($motAConvertir[$i])==120){
+					array_push($monArray,97);//on met un a minuscule si on a v
+				}
+				else if(ord($motAConvertir[$i])==121){
+					array_push($monArray,98);
+				}
+				else if(ord($motAConvertir[$i])==122){
+					array_push($monArray,99);
+				}
+				else if(ord($motAConvertir[$i])==88){//on met un A maj en cas de V maj
+					array_push($monArray,65);
+				}
+				else if(ord($motAConvertir[$i])==89){
+					array_push($monArray,66);
+				}
+				else if(ord($motAConvertir[$i])==35){
+					array_push($monArray,32);
+				}
+				else{
+					array_push($monArray,ord($motAConvertir[$i])+3);
+				}
+			}
+			$mot="";
+			$mot="";
+			for($j=0;$j<strlen($motAConvertir);$j++){
+				$mot=$mot.chr($monArray[$j]);
+			}
+			return $mot;
+		}
+		/*for($i=0; $i<11;$i++){
+        echo chr($monArray[$i]-5);
+        echo "<br>";
+    }
+		}*/
 ?>

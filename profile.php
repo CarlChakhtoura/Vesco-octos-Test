@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
+<?php session_start();
+	if(is_null($_SESSION["certificat"])==true){
+		header("Location: connexion_particulier.html");
+	}
+?>
 <html>
 	<head>
 		<meta charset="utf-8/">
@@ -11,6 +15,11 @@
 	</head>
 
 	<body>
+		<?php
+			if(isset($_GET["cert"])==false || $_GET["cert"]!=5){
+			}
+			else{
+		?>
 			<div class="header">
 				<div class="elementsduheader">
 					<span class="open-slide">
@@ -52,10 +61,10 @@
 			        </div>
 			        <div class="card-footer">
 			            <div class="col vr">
-			                <a href="editprofile.php">Edition profil</a>
+			                <a href="editprofile.php?cert=5">Edition profil</a>
 			            </div>
 			            <div class="col">
-			               <a href="accueil.php">Retour à l'accueil</a>
+			               <a href="accueil.php?cert=5">Retour à l'accueil</a>
 			            </div>
 			        </div>
 			    </div>
@@ -88,13 +97,13 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php">Controle</a>
-			    <a href="lestests.php">Test</a>
-			    <a href="resultats.php">Resultats</a>
-			    <a href="statistiques.php">Statistiques</a>
-			    <a href="sujetsforum.php">Forum</a>
-			    <a href="faq.php">F.A.Q</a>
-			    <a href="profile.php">Mon Profile</a>
+			    <a href="controle.php?cert=5">Controle</a>
+			    <a href="lestests.php?cert=5">Test</a>
+			    <a href="resultats.php?cert=5">Resultats</a>
+			    <a href="statistiques.php?cert=5">Statistiques</a>
+			    <a href="sujetsforum.php?cert=5">Forum</a>
+			    <a href="faq.php?cert=5">F.A.Q</a>
+			    <a href="profile.php?cert=5">Mon Profile</a>
 			  </div>
 
 			  <script>
@@ -169,6 +178,9 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		<?php
+			}
+		?>
 	</body>
 
 </html>

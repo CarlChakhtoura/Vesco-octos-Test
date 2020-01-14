@@ -24,7 +24,7 @@
 			$_SESSION['adresse']=$donnee['adresse'];
 			$_SESSION['telephone']=$donnee['telephone'];
 			
-			header("Location: lestests.php");
+			header("Location: lestests.php?cert=5");
 		}
 		else{
 			//echo "echec";

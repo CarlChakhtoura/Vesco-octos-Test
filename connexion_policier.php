@@ -16,6 +16,7 @@
 			$_SESSION['motDePasse']=$donnee['password'];			
 			$_SESSION['policeStation']=$donnee['policeStation'];
 			$_SESSION['telephone']=$donnee['telephoneCop'];
+			$_SESSION['certificat']=1;
 			
 			header("Location:controle.html");
 		}

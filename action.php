@@ -26,5 +26,5 @@
 		datePost=>$datePost
 		));
 	
-	header('Location:sujetsforum.php');
+	header('Location:sujetsforum.php?cert=5');
 ?>
