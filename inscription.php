@@ -2,7 +2,7 @@
 	session_start();
 	$_SESSION["echec"]=0;
 	
-	$baseDeDonnee=new PDO('mysql:host=localhost; dbname=APP; charset=utf8','mathieu','ariane5');
+	$baseDeDonnee=new PDO('mysql:host=localhost; dbname=APP; charset=utf8','root','');
 	
 
 	$Sexe=1;
