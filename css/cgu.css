@@ -124,11 +124,28 @@ body, html {
   color: #999999;
   text-decoration: none;
 }
+.footer .col ul a {
+  text-decoration: none;
+  color:#999999;;
+}
+
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
 .footer .col ul a:hover{
   color: #ffffff;
   transition: .1s;
   -webkit-transition: .1s;
   -moz-transition: .1s;
+  text-decoration: underline;
+}
+.footer .col ul a:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  text-decoration: underline;
 }
 .clearfix {
   clear: both;
