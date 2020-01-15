@@ -135,7 +135,7 @@
 			    <a href="statistiques.php?cert=5">Statistiques</a>
 			    <a href="sujetsforum.php?cert=5">Forum</a>
 			    <a href="faq.php?cert=5">F.A.Q</a>
-			    <a href="editprofile.php?cert=5">Mon Profil</a>
+			    <a href="profile.php?cert=5">Mon Profile</a>
 			  </div>
 
 			  <script>
@@ -155,8 +155,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contactez-nous</li>
-				      <li>CGU</li>
+				      <li><a href="contactnous.html">Contactez-nous</a></li>
+				      <li><a href="cgu.html">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

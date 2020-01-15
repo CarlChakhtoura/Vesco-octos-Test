@@ -68,12 +68,12 @@
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
 			    <a href="controle.php?cert=5">Controle</a>
-			    <a href="lestestsPolicier.php?cert=5">Test</a>
-			    <a href="resultatsPolicier.php?cert=5">Resultats</a>
-			    <a href="statistiquesPolicier.php?cert=5">Statistiques</a>
-			    <a href="sujetsforumPolicier.php?cert=5">Forum</a>
-			    <a href="faqPolicier.php?cert=5">F.A.Q</a>
-			    <a href="profilePolicier.php?cert=5">Mon Profile</a>
+			    <a href="lestests.php?cert=5">Test</a>
+			    <a href="resultats.php?cert=5">Resultats</a>
+			    <a href="statistiques.php?cert=5">Statistiques</a>
+			    <a href="sujetsforum.php?cert=5">Forum</a>
+			    <a href="faq.php?cert=5">F.A.Q</a>
+			    <a href="profile.php?cert=5">Mon Profile</a>
 			  </div>
 
 
@@ -94,8 +94,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contactez-nous</li>
-				      <li>CGU</li>
+				      <li><a href="contactnous.html">Contactez-nous</a></li>
+				      <li><a href="cgu.html">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

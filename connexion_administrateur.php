@@ -12,13 +12,13 @@
 		}
 		else{
 			//echo "echec";
-			header("Location:connexion_administrateur.html");
+			header("Location:connexion_administrateur.php");
 		}
 		
 	}
 	//actuellement c'est lui qui bloque****
 	else{
-		header("Location:connexion_administrateur.html");
+		header("Location:connexion_administrateur.php");
 	}
 	
 ?>

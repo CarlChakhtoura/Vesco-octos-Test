@@ -256,12 +256,11 @@ input[name="r"]{
   -webkit-transition: .2s;
   -moz-transition: .2s;
 }
-.social ul li {
-  display: inline-block;
-  padding-right: 5px !important;
+.footer .col ul a{
+  color: #999999;
+  text-decoration: none;
 }
-
-.footer .col ul li:hover {
+.footer .col ul a:hover{
   color: #ffffff;
   transition: .1s;
   -webkit-transition: .1s;

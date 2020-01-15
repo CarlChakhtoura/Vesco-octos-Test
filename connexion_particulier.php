@@ -1,4 +1,4 @@
-<?php
+ <?php
 	session_start();
 	$baseDeDonnee=new PDO('mysql:host=localhost;dbname=APP;charset=utf8', 'mathieu','ariane5');
 
