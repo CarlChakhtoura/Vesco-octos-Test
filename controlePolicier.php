@@ -40,11 +40,26 @@
 			<div class="contenusite">
 
 				<div class="stats-form">
-					<h1>Les contrôles</h1>
-
-					<p> Les contrôles s'affichent içi..</p>
-					<p> Les contrôles s'affichent içi..</p>
-					<p> Les contrôles s'affichent içi..</p>
+					<h1>CONTROLE FORCE DE L'ORDRE</h1><br>
+					<label>Nom: </label>
+					<input type="nom" required name="nom" class="inputbox" placeholder="Nom">
+					<br>
+					<label>Prénom: </label>
+					<input type="prenom" required name="prenom" class="inputbox" placeholder="Prénom">
+					<br>
+					<label>Permis: </label>
+					<input type="num_permis" required name="num_permis" class="inputbox" placeholder="numéro de votre permis de conduire">
+					<br>
+					<label>Adresse: </label>
+					<input type="lieu" required name="lieu" class="inputbox" placeholder="adresse du contrôle">
+					<br>
+					<label>Date: </label>
+					<input type="date " required name="date" class="inputbox" placeholder="date: jour/mois/année">
+					<br>
+					<label>Numéro policier: </label>
+					<input type="numpolice" required name="numpolice" class="inputbox" placeholder="numéro d'identification du policier">
+					<br><br>
+					<a href="#" class="btnvalider">Valider</a>
 
 				</div>
 

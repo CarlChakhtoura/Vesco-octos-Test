@@ -30,6 +30,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
+						<a href="">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -37,11 +38,26 @@
 			<div class="contenusite">
 
 				<div class="stats-form">
-					<h1>Les contrôles</h1>
-
-					<p> Les contrôles s'affichent içi..</p>
-					<p> Les contrôles s'affichent içi..</p>
-					<p> Les contrôles s'affichent içi..</p>
+					<h1>CONTROLE</h1><br>
+					<label>Nom: </label>
+					<input type="nom" required name="nom" class="inputbox" placeholder="Nom">
+					<br>
+					<label>Prénom: </label>
+					<input type="prenom" required name="prenom" class="inputbox" placeholder="Prénom">
+					<br>
+					<label>Permis: </label>
+					<input type="num_permis" required name="num_permis" class="inputbox" placeholder="numéro de votre permis de conduire">
+					<br>
+					<label>Adresse: </label>
+					<input type="lieu" required name="lieu" class="inputbox" placeholder="adresse du contrôle">
+					<br>
+					<label>Date: </label>
+					<input type="date " required name="date" class="inputbox" placeholder="date: jour/mois/année">
+					<br>
+					<label>Numéro policier: </label>
+					<input type="numpolice" required name="numpolice" class="inputbox" placeholder="numéro d'identification du policier">
+					<br><br>
+					<a href="#" class="btnvalider">Valider</a>
 
 				</div>
 
@@ -99,56 +115,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Produit</h1>
-				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Comptes</h1>
-				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Ressources</h1>
-				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				      <li>Contenu6</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Support</h1>
-				    <ul>
 				      <li>Contactez-nous</li>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				    </ul>
-				  </div>
-				  <div class="col social">
-				    <h1>Suivez nous</h1>
-				    <ul>
-				      <li><img src="https://svgshare.com/i/5fq.svg" width="32" style="width: 32px;"></li>
+				      <li>CGU</li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

@@ -34,6 +34,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
+						<a href="">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -128,56 +129,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <a href="deconnexion.php"><li>deconnexion</li></a>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Produit</h1>
-				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Comptes</h1>
-				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Ressources</h1>
-				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				      <li>Contenu6</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Support</h1>
-				    <ul>
 				      <li>Contactez-nous</li>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				    </ul>
-				  </div>
-				  <div class="col social">
-				    <h1>Suivez nous</h1>
-				    <ul>
-				      <li><img src="https://svgshare.com/i/5fq.svg" width="32" style="width: 32px;"></li>
+				      <li>CGU</li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>
