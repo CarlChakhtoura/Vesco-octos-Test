@@ -33,6 +33,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
+						<a href="">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -103,7 +104,7 @@
 			    <a href="statistiques.php?cert=5">Statistiques</a>
 			    <a href="sujetsforum.php?cert=5">Forum</a>
 			    <a href="faq.php?cert=5">F.A.Q</a>
-			    <a href="profile.php?cert=5">Mon Profile</a>
+			    <a href="profile.php?cert=5">Mon Profil</a>
 			  </div>
 
 			  <script>
@@ -123,56 +124,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Produit</h1>
-				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Comptes</h1>
-				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Ressources</h1>
-				    <ul>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				      <li>Contenu3</li>
-				      <li>Contenu4</li>
-				      <li>Contenu5</li>
-				      <li>Contenu6</li>
-				    </ul>
-				  </div>
-				  <div class="col">
-				    <h1>Support</h1>
-				    <ul>
 				      <li>Contactez-nous</li>
-				      <li>Contenu1</li>
-				      <li>Contenu2</li>
-				    </ul>
-				  </div>
-				  <div class="col social">
-				    <h1>Suivez nous</h1>
-				    <ul>
-				      <li><img src="https://svgshare.com/i/5fq.svg" width="32" style="width: 32px;"></li>
+				      <li>CGU</li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>
