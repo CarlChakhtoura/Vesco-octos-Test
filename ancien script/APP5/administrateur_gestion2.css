@@ -1,0 +1,57 @@
+body{
+	background:linear-gradient(45deg, blue, #00ffff);
+	margin: 0px;
+	padding: 0px;
+}
+
+h2{
+	color:yellow;
+	text-align:center;
+	margin-top: 5%;
+	letter-spacing: 5px;
+	font-size: 50px;
+}
+
+h3{
+	display:none;
+}
+
+.btn{
+	color: white;
+	text-decoration: none;
+	border: 2px solid black;
+	position: relative;
+	top: 30%;
+	left: 25%;
+	transform: translate(-50%,-50%);
+	background-color: blue;
+	color: white;
+	padding: 16px 10px;
+}
+
+.btn:hover{
+	background: red;
+}
+
+.ensemble{
+	display:flex;
+	flex-direction:column;
+	text-align: center;
+}
+
+@media screen and (max-width:700px){
+	h3{
+		display: auto;
+	}
+	
+	.btn{
+		display: block;
+		width: 60px;
+		margin-left: 25%;
+		text-align:center;
+	}
+	
+	.ensemble{
+		display:none;
+	}
+}
