@@ -48,29 +48,36 @@
 						<li class="active">Etape 1</li>
 						<li>Etape 2</li>
 						<li>Etape 3</li>
+						<li>Etape 4</li>
 					</ul>
 				<fieldset>
 					<h2 class="fs-title">Etape 1</h2>
 					<h3 class="fs-subtitle">C'est l'étape 1</h3>
-					 <img src="coeur.png">
-			 		<h2>Frequence Cardiaque</h2>
-			 		<a href="test2.html" class="button">Test suivant</a>
+					<img class="fs-images" src="images/coeur.png">
+			 		<h2 class="fs-title">Frequence Cardiaque</h2>
 					<input type="button" name="text" class="next action-button" value="Suivant" />
 				</fieldset>
 				<fieldset>
 					<h2 class="fs-title">Etape 2</h2>
 					<h3 class="fs-subtitle">C'est l'étape 2</h3>
-					<input type="text" name="name" placeholder="Nom" />
-					<input type="text" name="lastname" placeholder="Prénom" />
+					<img class="fs-images" src="images/temperature.png">
+			 		<h2 class="fs-title">Température</h2>
 					<input type="button" name="text" class="previous action-button" value="Précedent" />
 					<input type="button" name="text" class="next action-button" value="Suivant" />
 				</fieldset>
 				<fieldset>
 					<h2 class="fs-title">Etape 3</h2>
 					<h3 class="fs-subtitle">C'est l'étape 3</h3>
-					<input type="text" name="name" placeholder="Nom" />
-					<input type="text" name="lastname" placeholder="Prénom" />
+					<img class="fs-images" src="images/headphones.png">
+			 		<h2 class="fs-title">Test Sonore 1</h2>
 					<input type="button" name="text" class="previous action-button" value="Précedent" />
+					<input type="button" name="text" class="next action-button" value="Suivant" />
+				</fieldset>
+				<fieldset>
+					<h2 class="fs-title">Etape 4</h2>
+					<h3 class="fs-subtitle">C'est l'étape 4</h3>
+					<img class="fs-images" src="images/headphones.png">
+			 		<h2 class="fs-title">Test Sonore 2</h2>
 					<input type="submit" name="submit" class="submit action-button" value="Valider" />
 				</fieldset>
 				</form>
@@ -103,13 +110,12 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php?cert=5">Controle</a>
 			    <a href="lestests.php?cert=5">Test</a>
 			    <a href="resultats.php?cert=5">Resultats</a>
 			    <a href="statistiques.php?cert=5">Statistiques</a>
 			    <a href="sujetsforum.php?cert=5">Forum</a>
 			    <a href="faq.php?cert=5">F.A.Q</a>
-			    <a href="profile.php?cert=5">Mon Profil</a>
+			    <a href="profile.php?cert=5">Mon Profile</a>
 			  </div>
 
 			  <script>
@@ -129,8 +135,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contactez-nous</li>
-				      <li>CGU</li>
+				      <a href="contactnous.html"><li>Contactez-nous</li></a>
+				      <a href="cgu.html"><li>CGU</li></a>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

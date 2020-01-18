@@ -109,7 +109,6 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php?cert=5">Controle</a>
 			    <a href="lestests.php?cert=5">Test</a>
 			    <a href="resultats.php?cert=5">Resultats</a>
 			    <a href="statistiques.php?cert=5">Statistiques</a>

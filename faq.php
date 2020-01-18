@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <?php session_start();
-	$tempon=$_SESSION["certificat"];
-	if($tempon!=5){
-		header("Location: connexion_particulier.html");
-	}
 ?>
 <html>
 	<head>
@@ -213,8 +209,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contactez-nous</li>
-				      <li>CGU</li>
+				      <a href="contactnous.html"><li>Contactez-nous</li></a>
+				      <a href="cgu.html"><li>CGU</li></a>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>
