@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-<?php 
-	session_start();
-?>
 <html>
 	<head>
 		<title> Ability Test </title>
+		<link media="screen" rel="stylesheet" href="css/gestionadmin.css" >
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!--Pour que les accents s'affichent correctement-->
-		<link media="screen" rel="stylesheet" href="css/accueil.css" >
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ability Test </title>
 	</head>
 
 	<body>
-		<?php
-			if(isset($_GET["cert"])==false || $_GET["cert"]!=5){
-				header("Location=connexion_particulier.html");
-			}
-			else{
-		?>
 			<div class="header">
 				<div class="elementsduheader">
 					<span class="open-slide">
@@ -32,12 +23,24 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
 					</div>
 				</div>
 			</div>
 
 			<div class="contenusite">
+
+				<div class="admin-form">
+					<h1>PAGE RESERVE AUX ADMINISTRATEURS</h1><br>
+					<br>
+					<a href="compteparticulieradmin.html" class="btngerer">Gérer les comptes particuliers</a>
+					<br>
+					<a href="comptepolicieradmin.html" class="btngerer">Gérer les comptes policiers</a>
+					<br>
+					<a href="forumPourAdmin.php" class="btngerer">Gérer le forum</a>
+					<br>
+					<a href="statistiquePourAdmin.php" class="btngerer">Statistiques</a>
+
+				</div>
 
 				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
 
@@ -67,15 +70,15 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php?cert=5">Controle</a>
-			    <a href="lestests.php?cert=5">Test</a>
-			    <a href="resultats.php?cert=5">Resultats</a>
-			    <a href="statistiques.php?cert=5">Statistiques</a>
-			    <a href="sujetsforum.php?cert=5">Forum</a>
-			    <a href="faq.php?cert=5">F.A.Q</a>
-			    <a href="profile.php?cert=5">Mon Profile</a>
+			    <a href="gestionadmin.html">Accueil admin</a>
+			    <a href="controle.html">Contrôle</a>
+			    <a href="faq.html">FAQ</a>
+			    <a href="forumPourAdmin.html">Forum</a>
+			    <a href="profile.php">Compte</a>
+			    <a href="faq.html">Recherche</a>
+			    <a href="inscription.html">Inscription policier</a>
+			    <a href="inscription.html">Inscription particulier</a>
 			  </div>
-
 
 			  <script>
 			    function openSlideMenu(){
@@ -89,21 +92,18 @@
 			    }
 			  </script>
 
-			<div class="footer">
+		<div class="footer">
 				<div class="contain">
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contactez-nous</li>
-				      <li>CGU</li>
+				      <li><a href="contactnous.html">Contactez-nous</a></li>
+				      <li><a href="cgu.html">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>
 			</div>
 		</div>
-		<?php
-			}
-		?>
 	</body>
 
 </html>

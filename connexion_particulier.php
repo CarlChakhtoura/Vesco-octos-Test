@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$baseDeDonnee=new PDO('mysql:host=localhost;dbname=APP;charset=utf8', 'mathieu','ariane5');
+	$baseDeDonnee=new PDO('mysql:host=localhost;dbname=APP;charset=utf8', 'root','');
 
 	if((isset($_POST['motDePasse']) && isset($_POST['eMail'])) && (!empty($_POST['motDePasse']) && !empty($_POST['eMail']))){
 		$req=$baseDeDonnee->prepare("SELECT * FROM particulier WHERE Email=?");

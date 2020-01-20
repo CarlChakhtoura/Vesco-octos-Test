@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-	$bdd=new PDO('mysql:host=localhost; dbname=forum; metacharset=utf8','mathieu','ariane5');
+	$bdd=new PDO('mysql:host=localhost; dbname=forum; metacharset=utf8','root','');
 	
 	$author=htmlspecialchars($_POST['pseudo']);
 	$topicSubject=htmlspecialchars($_POST['nomProbleme']);

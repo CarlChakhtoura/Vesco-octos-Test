@@ -1,6 +1,6 @@
 <?php
 
-	$bdd=new PDO('mysql:host=localhost;dbname=forum;charset=utf8','mathieu','ariane5');
+	$bdd=new PDO('mysql:host=localhost;dbname=forum;charset=utf8','root','');
 	$req1=$bdd->prepare('SELECT * FROM liste_sujet WHERE topicSubject=?');
 	$req1->execute(array($_GET['sujet']));
 	$mesDonnees=$req1->fetch();
