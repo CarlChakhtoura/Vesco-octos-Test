@@ -39,25 +39,43 @@
 
 				<div class="stats-form">
 					<h1>CONTROLE</h1><br>
-					<label>Nom: </label>
-					<input type="nom" required name="nom" class="inputbox" placeholder="Nom">
+					
+					<div class="carre">
+                        <label class="demande">Nom: </label>
+                    <input type="nom" required name="nom" class="inputbox" placeholder="Nom">
+                        </div>
 					<br>
-					<label>Prénom: </label>
-					<input type="prenom" required name="prenom" class="inputbox" placeholder="Prénom">
+					
+					<div class="carre">
+                        <label class="demande">Prénom: </label>
+                    <input type="prenom" required name="prenom" class="inputbox" placeholder="Prénom">
+                        </div>
 					<br>
-					<label>Permis: </label>
-					<input type="num_permis" required name="num_permis" class="inputbox" placeholder="numéro de votre permis de conduire">
+					
+					<div class="carre">
+                        <label class="demande">Permis: </label>
+                    <input type="num_permis" required name="num_permis" class="inputbox" placeholder="num permis de conduire">
+                        </div>
 					<br>
-					<label>Adresse: </label>
-					<input type="lieu" required name="lieu" class="inputbox" placeholder="adresse du contrôle">
+					
+					<div class="carre2">
+                        <label class="demande">Adresse: </label>
+                    <input type="lieu" required name="lieu" class="inputbox" placeholder="adresse du contrôle">
+                    </div>
 					<br>
-					<label>Date: </label>
-					<input type="date " required name="date" class="inputbox" placeholder="date: jour/mois/année">
+					
+					<div class="carre2">
+                        <label class="demande">Date: </label>
+                    <input type="date " required name="date" class="inputbox" placeholder="date: jour/mois/année">
+                    </div>
 					<br>
-					<label>Numéro policier: </label>
-					<input type="numpolice" required name="numpolice" class="inputbox" placeholder="numéro d'identification du policier">
-					<br><br>
-					<a href="#" class="btnvalider">Valider</a>
+					
+					<div class="carre2">
+                        <label class="demande">Numéro policier: </label>
+                    <input type="numpolice" required name="numpolice" class="inputbox" placeholder="num identification policier">
+                        </div>
+					<br>
+					<div href="#" class="btnvalider">Valider</div>
 
 				</div>
 
@@ -89,13 +107,13 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php">Controle</a>
-			    <a href="lestests.php">Test</a>
-			    <a href="resultats.php">Resultats</a>
-			    <a href="statistiques.php">Statistiques</a>
-			    <a href="sujetsforum.php">Forum</a>
-			    <a href="faq.php">F.A.Q</a>
-			    <a href="profile.php">Mon Profil</a>
+			    <a href="controle.php?cert=5">Controle</a>
+			    <a href="lestests.php?cert=5">Test</a>
+			    <a href="resultats.php?cert=5">Resultats</a>
+			    <a href="statistiques.php?cert=5">Statistiques</a>
+			    <a href="sujetsforum.php?cert=5">Forum</a>
+			    <a href="faq.php?cert=5">F.A.Q</a>
+			    <a href="profile.php?cert=5">Mon Profile</a>
 			  </div>
 
 			  <script>
@@ -115,8 +133,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contactez-nous</li>
-				      <li>CGU</li>
+				      <li><a href="contactnous.html">Contactez-nous</a></li>
+				      <li><a href="cgu.html">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>
