@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <?php session_start();
-	if(is_null($_SESSION["certificat"])==true){
-		header("Location: connexion_policier.html");
-	}
  ?>
 <html>
 	<head>
@@ -41,53 +38,32 @@
 			<div class="contenusite">
 
 				<div class="stats-form">
+				<form method="Post" action="traitementControlePolicier.php">
 					<h1>CONTROLE FORCE DE L'ORDRE</h1><br>
-					<label>Nom: </label>
-					<input type="nom" required name="nom" class="inputbox" placeholder="Nom">
+					<label>Nom du policier: </label>
+					<input type="nom" required name="nomDuPolicier" class="inputbox" placeholder="nom Policier">
 					<br>
-					<label>Prénom: </label>
-					<input type="prenom" required name="prenom" class="inputbox" placeholder="Prénom">
+					<label>Prénom du policier: </label>
+					<input type="prenom" required name="prenomDuPolicier" class="inputbox" placeholder="prenom Policier">
 					<br>
-					<label>Permis: </label>
-					<input type="num_permis" required name="num_permis" class="inputbox" placeholder="numéro de votre permis de conduire">
+					<label>Nom du suspect: </label>
+					<input type="nomSuspect" required name="nomSuspect" class="inputbox" placeholder="nomSuspect">
 					<br>
-					<label>Adresse: </label>
-					<input type="lieu" required name="lieu" class="inputbox" placeholder="adresse du contrôle">
+					<label>Prenom suspect: </label>
+					<input type="prenomSuspect" required name="prenomSuspect" class="inputbox" placeholder="prenom suspect">
+					<br>
+					<label>Lieu du test: </label>
+					<input type="lieu" required name="lieu" class="inputbox" placeholder="lieu du controle">
 					<br>
 					<label>Date: </label>
-					<input type="date " required name="date" class="inputbox" placeholder="date: jour/mois/année">
+					<input type="date" required name="datel" class="inputbox">
 					<br>
-					<label>Numéro policier: </label>
-					<input type="numpolice" required name="numpolice" class="inputbox" placeholder="numéro d'identification du policier">
-					<br><br>
-					<a href="#" class="btnvalider">Valider</a>
-
+					<br>
+					<input type="submit" value="Envoyer"/>
+				</form>
 				</div>
 
-				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
-
-			      <div class="slides">
-			        <input type="radio" name="r" id="r1" checked>
-			        <input type="radio" name="r" id="r2">
-			        <input type="radio" name="r" id="r3">
-			        <div class="slide s1">
-			          <img src="images/1.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/2.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/3.jpg" alt="">
-			        </div>
-			      </div>
-
-			      <div class="navigation">
-			        <label for="r1" class="bar"></label>
-			        <label for="r2" class="bar"></label>
-			        <label for="r3" class="bar"></label>
-			      </div>
-			    </div>--> 
-
+				
 			</div>
 
 			<div id="side-menu" class="side-nav">

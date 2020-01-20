@@ -43,17 +43,17 @@
 			        </div>
 			        <div class="card-body">
 					<form method="POST" action="siteProfileModificationPolicier.php"><!--A FAIRE-->
-						<label>Nom</label><input type="text" name="nom" placeholder="">="<?php echo decryptageDuNom($_SESSION['lastNameCop']); ?>"/><br>
-						<label>Prenom</label><input type="text" name="prenom" placeholder="<?php echo decryptageDuNom($_SESSION['firstNameCop']); ?>" /><br>
-						<label>Mot de Passe</label><input type="password" name="motDePasse1" placeholder="<?php echo $_SESSION['password']; ?>" /><br>
-						<label>Confirmation du mot de passe</label><input type="password" name="motDePasse2" placeholder="<?php echo $_SESSION['password']; ?>" /><br>
-						<label>Email</label><input type="text" name="email" placeholder="<?php echo $_SESSION['emailCop']; ?>"/><br>
-						<label>Telephone </label><input type="text" name="telephone" placeholder="<?php echo $_SESSION['telephoneCop']; ?>"/><br>
-						<label>Commissariat </label><input type="text" name="Commissariat" placeholder="<?php echo decryptageDeLAdresse($_SESSION['policeStation']); ?>"/><br>
+						<label>Nom</label><input type="text" name="nom" value="<?php echo decryptageDuNom($_SESSION['Lastname']);?>"/><br>
+						<label>Prenom</label><input type="text" name="prenom" value="<?php echo decryptageDuNom($_SESSION['Firstname']); ?>" /><br>
+						<label>Mot de Passe</label><input type="password" name="motDePasse1" value="<?php echo $_SESSION['motDePasse']; ?>" /><br>
+						<label>Confirmation du mot de passe</label><input type="password" name="motDePasse2" value="<?php echo $_SESSION['motDePasse']; ?>" /><br>
+						<label>Email</label><input type="text" name="email" value="<?php echo $_SESSION['Email']; ?>"/><br>
+						<label>Telephone </label><input type="text" name="telephone" value="<?php echo $_SESSION['telephone']; ?>"/><br>
+						<label>Commissariat </label><input type="text" name="Commissariat" value="<?php echo decryptageDeLAdresse($_SESSION['policeStation']); ?>"/><br>
 						<input type="Submit" value="Confirmer"/>
 					</form>
 			            <div class="col">
-			               <a href="controlePolicier.php?cert=5">Retour à l'accueil</a>
+			               <a href="controlePolicier.php?cert=5">Retour</a>
 			            </div>
 			        </div>
 			    </div>

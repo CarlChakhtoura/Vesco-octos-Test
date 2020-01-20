@@ -13,7 +13,7 @@
 			$_SESSION['Lastname']=$donnee['lastNameCop'];
 			$_SESSION['Firstname']=$donnee['firstNameCop'];
 			$_SESSION['Email']=$donnee['emailCop'];
-			$_SESSION['motDePasse']=$donnee['password'];			
+			$_SESSION['motDePasse']=htmlspecialchars($_POST["motDePasse"]);			
 			$_SESSION['policeStation']=$donnee['policeStation'];
 			$_SESSION['telephone']=$donnee['telephoneCop'];
 			$_SESSION['certificat']=1;
