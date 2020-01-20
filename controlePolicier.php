@@ -59,7 +59,7 @@
 					<input type="date" required name="datel" class="inputbox">
 					<br>
 					<br>
-					<input type="submit" value="Envoyer"/>
+					<input class="btnvalider" type="submit" value="Envoyer"/>
 				</form>
 				</div>
 
