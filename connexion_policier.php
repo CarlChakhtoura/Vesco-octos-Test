@@ -18,7 +18,7 @@
 			$_SESSION['telephone']=$donnee['telephoneCop'];
 			$_SESSION['certificat']=1;
 			
-			header("Location:controle.html");
+			header("Location:controlePolicier.php?cert=5");
 		}
 		else{
 			//echo "echec";
@@ -27,6 +27,7 @@
 	}
 	
 	else{
-		
+		//echo "echec";
+			header("Location:connexion_policier.html");
 	}
 ?>

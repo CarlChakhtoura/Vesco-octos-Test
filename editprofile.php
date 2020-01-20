@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <?php session_start();
-	if(is_null($_SESSION['certificat'])==true){
-		header("Location: connexion_particulier.html");
-	}
 ?>
 <html>
 	<head>
@@ -33,7 +30,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -42,17 +39,17 @@
 				<h2>Edition profil<h2>
 				<div class="card">
 			        <div class="card-header">
-			            <img src="" alt="Profile Image" class="profile-img">
+			            <img src="./images/saif.png" alt="Profile Image" class="profile-img">
 			        </div>
 			        <div class="card-body">
 					<form method="POST" action="siteProfileModification.php">
-						<label>Nom</label><input type="text" name="nom" value="<?php echo decryptageDuNom($_SESSION['Lastname']); ?>"/><br>
-						<label>Prenom</label><input type="text" name="prenom" value="<?php echo decryptageDuNom($_SESSION['Firstname']); ?>" /><br>
-						<label>Mot de Passe</label><input type="password" name="motDePasse1" value="<?php echo $_SESSION['motDePasse']; ?>" /><br>
-						<label>Confirmation du mot de passe</label><input type="password" name="motDePasse2" value="<?php echo $_SESSION['motDePasse']; ?>" /><br>
-						<label>Email</label><input type="text" name="email" value="<?php echo $_SESSION['Email']; ?>"/><br>
-						<label>Telephone </label><input type="text" name="telephone" value="<?php echo $_SESSION['telephone']; ?>"/><br>
-						<label>Sexe </label>
+						<label>Nom :</label><input type="text" name="nom" placeholder="<?php echo decryptageDuNom($_SESSION['Lastname']); ?>"/><br>
+						<label>Prenom : </label><input type="text" name="prenom" placeholder="<?php echo decryptageDuNom($_SESSION['Firstname']); ?>" /><br>
+						<label>Mot de Passe: </label><input type="password" name="motDePasse1" placeholder="<?php echo $_SESSION['motDePasse']; ?>" /><br>
+						<label>Confirmation du mot de passe: </label><input type="password" name="motDePasse2" placeholder="<?php echo $_SESSION['motDePasse']; ?>" /><br>
+						<label>Email :</label><input type="text" name="email" placeholder="<?php echo $_SESSION['Email']; ?>"/><br>
+						<label>Telephone :</label><input type="text" name="telephone" placeholder="<?php echo $_SESSION['telephone']; ?>"/><br>
+						<label>Sexe :</label>
 						<?php
 							if($_SESSION['sexe']==1){
 								?>
@@ -73,7 +70,7 @@
 							}
 						?>
 						
-						<label>Nationalite</label>
+						<label>Nationalite : </label>
 						<?php
 							if($_SESSION['nationalite']=="France"){
 								?>
@@ -94,7 +91,7 @@
 							}
 						?>
 						
-						<label>Pays de residence</label>
+						<label>Pays de residence :</label>
 						<?php
 							$paysResidence=decryptageDeLAdresse($_SESSION['pays_residence']);
 							if($paysResidence=="France"){
@@ -116,12 +113,12 @@
 							}
 						?>
 						<br>
-						<label>Adresse</label><textarea class="textarea" name="adresse"><?php echo $_SESSION['adresse']; ?>></textarea><br>
-						<label>Code Postal</label><input type="text" name="codePostal" value="<?php echo $_SESSION['code_postal']; ?>"/><br>
+						<label>Adresse :</label><textarea class="textarea" name="adresse"><?php echo $_SESSION['adresse']; ?>></textarea><br>
+						<label>Code Postal: </label><input type="text" name="codePostal" value="<?php echo $_SESSION['code_postal']; ?>"/><br>
 						<input type="Submit" value="Confirmer"/>
 					</form>
 			            <div class="col">
-			               <a href="accueil.php?cert=5">Retour à l'accueil</a>
+			               <a href="lestests.php?cert=5">Retour vers les tests</a>
 			            </div>
 			        </div>
 			    </div>

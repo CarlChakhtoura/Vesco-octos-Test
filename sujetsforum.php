@@ -31,7 +31,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -40,12 +40,11 @@
 				
 				
 				<?php
-				//******************
-					$baseDonneeForum=new PDO('mysql:host=localhost; dbname=forum','mathieu','ariane5');
+					$baseDonneeForum=new PDO('mysql:host=localhost; dbname=forum','root','');
 					$req=$baseDonneeForum->query('SELECT * FROM liste_sujet ORDER BY dateCreation DESC');
 					
 				?>	
-					<button class="btn"><a href='creersujet.php'>Créer un sujet</a></button>
+					<button class="btn"><a href='creersujet.php?cert=5?'>Créer un sujet</a></button>
 					
 				<?php
 					$i=1;
@@ -66,9 +65,6 @@
 				<?php
 					}
 				?>
-	
-
-			</div>
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <?php session_start();
-	if(is_null($_SESSION["certificat"])==true){
-		header("Location: connexion_particulier.html");
-	}
 ?>
 <html>
 	<head>
@@ -33,7 +30,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -45,27 +42,26 @@
 			            <img src="./images/saif.png" alt="Profile Image" class="profile-img">
 			        </div>
 			        <div class="card-body">
-			            <p class="full-name"><?php echo $_SESSION['Lastname'];
+			            <p class="full-name"><?php echo decryptageDuNom($_SESSION['Lastname']);
 													echo " "; 
-													echo $_SESSION['Firstname']; ?>
+													echo decryptageDuNom($_SESSION['Firstname']); ?>
 											</p>
-			            <p class="username">@<?php echo $_SESSION['Lastname'];?></p>
-			            <p class="city"><?php echo $_SESSION['pays_residence'];?></p>
-			            <p class="desc">Je suis un developpeur web chez Ability Test.</p>		     
+			            <p class="username">@<?php echo decryptageDuNom($_SESSION['Lastname']);?></p>
+			            <p class="city"><?php echo decryptageDeLAdresse($_SESSION['pays_residence']);?></p>	     
 			        </div>
-			        <div class="skillbar">
+			        <!--<div class="skillbar">
 			        	<p>Votre barre</p>
 			        	<p>50%</p>
 			        	<div class="skill_pourcentage">
 			        		<div class="skill_level" style="width: 50%"></div><?php //*********************?>
 			        	</div>
-			        </div>
+			        </div>-->
 			        <div class="card-footer">
 			            <div class="col vr">
 			                <a href="editprofile.php?cert=5">Edition profil</a>
 			            </div>
 			            <div class="col">
-			               <a href="accueil.php?cert=5">Retour à l'accueil</a>
+			               <a href="lestests.php?cert=5">Retour vers les tests</a>
 			            </div>
 			        </div>
 			    </div>
@@ -133,7 +129,93 @@
 		</div>
 		<?php
 			}
+
+
+			function decryptageDeLAdresse($motAConvertir){
+			$monArray=array();
+			for( $i=0; $i<strlen($motAConvertir);$i++){
+				//derniers caracat
+				if(ord($motAConvertir[$i])==97){
+					array_push($monArray,122);//on met un a minuscule si on a v
+				}
+				else if(ord($motAConvertir[$i])==98){
+					array_push($monArray,121);
+				}
+				else if(ord($motAConvertir[$i])==99){
+					array_push($monArray,120);
+				}
+				else if(ord($motAConvertir[$i])==100){
+					array_push($monArray,119);
+				}
+				else if(ord($motAConvertir[$i])==101){
+					array_push($monArray,118);
+				}
+				else if(ord($motAConvertir[$i])==65){//on met un A maj en cas de V maj
+					array_push($monArray,90);
+				}
+				else if(ord($motAConvertir[$i])==66){
+					array_push($monArray,89);
+				}
+				else if(ord($motAConvertir[$i])==67){
+					array_push($monArray,88);
+				}
+				else if(ord($motAConvertir[$i])==68){
+					array_push($monArray,87);
+				}
+				else if(ord($motAConvertir[$i])==69){
+					array_push($monArray,86);
+				}
+				else if(ord($motAConvertir[$i])==37){//cas de l espace
+					array_push($monArray,37);
+				}
+				else{
+					array_push($monArray,ord($motAConvertir[$i])-5);
+				}
+			}
+			//maintenant on veut creer un string
+			$mot="";
+			$mot="";
+			for($j=0;$j<strlen($motAConvertir);$j++){
+				$mot=$mot.chr($monArray[$j]);
+			}
+			return $mot;
+		}
+	
+	
+	function decryptageDuNom($motAConvertir){
+			$monArray=array();
+			for( $i=0; $i<strlen($motAConvertir);$i++){
+				if(ord($motAConvertir[$i])==97){
+					array_push($monArray,122);//on met un a minuscule si on a v
+				}
+				else if(ord($motAConvertir[$i])==98){
+					array_push($monArray,121);
+				}
+				else if(ord($motAConvertir[$i])==99){
+					array_push($monArray,120);
+				}
+				else if(ord($motAConvertir[$i])==65){//on met un A maj en cas de V maj
+					array_push($monArray,98);
+				}
+				else if(ord($motAConvertir[$i])==66){
+					array_push($monArray,99);
+				}
+				else if(ord($motAConvertir[$i])==67){
+					array_push($monArray,100);
+				}
+				else{
+					array_push($monArray,ord($motAConvertir[$i])-3);
+				}
+			}
+			$mot="";
+			$mot="";
+			for($j=0;$j<strlen($motAConvertir);$j++){
+				$mot=$mot.chr($monArray[$j]);
+			}
+			return $mot;
+		}
 		?>
+
 	</body>
 
 </html>

@@ -34,7 +34,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -73,35 +73,7 @@
 			
 				<div class="stats">
 					<canvas id="myChart">
-			<script>
-				var myContext = document.getElementById("myChart");
-				var myChartConfig = {
-				type: 'bar',
-				data: {
-				labels: ["Statistiques de controles attendues"],
-				datasets: [
-				{
-				label: "Personnes testees au seuil de 75%",
-				data: [204]
-				//pour la couleur
-				},{
-				label: "Personnes testees au seuil de 75%",
-				data: [504]
-				},{
-				label: "Personnes testes au seuil de 50%",
-				data: [307]
-				},{
-				label: "Personnes testes au seul de 25%",
-				data: [120]
-				},{
-				label: "Personnes testes au seul de 0%",
-				data: [45]
-				}
-				]
-				}
-				}
-			var myChart = new Chart(myContext, myChartConfig);
-			</script>
+			
 			</canvas>
 
 				</div>

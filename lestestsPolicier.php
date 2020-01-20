@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <? session_start();
-?>
+?>	
+	
 <html>
 	<head>
 		<meta charset="utf-8/">
@@ -12,10 +13,13 @@
 	</head>
 
 	<body>
-		<?php
-			if(isset($_GET["cert"])==false || $_GET["cert"]!=5){
-			}
-			else{
+	<?php
+	
+	
+	if(isset($_GET["cert"])==false || $_GET["cert"]!=5){
+		header("Location=connexion_particulier.html");
+	}
+	else{
 		?>
 			<div class="header">
 				<div class="elementsduheader">
@@ -30,7 +34,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -44,67 +48,51 @@
 						<li class="active">Etape 1</li>
 						<li>Etape 2</li>
 						<li>Etape 3</li>
+						<li>Etape 4</li>
 					</ul>
 				<fieldset>
 					<h2 class="fs-title">Etape 1</h2>
 					<h3 class="fs-subtitle">C'est l'étape 1</h3>
-					<input type="text" name="name" placeholder="Nom" />
-					<input type="text" name="lastname" placeholder="Prénom" />
+					<img class="fs-images" src="images/coeur.png">
+			 		<h2 class="fs-title">Frequence Cardiaque</h2>
 					<input type="button" name="text" class="next action-button" value="Suivant" />
 				</fieldset>
 				<fieldset>
 					<h2 class="fs-title">Etape 2</h2>
 					<h3 class="fs-subtitle">C'est l'étape 2</h3>
-					<input type="text" name="name" placeholder="Nom" />
-					<input type="text" name="lastname" placeholder="Prénom" />
+					<img class="fs-images" src="images/temperature.png">
+			 		<h2 class="fs-title">Température</h2>
 					<input type="button" name="text" class="previous action-button" value="Précedent" />
 					<input type="button" name="text" class="next action-button" value="Suivant" />
 				</fieldset>
 				<fieldset>
 					<h2 class="fs-title">Etape 3</h2>
 					<h3 class="fs-subtitle">C'est l'étape 3</h3>
-					<input type="text" name="name" placeholder="Nom" />
-					<input type="text" name="lastname" placeholder="Prénom" />
+					<img class="fs-images" src="images/headphones.png">
+			 		<h2 class="fs-title">Test Sonore 1</h2>
 					<input type="button" name="text" class="previous action-button" value="Précedent" />
+					<input type="button" name="text" class="next action-button" value="Suivant" />
+				</fieldset>
+				<fieldset>
+					<h2 class="fs-title">Etape 4</h2>
+					<h3 class="fs-subtitle">C'est l'étape 4</h3>
+					<img class="fs-images" src="images/headphones.png">
+			 		<h2 class="fs-title">Test Sonore 2</h2>
 					<input type="submit" name="submit" class="submit action-button" value="Valider" />
 				</fieldset>
 				</form>
-
-				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
-
-			      <div class="slides">
-			        <input type="radio" name="r" id="r1" checked>
-			        <input type="radio" name="r" id="r2">
-			        <input type="radio" name="r" id="r3">
-			        <div class="slide s1">
-			          <img src="images/1.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/2.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/3.jpg" alt="">
-			        </div>
-			      </div>
-
-			      <div class="navigation">
-			        <label for="r1" class="bar"></label>
-			        <label for="r2" class="bar"></label>
-			        <label for="r3" class="bar"></label>
-			      </div>
-			    </div>--> 
 
 			</div>
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controlePolicier.php?cert=5">Controle</a>
+			    <a href="controle.php?cert=5">Controle</a>
 			    <a href="lestestsPolicier.php?cert=5">Test</a>
 			    <a href="resultatsPolicier.php?cert=5">Resultats</a>
 			    <a href="statistiquesPolicier.php?cert=5">Statistiques</a>
 			    <a href="sujetsforumPolicier.php?cert=5">Forum</a>
 			    <a href="faqPolicier.php?cert=5">F.A.Q</a>
-			    <a href="profilePolicier.php?cert=5">Mon Profil</a>
+			    <a href="profilePolicier.php?cert=5">Mon Profile</a>
 			  </div>
 
 			  <script>
@@ -134,10 +122,8 @@
 
 		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
 		<script src="js/tests.js"></script>
-		<?php
-			}
-		?>
+	<?php }
+	?>
 	</body>
 
 </html>
-

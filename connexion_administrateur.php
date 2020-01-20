@@ -8,17 +8,17 @@
 		
 		if($donnee['password']==$_POST["motDePasse"]){
 			//echo "Connexion reussie";
-			header("Location:administrateur_gestion.php");
+			header("Location:gestionadmin.html");
 		}
 		else{
 			//echo "echec";
-			header("Location:connexion_administrateur.php");
+			header("Location:connexion_administrateur.html");
 		}
 		
 	}
 	//actuellement c'est lui qui bloque****
 	else{
-		header("Location:connexion_administrateur.php");
+		header("Location:connexion_administrateur.html");
 	}
 	
 ?>

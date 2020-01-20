@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <?php session_start();
-	$tempon=$_SESSION["certificat"];
-	if($tempon!=5){
-		header("Location: connexion_particulier.html");
-	}
+	
 ?>
 <html>
 	<head>
@@ -35,7 +32,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>

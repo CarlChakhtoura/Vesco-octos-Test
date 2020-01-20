@@ -46,50 +46,17 @@
 													echo $_SESSION['Firstname']; ?>
 											</p>
 			            <p class="username">@<?php echo $_SESSION['Lastname'];?></p>
-			            <p class="city"><?php echo $_SESSION['pays_residence'];?></p>
-			            <p class="desc">Je suis un developpeur web chez Ability Test.</p>		     
-			        </div>
-			        <div class="skillbar">
-			        	<p>Votre barre</p>
-			        	<p>50%</p>
-			        	<div class="skill_pourcentage">
-			        		<div class="skill_level" style="width: 50%"></div><?php //*********************?>
-			        	</div>
+			            <p class="city"><?php echo $_SESSION['pays_residence'];?></p>	     
 			        </div>
 			        <div class="card-footer">
 			            <div class="col vr">
-			                <a href="editprofile.php">Edition profil</a>
+			                <a href="editprofilePolicier.php?cert=5">Edition profil</a>
 			            </div>
 			            <div class="col">
-			               <a href="accueil.php">Retour à l'accueil</a>
+			               <a href="lestestsPolicier.php?cert=5">Retour à l'accueil</a>
 			            </div>
 			        </div>
 			    </div>
-
-				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
-
-			      <div class="slides">
-			        <input type="radio" name="r" id="r1" checked>
-			        <input type="radio" name="r" id="r2">
-			        <input type="radio" name="r" id="r3">
-			        <div class="slide s1">
-			          <img src="images/1.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/2.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/3.jpg" alt="">
-			        </div>
-			      </div>
-
-			      <div class="navigation">
-			        <label for="r1" class="bar"></label>
-			        <label for="r2" class="bar"></label>
-			        <label for="r3" class="bar"></label>
-			      </div>
-			    </div>--> 
-
 			</div>
 
 			<div id="side-menu" class="side-nav">
@@ -133,4 +100,3 @@
 	</body>
 
 </html>
-

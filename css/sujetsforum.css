@@ -122,12 +122,17 @@ body, html {
   top: 40%;
   left: 40%;
   transform: translate(-40%,-40%);
-  background: #9b59b6;
+  background: blue;
   padding: 14px 0;
   color: white;
   text-transform: uppercase;
   cursor: pointer;
   width: auto;
+}
+
+.btn a{
+  color: white;
+  text-decoration: none;
 }
 
 .btn:hover{

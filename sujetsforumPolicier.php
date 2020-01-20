@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <?php session_start();
-if(is_null($_SESSION["certificat"])==false){
-		header("Location: connexion_policier.html");
-	}
+
 ?>
 <html>
 	<head>
@@ -34,7 +32,7 @@ if(is_null($_SESSION["certificat"])==false){
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -44,7 +42,7 @@ if(is_null($_SESSION["certificat"])==false){
 				
 				<?php
 				//******************
-					$baseDonneeForum=new PDO('mysql:host=localhost; dbname=forum','mathieu','ariane5');
+					$baseDonneeForum=new PDO('mysql:host=localhost; dbname=forum','root','');
 					$req=$baseDonneeForum->query('SELECT * FROM liste_sujet ORDER BY dateCreation DESC');
 					
 				?>	
@@ -75,13 +73,13 @@ if(is_null($_SESSION["certificat"])==false){
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php?cert=5">Controle</a>
-			    <a href="lestests.php?cert=5">Test</a>
-			    <a href="resultats.php?cert=5">Resultats</a>
-			    <a href="statistiques.php?cert=5">Statistiques</a>
-			    <a href="sujetsforum.php?cert=5">Forum</a>
-			    <a href="faq.php?cert=5">F.A.Q</a>
-			    <a href="profile.php?cert=5">Mon Profile</a>
+			    <a href="controlePolicier.php?cert=5">Controle</a>
+			    <a href="lestestsPolicier.php?cert=5">Test</a>
+			    <a href="resultatsPolicier.php?cert=5">Resultats</a>
+			    <a href="statistiquesPolicier.php?cert=5">Statistiques</a>
+			    <a href="sujetsforumPolicier.php?cert=5">Forum</a>
+			    <a href="faqPolicier.php?cert=5">F.A.Q</a>
+			    <a href="profilePolicier.php?cert=5">Mon Profil</a>
 			  </div>
 
 			  <script>

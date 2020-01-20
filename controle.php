@@ -30,7 +30,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -38,44 +38,26 @@
 			<div class="contenusite">
 
 				<div class="stats-form">
-					<h1>CONTROLE</h1><br>
-					
-					<div class="carre">
-                        <label class="demande">Nom: </label>
-                    <input type="nom" required name="nom" class="inputbox" placeholder="Nom">
-                        </div>
+					<h1>CONTROLE FORCE DE L'ORDRE</h1><br><br>
+					<label>Nom: </label>
+					<input type="nom" required name="nom" class="inputbox" placeholder="Nom">
 					<br>
-					
-					<div class="carre">
-                        <label class="demande">Prénom: </label>
-                    <input type="prenom" required name="prenom" class="inputbox" placeholder="Prénom">
-                        </div>
+					<label>Prénom: </label>
+					<input type="prenom" required name="prenom" class="inputbox" placeholder="Prénom">
 					<br>
-					
-					<div class="carre">
-                        <label class="demande">Permis: </label>
-                    <input type="num_permis" required name="num_permis" class="inputbox" placeholder="num permis de conduire">
-                        </div>
+					<label>Permis: </label>
+					<input type="num_permis" required name="num_permis" class="inputbox" placeholder="numéro de votre permis de conduire">
 					<br>
-					
-					<div class="carre2">
-                        <label class="demande">Adresse: </label>
-                    <input type="lieu" required name="lieu" class="inputbox" placeholder="adresse du contrôle">
-                    </div>
+					<label>Adresse: </label>
+					<input type="lieu" required name="lieu" class="inputbox" placeholder="adresse du contrôle">
 					<br>
-					
-					<div class="carre2">
-                        <label class="demande">Date: </label>
-                    <input type="date " required name="date" class="inputbox" placeholder="date: jour/mois/année">
-                    </div>
+					<label>Date: </label>
+					<input type="date " required name="date" class="inputbox" placeholder="date: jour/mois/année">
 					<br>
-					
-					<div class="carre2">
-                        <label class="demande">Numéro policier: </label>
-                    <input type="numpolice" required name="numpolice" class="inputbox" placeholder="num identification policier">
-                        </div>
-					<br>
-					<div href="#" class="btnvalider">Valider</div>
+					<label>Num policier: </label>
+					<input type="numpolice" required name="numpolice" class="inputbox" placeholder="numéro d'identification du policier">
+					<br><br>
+					<a href="lestests.html" class="btnvalider">Valider</a>
 
 				</div>
 
@@ -108,12 +90,12 @@
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
 			    <a href="controle.php?cert=5">Controle</a>
-			    <a href="lestests.php?cert=5">Test</a>
-			    <a href="resultats.php?cert=5">Resultats</a>
-			    <a href="statistiques.php?cert=5">Statistiques</a>
-			    <a href="sujetsforum.php?cert=5">Forum</a>
-			    <a href="faq.php?cert=5">F.A.Q</a>
-			    <a href="profile.php?cert=5">Mon Profile</a>
+			    <a href="lestestsPolicier.php?cert=5">Test</a>
+			    <a href="resultatsPolicier.php?cert=5">Resultats</a>
+			    <a href="statistiquesPolicier.php?cert=5">Statistiques</a>
+			    <a href="sujetsforumPolicier.php?cert=5">Forum</a>
+			    <a href="faqPolicier.php?cert=5">F.A.Q</a>
+			    <a href="profilePolicier.php?cert=5">Mon Profile</a>
 			  </div>
 
 			  <script>

@@ -74,6 +74,29 @@
 			    </ul>
 			</div>
 
+			<div id="side-menu" class="side-nav">
+			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+			    <a href="controle.php?cert=5">Controle</a>
+			    <a href="lestests.php?cert=5">Test</a>
+			    <a href="resultats.php?cert=5">Resultats</a>
+			    <a href="statistiques.php?cert=5">Statistiques</a>
+			    <a href="sujetsforum.php?cert=5">Forum</a>
+			    <a href="faq.php?cert=5">F.A.Q</a>
+			    <a href="profile.php?cert=5">Mon Profile</a>
+			  </div>
+
+			  <script>
+			    function openSlideMenu(){
+			      document.getElementById('side-menu').style.width = '250px';
+			      document.getElementById('main').style.marginLeft = '250px';
+			    }
+
+			    function closeSlideMenu(){
+			      document.getElementById('side-menu').style.width = '0';
+			      document.getElementById('main').style.marginLeft = '0';
+			    }
+			  </script>
+
 			<div class="footer">
 				<div class="contain">
 				  <div class="col">
@@ -81,7 +104,6 @@
 				    <ul>
 				      <li><a href="contactnous.html">Contactez-nous</a></li>
 				      <li><a href="cgu.html">CGU</a></li>
-				      <li>CGU</li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>
