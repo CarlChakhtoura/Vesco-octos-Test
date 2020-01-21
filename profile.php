@@ -47,7 +47,7 @@
 													echo decryptageDuNom($_SESSION['Firstname']); ?>
 											</p>
 			            <p class="username">@<?php echo decryptageDuNom($_SESSION['Lastname']);?></p>
-			            <p class="city"><?php echo decryptageDeLAdresse($_SESSION['pays_residence']);?></p>	     
+			            <p class="city"><?php echo $_SESSION['pays_residence'];?></p>	     
 			        </div>
 			        <!--<div class="skillbar">
 			        	<p>Votre barre</p>

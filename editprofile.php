@@ -43,18 +43,18 @@
 			        </div>
 			        <div class="card-body">
 					<form method="POST" action="siteProfileModification.php">
-						<label>Nom : </label><input type="text" name="nom" placeholder="<?php echo decryptageDuNom($_SESSION['Lastname']); ?>"/><br>
-						<label>Prenom : </label><input type="text" name="prenom" placeholder="<?php echo decryptageDuNom($_SESSION['Firstname']); ?>" /><br>
-						<label>Mot de Passe: </label><input type="password" name="motDePasse1" placeholder="<?php echo $_SESSION['motDePasse']; ?>" /><br>
-						<label>Confirmation du mot de passe: </label><input type="password" name="motDePasse2" placeholder="<?php echo $_SESSION['motDePasse']; ?>" /><br>
-						<label>Email : </label><input type="text" name="email" placeholder="<?php echo $_SESSION['Email']; ?>"/><br>
-						<label>Telephone : </label><input type="text" name="telephone" placeholder="<?php echo $_SESSION['telephone']; ?>"/><br>
+						<label>Nom : </label><input type="text" name="nom" value="<?php echo decryptageDuNom($_SESSION['Lastname']); ?>"/><br>
+						<label>Prenom : </label><input type="text" name="prenom" value="<?php echo decryptageDuNom($_SESSION['Firstname']); ?>" /><br>
+						<label>Mot de Passe: </label><input type="password" name="motDePasse1" value="<?php echo $_SESSION['motDePasse']; ?>" /><br>
+						<label>Confirmation du mot de passe: </label><input type="password" name="motDePasse2" value="<?php echo $_SESSION['motDePasse']; ?>" /><br>
+						<label>Email : </label><input type="text" name="email" value="<?php echo $_SESSION['Email']; ?>"/><br>
+						<label>Telephone : </label><input type="text" name="telephone" value="<?php echo $_SESSION['telephone']; ?>"/><br>
 						<label>Sexe : </label>
 						<?php
 							if($_SESSION['sexe']==1){
 								?>
 							<select name="sexe">
-									<option value="male" selected>Homme</option>
+								<option value="male" selected>Homme</option>
 								<option value="female">Femme</option>
 							</select>
 							<br>
@@ -62,7 +62,7 @@
 							else{
 								?>
 							<select name="sexe">
-									<option value="male" selected>Homme</option>
+								<option value="male" selected>Homme</option>
 								<option value="female">Femme</option>
 							</select>
 							<br>
@@ -93,11 +93,11 @@
 						
 						<label>Pays de residence : </label>
 						<?php
-							$paysResidence=decryptageDeLAdresse($_SESSION['pays_residence']);
+							$paysResidence=$_SESSION['pays_residence'];
 							if($paysResidence=="France"){
 								?>
 							<select name="paysResidence">
-									<option value="male" selected>France</option>
+								<option value="male" selected>France</option>
 								<option value="female">Maroc</option>
 							</select>
 							<br>
@@ -113,7 +113,7 @@
 							}
 						?>
 						<br>
-						<label>Adresse : </label><textarea class="textarea" name="adresse"><?php echo $_SESSION['adresse']; ?>></textarea><br>
+						<label>Adresse : </label><textarea class="textarea" name="adresse"><?php echo decryptageDeLAdresse($_SESSION['adresse']); ?></textarea><br>
 						<label>Code Postal: </label><input type="text" name="codePostal" value="<?php echo $_SESSION['code_postal']; ?>"/><br>
 						<input type="Submit" value="Confirmer"/>
 					</form>
