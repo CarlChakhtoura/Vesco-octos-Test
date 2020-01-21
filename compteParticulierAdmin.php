@@ -45,86 +45,60 @@
 								<th>Adresse</th>
 								<th>Code postal</th>
 								<th>Téléphone</th>
-								<th>Modifier cet utilisateur</th>
 								<th>Supprimer cet utilisateur</th>
 							</tr>
 							<?php
-			$baseDonneeAPP=new PDO('mysql:host=localhost; dbname=app','mathieu','ariane5');
-			$tableParticulier=$baseDonneeAPP->query('SELECT * FROM particulier');
-			while($donneeParticulier=$tableParticulier->fetch()){
-				?>
-				<tr>
-					<td>
-					<?php echo decryptageDuNom($donneeParticulier['Lastname']); ?>
-					</td>
-					<td>
-					<?php echo decryptageDuNom($donneeParticulier['Firstname']); ?>
-					</td>
-					<td>
-					<?php 
-					if ($donneeParticulier['Sexe']==1){
-						echo "Homme";
-					}
-					else{
-						echo "Femme";
-					} ?>
-					</td>
-					<td>
-					<?php echo $donneeParticulier['Email']; ?>
-					</td>
-					<td>
-					<?php echo $donneeParticulier['nationalite']; ?>
-					</td>
-					<td>
-					<?php echo $donneeParticulier['pays_residence']; ?>
-					</td>
-					<td>
-					<?php echo decryptageDeLAdresse($donneeParticulier['adresse']); ?>
-					</td>
-					<td>
-					<?php echo $donneeParticulier['code_postal']; ?>
-					</td>
-					<td>
-					<?php echo $donneeParticulier['telephone']; ?>
-					</td>
-					<td>
-					<a href="detailCompteParticulierPourAdmin.php?Userid=<?php echo $donneeParticulier['Userid']; ?>">Detail</a>
-					</td>
-					<td>
-					<a href="actionSuppresionUtilitaireDeAdmin.php?Userid=<?php echo $donneeParticulier['Userid'];?>">Supprimer cet utilitaire</a>
-					</td>
-				</tr>
-			<?php }
-			?>
-						</tbody>
-					</table>
-				</div>
+					$baseDonneeAPP=new PDO('mysql:host=localhost; dbname=app','root','');
+					$tableParticulier=$baseDonneeAPP->query('SELECT * FROM particulier');
+					while($donneeParticulier=$tableParticulier->fetch()){
+						?>
+						<tr>
+							<td>
+							<?php echo decryptageDuNom($donneeParticulier['Lastname']); ?>
+							</td>
+							<td>
+							<?php echo decryptageDuNom($donneeParticulier['Firstname']); ?>
+							</td>
+							<td>
+							<?php 
+							if ($donneeParticulier['Sexe']==1){
+								echo "Homme";
+							}
+							else{
+								echo "Femme";
+							} ?>
+							</td>
+							<td>
+							<?php echo $donneeParticulier['Email']; ?>
+							</td>
+							<td>
+							<?php echo $donneeParticulier['nationalite']; ?>
+							</td>
+							<td>
+							<?php echo $donneeParticulier['pays_residence']; ?>
+							</td>
+							<td>
+							<?php echo decryptageDeLAdresse($donneeParticulier['adresse']); ?>
+							</td>
+							<td>
+							<?php echo $donneeParticulier['code_postal']; ?>
+							</td>
+							<td>
+							<?php echo $donneeParticulier['telephone']; ?>
+							</td>
+							<td>
+							<a href="actionSuppresionUtilitaireDeAdmin.php?Userid=<?php echo $donneeParticulier['Userid'];?>">Supprimer cet utilitaire</a>
+							</td>
+						</tr>
+					<?php }
+					?>
+								</tbody>
+							</table>
+						</div>
+						<a href="gestionAdmin.php">Retour au menu</a>
+						
 
-				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
-
-			      <div class="slides">
-			        <input type="radio" name="r" id="r1" checked>
-			        <input type="radio" name="r" id="r2">
-			        <input type="radio" name="r" id="r3">
-			        <div class="slide s1">
-			          <img src="images/1.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/2.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/3.jpg" alt="">
-			        </div>
-			      </div>
-
-			      <div class="navigation">
-			        <label for="r1" class="bar"></label>
-			        <label for="r2" class="bar"></label>
-			        <label for="r3" class="bar"></label>
-			      </div>
-			    </div>--> 
-
-			</div>
+					</div>
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>

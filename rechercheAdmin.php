@@ -50,7 +50,7 @@
 				$resultat=0;
 				
 				if (isset($_GET['entree']) AND !empty($_GET['entree'])){
-					$entree=htmlspecialchars($_GET['entree']);
+					$entree=cryptageDuNom(htmlspecialchars($_GET['entree']));
 					$entree_array=explode(' ',$entree);
 					
 					//---------------------------------------------------------------------------------------------------------------------------------
@@ -295,8 +295,8 @@
 					echo "Aucun resultat";
 				}
 				?>
-
-				
+			<br>
+			<a href="gestionAdmin.php">Retour au menu</a>
 
 
 			</div>
@@ -413,6 +413,39 @@
 				}
 				else{
 					array_push($monArray,ord($motAConvertir[$i])-3);
+				}
+			}
+			$mot="";
+			$mot="";
+			for($j=0;$j<strlen($motAConvertir);$j++){
+				$mot=$mot.chr($monArray[$j]);
+			}
+			return $mot;
+		}
+		
+		function cryptageDuNom($motAConvertir){
+			$monArray=array();
+			for( $i=0; $i<strlen($motAConvertir);$i++){
+				if(ord($motAConvertir[$i])==120){
+					array_push($monArray,97);//on met un a minuscule si on a v
+				}
+				else if(ord($motAConvertir[$i])==121){
+					array_push($monArray,98);
+				}
+				else if(ord($motAConvertir[$i])==122){
+					array_push($monArray,99);
+				}
+				else if(ord($motAConvertir[$i])==88){//on met un A maj en cas de V maj
+					array_push($monArray,65);
+				}
+				else if(ord($motAConvertir[$i])==89){
+					array_push($monArray,66);
+				}
+				else if(ord($motAConvertir[$i])==35){
+					array_push($monArray,32);
+				}
+				else{
+					array_push($monArray,ord($motAConvertir[$i])+3);
 				}
 			}
 			$mot="";
