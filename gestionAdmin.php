@@ -44,7 +44,7 @@
 					<br>
 					<a href="inscriptionPolicierAdmin.php" class="btngerer">Ajouter des comptes policiers</a>
 					<br>
-					<a href="forumPourAdmin.php" class="btngerer">Gérer le forum</a>
+					<a href="gestionForumA.php" class="btngerer">Gérer le forum</a>
 					<br>
 					<a href="rechercheAdmin.php" class="btngerer">Statistiques</a>
 

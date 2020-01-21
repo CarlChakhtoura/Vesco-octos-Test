@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
 	session_start();
+	/*modifier sujet*/
+	
 ?>
 <html>
 	<head>
@@ -26,7 +28,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -39,12 +41,33 @@
 					<table>
 						<tbody>
 							<tr>
-								<th>Titre</th>
-								<th>Contenu</th>
+								<th>Modifier Titre</th>
+								<th>Modifier Contenu</th>
 							</tr>
+							<?php
+							
+							$baseDeDonnee=new PDO('mysql:host=localhost; dbname=forum','root','');
+							
+							//******
+							$req1=$baseDeDonnee->prepare('SELECT * FROM conversation WHERE id=?');
+							$req1->execute(array($_GET['id']));
+							$donnee=$req1->fetch();
+							$a=$donnee["idConversation"];
+							$req1->closeCursor();
+							$req1=$baseDeDonnee->prepare('SELECT * FROM liste_sujet WHERE id=?');
+							$req1->execute(array($a));
+							$titre=$req1->fetch();
+							?>
 							<tr>
-								<td><input type="text" class="inputs" name="titresujet" placeholder="Titre du sujet" /></td>
-								<td><textarea placeholder="Modifiez le contenu du sujet"></textarea></td>
+								<td><input type="text" class="inputs" name="titresujet" value="<?php echo $titre['topicSubject'];?>" /></td>
+								
+							<?php
+							$req1->closeCursor();
+							$req1=$baseDeDonnee->prepare('SELECT * FROM conversation WHERE id=?');
+							$req1->execute(array($_GET['id']));
+							$donnee=$req1->fetch();
+							?>
+								<td><textarea value="<?php echo $donnee["content"];?>"></textarea></td>
 							</tr>
 						</tbody>
 					</table>

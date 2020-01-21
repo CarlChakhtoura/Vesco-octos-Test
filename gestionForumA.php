@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<?php
-	session_start();
-?>
 <html>
 	<head>
 		<title> Ability Test </title>
-		<link media="screen" rel="stylesheet" href="css/modifiersujetsforum.css" >
+		<link media="screen" rel="stylesheet" href="css/gestionforum.css" >
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!--Pour que les accents s'affichent correctement-->
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,22 +30,40 @@
 
 			<div class="contenusite">
 
-				<h1>Gérer forum par les Administrateurs</h1>
+				<h1>La gestion du forum</h1>
 
 				<div class="res-tab">
 					<table>
 						<tbody>
 							<tr>
-								<th>Titre</th>
+								
+								<th>ID sujet</th>
 								<th>Contenu</th>
+								<th>Auteur</th>
+								<th>Date publication</th>
+								<th>Supprimer</th>
+								<th>Modifier</th>
 							</tr>
+							<?php
+							
+							$baseDonneeForum=new PDO('mysql:host=localhost; dbname=forum','root','');
+							
+							$req1=$baseDonneeForum->query('SELECT * FROM conversation ORDER BY idConversation DESC');
+							while($donnee=$req1->fetch()){
+								?>
 							<tr>
-								<td><input type="text" class="inputs" name="titresujet" placeholder="Titre du sujet" /></td>
-								<td><textarea placeholder="Modifiez le contenu du sujet"></textarea></td>
+								
+								<td><?php echo $donnee['id']?></td>
+								<td><?php echo $donnee['content']?></td>
+								<td><?php echo $donnee['author'];?></td>
+								<td><?php echo $donnee['datePost'];?></td>
+								<td><a href="supprimerSujetForum.php?id=<?php echo $donnee['id'];?>">Supprimer</a></td>
+								<td><a href="modifierSujetsForum.php?id=<?php echo $donnee['id'];?>">Modifier</a></td>
+							<?php }
+							?>
 							</tr>
 						</tbody>
 					</table>
-					<button class="button-envoyer">Envoyer</button>
 				</div>
 
 				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
