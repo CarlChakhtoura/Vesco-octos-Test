@@ -117,10 +117,9 @@ body, html {
   overflow-y: scroll;
 }
 
-.contenusite h1{
+h1{
   font-style: italic;
   text-align: center;
-  text-decoration: underline;
   color: white;
 }
 
@@ -146,22 +145,61 @@ th,td{
   padding: 15px;
 }
 
-.res-tab a{
+td a{
   color: white;
   text-decoration: none;
 }
 
-.res-tab a:hover{
+td a:hover{
   color: red;
 }
 
-.retoursite{
-  color: white;
-  text-decoration: none;
+.inputs{
+  border: none;
+  padding: 8px;
+  width: 60%;
 }
 
-.retoursite:hover{
-  color: red;
+::-webkit-input-placeholder{
+  text-align: center;
+}
+
+::-moz-placeholder{
+  text-align: center;
+}
+
+::-ms-input-placeholder{
+  text-align: center;
+}
+
+td textarea{
+  padding: 30px 70px;
+}
+
+.button-envoyer{
+  box-shadow: 0px 10px 14px -7px #276873;
+  background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color:#599bb3;
+  border-radius:6px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:12px;
+  font-weight:bold;
+  padding:15px 25px;
+  margin: 25px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #3d768a;
+}
+
+.button-envoyer:hover {
+  background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color:#408c99;
+}
+.button-envoyer:active {
+  position:relative;
+  top:1px;
 }
 
 /*.slidershow{  #Ceci est un slideshow

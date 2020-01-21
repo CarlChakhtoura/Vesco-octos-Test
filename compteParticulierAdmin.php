@@ -15,9 +15,9 @@
 					<span class="open-slide">
 						      <a href="#" onclick="openSlideMenu()">
 						        <svg width="30" height="30">
-						            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-						            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-						            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+						            <path d="M0,5 30,5" stroke="black" stroke-width="5"/>
+						            <path d="M0,14 30,14" stroke="black" stroke-width="5"/>
+						            <path d="M0,23 30,23" stroke="black" stroke-width="5"/>
 						        </svg>
 						      </a>
 						    </span>
@@ -95,21 +95,10 @@
 								</tbody>
 							</table>
 						</div>
-						<a href="gestionAdmin.php">Retour au menu</a>
+						<a class="retoursite" href="gestionAdmin.php">Retour au menu</a>
 						
 
 					</div>
-
-			<div id="side-menu" class="side-nav">
-			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.html">Controle</a>
-			    <a href="lestests.html">Test</a>
-			    <a href="resultats.html">Resultats</a>
-			    <a href="statistiques.html">Statistiques</a>
-			    <a href="sujetsforum.html">Forum</a>
-			    <a href="faq.html">F.A.Q</a>
-			    <a href="profile.html">Mon Profil</a>
-			  </div>
 
 			  <script>
 			    function openSlideMenu(){

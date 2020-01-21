@@ -38,7 +38,7 @@
 				<h2>Votre profil<h2>
 				<div class="card">
 			        <div class="card-header">
-			            <img src="./images/saif.png" alt="Profile Image" class="profile-img">
+			            <img src="./images/avatarprof.png" alt="Profile Image" class="profile-img">
 			        </div>
 			        <div class="card-body">
 			            <p class="full-name"><?php echo decryptageDuNom($_SESSION['Lastname']);

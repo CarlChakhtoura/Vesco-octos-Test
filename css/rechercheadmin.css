@@ -196,6 +196,15 @@ th,td{
   padding: 15px;
 }
 
+.retoursite{
+  color: white;
+  text-decoration: none;
+}
+
+.retoursite:hover{
+  color: red;
+}
+
 /*.slidershow{  #Ceci est un slideshow
   width: 700px;
   height: 400px;

@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-<?php session_start();
-?>
 <html>
 	<head>
-		<meta charset="utf-8/">
 		<title> Ability Test </title>
-		<link media="screen" rel="stylesheet" href="css/sujetsforum.css" >
+		<link media="screen" rel="stylesheet" href="css/gestionforum.css" >
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!--Pour que les accents s'affichent correctement-->
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ability Test </title>
 	</head>
 
 	<body>
-		<?php
-		if(isset($_GET["cert"])==false || $_GET["cert"]!=5){
-		header("Location=connexion_particulier.html");
-		}
-		else{
-		?>
 			<div class="header">
 				<div class="elementsduheader">
 					<span class="open-slide">
@@ -31,48 +23,75 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="deconnexion.php">Déconnexion</a>
+						<a href="">Déconnexion</a>
 					</div>
 				</div>
 			</div>
 
 			<div class="contenusite">
-				
-				
-				<?php
-					$baseDonneeForum=new PDO('mysql:host=localhost; dbname=forum','root','');
-					$req=$baseDonneeForum->query('SELECT * FROM liste_sujet ORDER BY dateCreation DESC');
-					
-				?>	
-					<button class="btn" onclick="window.location.href='creersujet.php?cert=5'">Créer un sujet</a></button>
-					
-				<?php
-					$i=1;
-					while($donnee=$req->fetch()){	
-					?>
-			        <div class="item">
-			        	<h1><?php echo $donnee['topicSubject'];
-						echo " ";
-						echo $i; ?></h1>
-			          <?php
-					  //content
-					  echo $donnee['Content'];
-					  ?>
-			        </div>
-			       
+
+				<h1>La gestion du forum</h1>
+
+				<div class="res-tab">
+					<table>
+						<tbody>
+							<tr>
+								<th>ID sujet</th>
+								<th>Titre</th>
+								<th>Contenu</th>
+								<th>Auteur</th>
+								<th>Date publication</th>
+								<th>Modifier</th>
+								<th>Supprimer</th>
+							</tr>
+							<tr>
+								<td>0</td>
+								<td>Bienvenue sur notre site</td>
+								<td>Voici un contenu pour ce titre</td>
+								<td>Saifeddine El Ouazzani</td>
+								<td>21/01/2020</td>
+								<td><a href="#">....</a></td>
+								<td><a href="#">....</a></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<?php
-					}
-				?>
+
+				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
+
+			      <div class="slides">
+			        <input type="radio" name="r" id="r1" checked>
+			        <input type="radio" name="r" id="r2">
+			        <input type="radio" name="r" id="r3">
+			        <div class="slide s1">
+			          <img src="images/1.jpg" alt="">
+			        </div>
+			        <div class="slide">
+			          <img src="images/2.jpg" alt="">
+			        </div>
+			        <div class="slide">
+			          <img src="images/3.jpg" alt="">
+			        </div>
+			      </div>
+
+			      <div class="navigation">
+			        <label for="r1" class="bar"></label>
+			        <label for="r2" class="bar"></label>
+			        <label for="r3" class="bar"></label>
+			      </div>
+			    </div>--> 
+
+			</div>
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+			    <a href="controle.php?cert=5">Controle</a>
 			    <a href="lestests.php?cert=5">Test</a>
 			    <a href="resultats.php?cert=5">Resultats</a>
 			    <a href="statistiques.php?cert=5">Statistiques</a>
 			    <a href="sujetsforum.php?cert=5">Forum</a>
 			    <a href="faq.php?cert=5">F.A.Q</a>
-			    <a href="profile.php?cert=5">Mon Profil</a>
+			    <a href="profile.php?cert=5">Mon Profile</a>
 			  </div>
 
 			  <script>
@@ -99,9 +118,6 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
-		<?php 
-		}
-		?>
 	</body>
 
 </html>

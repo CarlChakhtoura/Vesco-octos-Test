@@ -117,7 +117,7 @@ body, html {
   overflow-y: scroll;
 }
 
-h1{
+.contenusite h1{
   font-style: italic;
   text-align: center;
   text-decoration: underline;
@@ -152,6 +152,15 @@ th,td{
 }
 
 .res-tab a:hover{
+  color: red;
+}
+
+.retoursite{
+  color: white;
+  text-decoration: none;
+}
+
+.retoursite:hover{
   color: red;
 }
 

@@ -117,10 +117,9 @@ body, html {
   overflow-y: scroll;
 }
 
-.contenusite h1{
+h1{
   font-style: italic;
   text-align: center;
-  text-decoration: underline;
   color: white;
 }
 
@@ -146,21 +145,12 @@ th,td{
   padding: 15px;
 }
 
-.res-tab a{
-  color: white;
+td a{
   text-decoration: none;
-}
-
-.res-tab a:hover{
-  color: red;
-}
-
-.retoursite{
   color: white;
-  text-decoration: none;
 }
 
-.retoursite:hover{
+td a:hover{
   color: red;
 }
 

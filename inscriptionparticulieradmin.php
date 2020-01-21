@@ -77,7 +77,7 @@ session_start();
 	 </form>
 	 <div class="retourConnexion">
 			<br>
-	      	 <p><a href="gestionadmin.html">Retour à la page de la gestion des administrateurs</a></p>
+	      	 <p><a href="gestionadmin.php">Retour à la page de la gestion des administrateurs</a></p>
 	 </div>
     </div>
 </div>	

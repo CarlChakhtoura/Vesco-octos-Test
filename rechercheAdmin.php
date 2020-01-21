@@ -296,21 +296,10 @@
 				}
 				?>
 			<br>
-			<a href="gestionAdmin.php">Retour au menu</a>
+			<a class="retoursite" href="gestionAdmin.php">Retour au menu</a>
 
 
 			</div>
-
-			<div id="side-menu" class="side-nav">
-			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php?cert=5">Controle</a>
-			    <a href="lestests.php?cert=5">Test</a>
-			    <a href="resultats.php?cert=5">Resultats</a>
-			    <a href="statistiques.php?cert=5">Statistiques</a>
-			    <a href="sujetsforum.php?cert=5">Forum</a>
-			    <a href="faq.php?cert=5">F.A.Q</a>
-			    <a href="profile.php?cert=5">Mon Profile</a>
-			  </div>
 
 			  <script>
 			    function openSlideMenu(){

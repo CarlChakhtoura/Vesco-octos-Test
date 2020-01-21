@@ -61,7 +61,6 @@
 					  //content
 					  echo $donnee['Content'];
 					  ?>
-					  <a href="lireSujetForum.php?sujet=<?php echo $donnee['topicSubject'];?>">Lire</a>
 			        </div>
 			       
 				</div>

@@ -73,22 +73,11 @@
 						</tbody>
 					</table>
 				</div>
-				<a href="gestionAdmin.php">Retour au menu</a>
+				<a class="retoursite" href="gestionAdmin.php">Retour au menu</a>
 				
 
 			</div>
-
-			<div id="side-menu" class="side-nav">
-			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.html">Controle</a>
-			    <a href="lestests.html">Test</a>
-			    <a href="resultats.html">Resultats</a>
-			    <a href="statistiques.html">Statistiques</a>
-			    <a href="sujetsforum.html">Forum</a>
-			    <a href="faq.html">F.A.Q</a>
-			    <a href="profile.html">Mon Profil</a>
-			  </div>
-
+			
 			  <script>
 			    function openSlideMenu(){
 			      document.getElementById('side-menu').style.width = '250px';
