@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-session_start();
+	session_start();
 ?>
 <html lang="en">
 <head>
@@ -15,10 +15,10 @@ session_start();
 
 <div class="wrapper">
     <div class="title">
-      Inscription particulier pour les administrateurs
+      Inscription policier pour les administrateurs
     </div>
     <div class="form">
-	<form method="Post" action="traitementInscriptionParticulierAdmin.php">
+	<form>
        <div class="inputfield">
           <label>Nom</label>
           <input type="text" class="input" name="nom">
@@ -31,20 +31,6 @@ session_start();
           <label>Mot de passe</label>
           <input type="password" class="input" name="motDePasse1">
        </div>  
-      <div class="inputfield">
-          <label>Confirmation mot de passe</label>
-          <input type="password" class="input" name="motDePasse2">
-       </div> 
-        <div class="inputfield">
-          <label>Sexe</label>
-          <div class="custom_select">
-            <select name="sexe">
-              <option value="">Selectionnez</option>
-              <option value="male">Homme</option>
-              <option value="female">Femme</option>
-            </select>
-          </div>
-       </div>
         <div class="inputfield">
           <label>Adresse mail</label>
           <input type="text" class="input" name="email">
@@ -54,23 +40,10 @@ session_start();
           <input type="text" class="input" name="tel">
        </div> 
       <div class="inputfield">
-          <label>Adresse</label>
+          <label>Station de police</label>
           <textarea class="textarea" name="adresse"></textarea>
        </div> 
-      <div class="inputfield">
-          <label>Code postale</label>
-          <input type="text" class="input" name="codePostal">
-       </div>
-	<div class="inputfield">
-          <label>Pays</label>
-          <div class="pays">
-            <select name="nationalite">
-              <option value="">Selectionnez</option>
-              <option value="France">France</option>
-              <option value="Maroc">Maroc</option>
-            </select>
-          </div>
-       </div> 
+ 
       <div class="inputfield">
         <input type="submit" value="Inscription" class="btn">
       </div>

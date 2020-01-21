@@ -1,15 +1,10 @@
 <?php
-	session_start();
-	$_SESSION["echec"]=0;
-	
 	$baseDeDonnee=new PDO('mysql:host=localhost; dbname=APP; charset=utf8','root','');
 	
 
 	$Sexe=1;
 	if($_POST['sexe']=="Femme"){
 		$Sexe=2;
-		//1 pour les hommes
-		//2 pour les femmes
 		}
 		
 	$nationalite="France";
@@ -42,8 +37,9 @@
 					'pays_residence'=>cryptageDeLAdresse($paysResidence),
 					'adresse'=>$_POST['adresse'],
 					'code_postal'=>$_POST['codePostal'],
-					'telephone'=>$_POST['tel']
-					));
+					'telephone'=>$_POST['tel'],
+					)
+				);
 	
 			header('Location: connexion_particulier.html');
 			}
@@ -231,9 +227,4 @@
 			}
 			return $mot;
 		}
-		/*for($i=0; $i<11;$i++){
-        echo chr($monArray[$i]-5);
-        echo "<br>";
-    }
-		}*/
 ?>

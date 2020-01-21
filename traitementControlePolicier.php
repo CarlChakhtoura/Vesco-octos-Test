@@ -17,5 +17,5 @@
 	'nlieuDuTest'=>$_POST["lieu"]
 	));
 	
-	header('Location: connexion_particulier.html');
+	header('Location: lestestsPolicier.php?cert=5');
 ?>

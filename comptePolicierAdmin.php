@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<?php
-	session_start();
-?>
 <html>
 	<head>
 		<title> Ability Test </title>
-		<link media="screen" rel="stylesheet" href="css/gestionadmin.css" >
+		<link media="screen" rel="stylesheet" href="css/comptepolicieradmin.css" >
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!--Pour que les accents s'affichent correctement-->
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,17 +30,27 @@
 
 			<div class="contenusite">
 
-				<div class="admin-form">
-					<h1>PAGE RESERVE AUX ADMINISTRATEURS</h1><br>
-					<br>
-					<a href="compteparticulieradmin.html" class="btngerer">Gérer les comptes particuliers</a>
-					<br>
-					<a href="comptepolicieradmin.html" class="btngerer">Gérer les comptes policiers</a>
-					<br>
-					<a href="forumPourAdmin.php" class="btngerer">Gérer le forum</a>
-					<br>
-					<a href="statistiquePourAdmin.php" class="btngerer">Statistiques</a>
+				<h1>Gérer les comptes policiers</h1>
 
+				<div class="res-tab">
+					<table>
+						<tbody>
+							<tr>
+								<th>Nom</th>
+								<th>Prénom</th>
+								<th>Affecte au secteur</th>
+								<th>Téléphone</th>
+								<th>Supprimer cet utilitaire</th>
+							</tr>
+							<tr>
+								<td>El Ouazzani</td>
+								<td>Saifeddine</td>
+								<td>ISEP</td>
+								<td>0640473977</td>
+								<td><a href="#">Supprimer</a></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 
 				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
@@ -74,14 +81,13 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="gestionadmin.html">Accueil admin</a>
-			    <a href="controle.html">Contrôle</a>
-			    <a href="faq.html">FAQ</a>
-			    <a href="forumPourAdmin.html">Forum</a>
-			    <a href="profile.php">Compte</a>
-			    <a href="faq.html">Recherche</a>
-			    <a href="inscription.html">Inscription policier</a>
-			    <a href="inscription.html">Inscription particulier</a>
+			    <a href="controle.html">Controle</a>
+			    <a href="lestests.html">Test</a>
+			    <a href="resultats.html">Resultats</a>
+			    <a href="statistiques.html">Statistiques</a>
+			    <a href="sujetsforum.html">Forum</a>
+			    <a href="faq.html">F.A.Q</a>
+			    <a href="profile.html">Mon Profil</a>
 			  </div>
 
 			  <script>
@@ -96,7 +102,7 @@
 			    }
 			  </script>
 
-		<div class="footer">
+			<div class="footer">
 				<div class="contain">
 				  <div class="col">
 				    <h1>Ability Test</h1>

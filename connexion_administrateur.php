@@ -8,7 +8,7 @@
 		
 		if($donnee['password']==$_POST["motDePasse"]){
 			//echo "Connexion reussie";
-			header("Location:gestionadmin.html");
+			header("Location:gestionAdmin.php");
 		}
 		else{
 			//echo "echec";

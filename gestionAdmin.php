@@ -36,9 +36,13 @@
 				<div class="admin-form">
 					<h1>PAGE RESERVE AUX ADMINISTRATEURS</h1><br>
 					<br>
-					<a href="compteparticulieradmin.html" class="btngerer">Gérer les comptes particuliers</a>
+					<a href="compteParticulierAdmin.php" class="btngerer">Gérer les comptes particuliers</a>
 					<br>
-					<a href="comptepolicieradmin.html" class="btngerer">Gérer les comptes policiers</a>
+					<a href="inscriptionParticulierAdmin.php" class="btngerer">Ajouter des comptes particuliers</a>
+					<br>
+					<a href="comptePolicierAdmin.php" class="btngerer">Gérer les comptes policiers</a>
+					<br>
+					<a href="inscriptionPolicierAdmin.php" class="btngerer">Ajouter des comptes policiers</a>
 					<br>
 					<a href="forumPourAdmin.php" class="btngerer">Gérer le forum</a>
 					<br>
@@ -74,8 +78,8 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="gestionadmin.html">Accueil admin</a>
-			    <a href="controle.html">Contrôle</a>
+			    <a href="gestionAdmin.php">Accueil admin</a>
+			    <a href="controle.php">Contrôle</a>
 			    <a href="faq.html">FAQ</a>
 			    <a href="forumPourAdmin.html">Forum</a>
 			    <a href="profile.php">Compte</a>
