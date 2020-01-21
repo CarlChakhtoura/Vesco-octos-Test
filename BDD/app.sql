@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 11 Janvier 2020 à 15:54
+-- Généré le :  Mar 21 Janvier 2020 à 12:00
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -45,27 +45,6 @@ INSERT INTO `administrateur` (`idAdmin`, `firstNameAdmin`, `lastNameAdmin`, `tel
 -- --------------------------------------------------------
 
 --
--- Structure de la table `asup`
---
-
-CREATE TABLE `asup` (
-  `id` int(11) NOT NULL,
-  `Prenom` varchar(255) NOT NULL,
-  `Status` tinyint(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Contenu de la table `asup`
---
-
-INSERT INTO `asup` (`id`, `Prenom`, `Status`) VALUES
-(1, 'John', 0),
-(2, 'John', 0),
-(3, 'Kevin', 0);
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `particulier`
 --
 
@@ -88,13 +67,10 @@ CREATE TABLE `particulier` (
 --
 
 INSERT INTO `particulier` (`Userid`, `Lastname`, `Firstname`, `Email`, `Sexe`, `password`, `nationalite`, `pays_residence`, `adresse`, `code_postal`, `telephone`) VALUES
-(28, 'MENNER', 'Quentin', 'menner@laposte.net', 1, '71d1f4a6b14c1a2fe5990456bb74a490541770f8', 'France', 'France', 'Cachan', 94400, 675757575),
-(27, 'BARON', 'Albane', 'baron@laposte.net', 1, '6ac56e9866b7b5ea88b04f9643e94504fba68fe8', 'France', 'France', 'rue de la gare, Palaiseau', 91120, 651511598),
-(26, 'EL OUAZZANI', 'Saifedine', 'safsaf@laposte.net', 1, '99800b85d3383e3a2fb45eb7d0066a4879a9dad0', 'Maroc', 'Maroc', 'Courneuve', 93120, 1894),
-(25, 'CHAKTOURA', 'Carl', 'chacha@laposte.net', 1, 'fd4cef7a4e607f1fcc920ad6329a6df2df99a4e8', 'France', 'France', 'Convention Paris 15', 75015, 1918),
-(29, 'PAVAUT', 'Mathieu', 'mat@laposte.net', 1, 'a14847ef81de19f27d2715193132cb70267bbf04', 'France', 'France', 'rue Carnot Palaiseau', 9120, 15154),
-(24, 'FAURE', 'Gustave', 'faure@laposte.net', 1, 'aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d', 'France', 'France', 'Convention, Paris 15', 75015, 1717),
-(22, 'BRISSE', 'Clement', 'brisse@laposte.net', 1, '1f71e0f4ac9b47cd93bf269e4017abaab9d3bd63', 'France', 'France', 'Vaucresson', 78000, 1213112);
+(59, 'EDURQ', 'Doedqh', 'baron@laposte.net', 2, 'b628a94e6990eb1385ddbece2d11e4510e58b7ef', 'France', 'France', 'Ufwnx', 7500, 680808080),
+(60, 'SDYDXW', 'Pdwklhx', 'mat@laposte.net', 1, '72d884262fcfef114eab61d6708e1ed390516d9a', 'France', 'France', 'Ufqfnxjfz', 91120, 651515151),
+(61, 'Idxuh', 'Jxvwdyh', 'faure@laposte.net', 1, '5b9451290b006ff3917bb276fdb138448c74563f', 'France', 'France', 'Ufwnx', 75000, 655575557),
+(62, 'Fkdnwrxudk', 'Fduo', 'cha@laposte.net', 1, 'a1b83b7fc34cd1701cee8ca48748f9c94db0cab4', 'France', 'France', 'Ufwnx', 75000, 680808281);
 
 -- --------------------------------------------------------
 
@@ -117,7 +93,22 @@ CREATE TABLE `policier` (
 --
 
 INSERT INTO `policier` (`idCop`, `lastNameCop`, `firstNameCop`, `policeStation`, `emailCop`, `password`, `telephoneCop`) VALUES
-(2, 'pav', 'mathieu', 'Palaiseau', 'mat@laposte.net', 'matmat', 1717);
+(2, 'SDYDXW', 'Pdwklhx', 'Ufqfnxjfz', 'mat@laposte.net', 'a14847ef81de19f27d2715193132cb70267bbf04', 1717);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `resultat`
+--
+
+CREATE TABLE `resultat` (
+  `numeroDuTest` int(11) NOT NULL,
+  `resultatTest1` int(11) NOT NULL,
+  `resultatTest2` int(11) NOT NULL,
+  `resultatTest3` int(11) NOT NULL,
+  `resultatTest4` int(11) NOT NULL,
+  `dateDuTest` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -129,8 +120,7 @@ CREATE TABLE `testparticulier` (
   `testId` int(11) NOT NULL,
   `lastname` varchar(256) DEFAULT NULL,
   `firstname` varchar(256) DEFAULT NULL,
-  `dateDuTest` date DEFAULT NULL,
-  `score` decimal(4,2) DEFAULT NULL
+  `dateDuTest` date DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -146,9 +136,16 @@ CREATE TABLE `testpolicier` (
   `lastNameChecked` varchar(256) DEFAULT NULL,
   `firstNameChecked` varchar(256) DEFAULT NULL,
   `dateDuTest` date DEFAULT NULL,
-  `lieuDuTest` varchar(256) DEFAULT NULL,
-  `score` decimal(4,2) DEFAULT NULL
+  `lieuDuTest` varchar(256) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `testpolicier`
+--
+
+INSERT INTO `testpolicier` (`idTestPolicier`, `lastnameCop`, `firstNameCop`, `lastNameChecked`, `firstNameChecked`, `dateDuTest`, `lieuDuTest`) VALUES
+(1, 'Pavaut', 'Mathieu', 'Baron', 'Albane', '2019-02-02', 'Palaiseau'),
+(2, 'Pavaut', 'Mathieu', 'Camard', 'Emmanuelle', '2020-01-01', 'Massy');
 
 --
 -- Index pour les tables exportées
@@ -160,12 +157,6 @@ CREATE TABLE `testpolicier` (
 ALTER TABLE `administrateur`
   ADD PRIMARY KEY (`idAdmin`),
   ADD UNIQUE KEY `emailAdmin` (`emailAdmin`);
-
---
--- Index pour la table `asup`
---
-ALTER TABLE `asup`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `particulier`
@@ -182,6 +173,12 @@ ALTER TABLE `policier`
   ADD PRIMARY KEY (`idCop`),
   ADD UNIQUE KEY `emailCop` (`emailCop`),
   ADD UNIQUE KEY `telephoneCop` (`telephoneCop`);
+
+--
+-- Index pour la table `resultat`
+--
+ALTER TABLE `resultat`
+  ADD PRIMARY KEY (`numeroDuTest`);
 
 --
 -- Index pour la table `testparticulier`
@@ -209,20 +206,20 @@ ALTER TABLE `testpolicier`
 ALTER TABLE `administrateur`
   MODIFY `idAdmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT pour la table `asup`
---
-ALTER TABLE `asup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
 -- AUTO_INCREMENT pour la table `particulier`
 --
 ALTER TABLE `particulier`
-  MODIFY `Userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `Userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT pour la table `policier`
 --
 ALTER TABLE `policier`
   MODIFY `idCop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT pour la table `resultat`
+--
+ALTER TABLE `resultat`
+  MODIFY `numeroDuTest` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `testparticulier`
 --
@@ -232,7 +229,7 @@ ALTER TABLE `testparticulier`
 -- AUTO_INCREMENT pour la table `testpolicier`
 --
 ALTER TABLE `testpolicier`
-  MODIFY `idTestPolicier` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTestPolicier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
