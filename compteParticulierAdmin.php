@@ -15,9 +15,9 @@
 					<span class="open-slide">
 						      <a href="#" onclick="openSlideMenu()">
 						        <svg width="30" height="30">
-						            <path d="M0,5 30,5" stroke="black" stroke-width="5"/>
-						            <path d="M0,14 30,14" stroke="black" stroke-width="5"/>
-						            <path d="M0,23 30,23" stroke="black" stroke-width="5"/>
+						            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+						            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+						            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
 						        </svg>
 						      </a>
 						    </span>
@@ -45,19 +45,20 @@
 								<th>Adresse</th>
 								<th>Code postal</th>
 								<th>Téléphone</th>
+								<th>Modifier cet utilisateur</th>
 								<th>Supprimer cet utilisateur</th>
 							</tr>
 							<?php
-			$baseDonneeAPP=new PDO('mysql:host=localhost; dbname=app','root','');
+			$baseDonneeAPP=new PDO('mysql:host=localhost; dbname=app','mathieu','ariane5');
 			$tableParticulier=$baseDonneeAPP->query('SELECT * FROM particulier');
 			while($donneeParticulier=$tableParticulier->fetch()){
 				?>
 				<tr>
 					<td>
-					<?php echo $donneeParticulier['Lastname']; ?>
+					<?php echo decryptageDuNom($donneeParticulier['Lastname']); ?>
 					</td>
 					<td>
-					<?php echo $donneeParticulier['Firstname']; ?>
+					<?php echo decryptageDuNom($donneeParticulier['Firstname']); ?>
 					</td>
 					<td>
 					<?php 
@@ -78,13 +79,16 @@
 					<?php echo $donneeParticulier['pays_residence']; ?>
 					</td>
 					<td>
-					<?php echo $donneeParticulier['adresse']; ?>
+					<?php echo decryptageDeLAdresse($donneeParticulier['adresse']); ?>
 					</td>
 					<td>
 					<?php echo $donneeParticulier['code_postal']; ?>
 					</td>
 					<td>
 					<?php echo $donneeParticulier['telephone']; ?>
+					</td>
+					<td>
+					<a href="detailCompteParticulierPourAdmin.php?Userid=<?php echo $donneeParticulier['Userid']; ?>">Detail</a>
 					</td>
 					<td>
 					<a href="actionSuppresionUtilitaireDeAdmin.php?Userid=<?php echo $donneeParticulier['Userid'];?>">Supprimer cet utilitaire</a>
@@ -151,12 +155,99 @@
 				    <h1>Ability Test</h1>
 				    <ul>
 				      <li><a href="contactnous.html">Contactez-nous</a></li>
-				      <li><a href="cgu.html" target="_blank">CGU</a></li>
+				      <li><a href="cgu.html">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		<?php
+		function decryptageDeLAdresse($motAConvertir){
+			$monArray=array();
+			for( $i=0; $i<strlen($motAConvertir);$i++){
+				//derniers caracat
+				if(ord($motAConvertir[$i])==97){
+					array_push($monArray,122);//on met un a minuscule si on a v
+				}
+				else if(ord($motAConvertir[$i])==98){
+					array_push($monArray,121);
+				}
+				else if(ord($motAConvertir[$i])==99){
+					array_push($monArray,120);
+				}
+				else if(ord($motAConvertir[$i])==100){
+					array_push($monArray,119);
+				}
+				else if(ord($motAConvertir[$i])==101){
+					array_push($monArray,118);
+				}
+				else if(ord($motAConvertir[$i])==65){//on met un A maj en cas de V maj
+					array_push($monArray,90);
+				}
+				else if(ord($motAConvertir[$i])==66){
+					array_push($monArray,89);
+				}
+				else if(ord($motAConvertir[$i])==67){
+					array_push($monArray,88);
+				}
+				else if(ord($motAConvertir[$i])==68){
+					array_push($monArray,87);
+				}
+				else if(ord($motAConvertir[$i])==69){
+					array_push($monArray,86);
+				}
+				else if(ord($motAConvertir[$i])==37){//cas de l espace
+					array_push($monArray,37);
+				}
+				else{
+					array_push($monArray,ord($motAConvertir[$i])-5);
+				}
+			}
+			//maintenant on veut creer un string
+			$mot="";
+			$mot="";
+			for($j=0;$j<strlen($motAConvertir);$j++){
+				$mot=$mot.chr($monArray[$j]);
+			}
+			return $mot;
+		}
+	
+	
+	function decryptageDuNom($motAConvertir){
+			$monArray=array();
+			for( $i=0; $i<strlen($motAConvertir);$i++){
+				if(ord($motAConvertir[$i])==97){
+					array_push($monArray,122);//on met un a minuscule si on a v
+				}
+				else if(ord($motAConvertir[$i])==98){
+					array_push($monArray,121);
+				}
+				else if(ord($motAConvertir[$i])==99){
+					array_push($monArray,120);
+				}
+				else if(ord($motAConvertir[$i])==65){//on met un A maj en cas de V maj
+					array_push($monArray,98);
+				}
+				else if(ord($motAConvertir[$i])==66){
+					array_push($monArray,99);
+				}
+				else if(ord($motAConvertir[$i])==67){
+					array_push($monArray,100);
+				}
+				else{
+					array_push($monArray,ord($motAConvertir[$i])-3);
+				}
+			}
+			$mot="";
+			$mot="";
+			for($j=0;$j<strlen($motAConvertir);$j++){
+				$mot=$mot.chr($monArray[$j]);
+			}
+			return $mot;
+		}
+		?>
+		
+		
 	</body>
 
 </html>

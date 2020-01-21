@@ -1,67 +1,35 @@
 <?php<?php
 	$baseDeDonnee=new PDO('mysql:host=localhost; dbname=APP; charset=utf8','root','');
 	
-
-	$Sexe=1;
-	if($_POST['sexe']=="Femme"){
-		$Sexe=2;
-		}
+	
+	if(isset($_POST['Inscription'])){
+		$a=htmlspecialchars($_POST["motDePasse1"]);
+		$vrai=motdepasse($a);
+		$num=numeroDeTelephoneValide($_POST['telephone']);
+		if($vrai==true && $num==true){
+			$requete=$baseDeDonnee->prepare('INSERT INTO policier(lastNameCop,firstNameCop,password,emailCop,telephoneCop,policeStation) VALUES (:Lastname,:Firstname,:password,:email, :telephone, :policeStation)');
 		
-	$nationalite="France";
-	if($_POST['nationalite']=="Maroc"){
-			$nationalite="Maroc";
-		}
-	
-	if($_POST["motDePasse1"]==$_POST["motDePasse2"]){
-		$tempon=motdepasse($_POST["motDePasse1"]);
-		if($tempon==true){
-			$tempon2=numeroDeTelephoneValide(htmlspecialchars($_POST['tel']));
-			if($tempon2==true){
-					$nom=htmlspecialchars($_POST['nom']);
-					$prenom=htmlspecialchars($_POST['prenom']);
-					$paysResidence=htmlspecialchars($_POST['nationalite']);
-					
-					
-					$requete=$baseDeDonnee->prepare('INSERT INTO particulier (Lastname, 
-					Firstname, Email, Sexe, password, nationalite, pays_residence, adresse, code_postal, telephone)
-					VALUES (:Lastname, 
-					:Firstname, :Email, :Sexe, :password, :nationalite, :pays_residence, :adresse, :code_postal, :telephone)');
-	
-					$requete->execute(array(
-					'Lastname'=> cryptageDuNom($nom),
-					'Firstname'=> cryptageDuNom($prenom),
-					'Email'=>$_POST['email'],
-					'Sexe'=>$Sexe,
-					'password'=>sha1($_POST['motDePasse1']),
-					'nationalite'=>$nationalite,
-					'pays_residence'=>cryptageDeLAdresse($paysResidence),
-					'adresse'=>$_POST['adresse'],
-					'code_postal'=>$_POST['codePostal'],
-					'telephone'=>$_POST['tel'],
-					)
-				);
-	
-			header('Location: connexion_particulier.html');
-			}
-			else{
-				$_SESSION["echec"]=2;
-				header('Location: inscriptionEchec.php');
-			}
-
+			$requete->execute(array(
+				'Lastname'=>cryptageDuNom(htmlspecialchars($_POST['nom'])),
+				'Firstname'=>cryptageDuNom(htmlspecialchars($_POST['prenom'])),
+				'password'=>sha1($a),
+				'email'=>htmlspecialchars($_POST['email']),
+				'policeStation'=>cryptageDeLAdresse(htmlspecialchars($_POST['policeStation'])),
+				'telephone'=>htmlspecialchars($_POST['telephone']),
+			
+			));
+			header("Location: gestionAdmin.php");
 		}
 		else{
-			//echo "Pour rappel il doit contenir 8 caractere dont une minuscule, un caractere speciale (@-:!&) ou une majuscule, et un chiffre <br>";
-			$_SESSION["echec"]=1;
-			header('Location: inscriptionEchec.php');
+			header("Location:inscriptionPolicierAdmin.php");
 		}
 	}
+	
 	else{
-		header('Location: inscription.html');
+		header("Location:inscriptionPolicierAdmin.php");	
 	}
 	
 	
-	
-	//*****************************
 	function motdepasse1($value){
 		if (preg_match("#[0-9]#", $value)){
 			return true;
@@ -227,6 +195,4 @@
 			}
 			return $mot;
 		}
-?>
-
 ?>

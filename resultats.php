@@ -53,30 +53,6 @@
 								<td>saifouazzani2k18@gmail.com</td>
 								<td>Positif</td>
 							</tr>
-							<tr>
-								<td>Chakhtoura</td>
-								<td>Carl</td>
-								<td>carlchakhtoura@gmail.com</td>
-								<td>Positif</td>
-							</tr>
-							<tr>
-								<td>Brisse</td>
-								<td>Clément</td>
-								<td>brisseclement@gmail.com</td>
-								<td>Positif</td>
-							</tr>
-							<tr>
-								<td>Pavaut</td>
-								<td>Mathieu</td>
-								<td>pavautmathieu@gmail.com</td>
-								<td>Positif</td>
-							</tr>
-							<tr>
-								<td>Faure</td>
-								<td>Gustave</td>
-								<td>fauregustave@gmail.com</td>
-								<td>Positif</td>
-							</tr>
 						</tbody>
 					</table>
 				</div>

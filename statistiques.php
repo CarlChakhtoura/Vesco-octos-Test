@@ -56,13 +56,12 @@
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
-            label: 'My First dataset',
+            label: 'Nombre mort sur les routes',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            data: [8508, 5008, 1500, 1874,4897, 300, 1500]
         }]
     },
-
     // Configuration options go here
     options: {}
 });
@@ -70,14 +69,7 @@
 	</canvas>
 				</div>
 			
-			
-				<div class="stats">
-					<canvas id="myChart">
-			
-			</canvas>
-
 				</div>
-			</div>
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>

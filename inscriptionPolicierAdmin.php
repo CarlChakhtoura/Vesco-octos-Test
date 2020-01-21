@@ -18,7 +18,7 @@
       Inscription policier pour les administrateurs
     </div>
     <div class="form">
-	<form>
+	<form method="POST" action="traitementInscriptionPolicierAdmin.php">
        <div class="inputfield">
           <label>Nom</label>
           <input type="text" class="input" name="nom">
@@ -37,20 +37,20 @@
        </div> 
       <div class="inputfield">
           <label>Numéro téléphone</label>
-          <input type="text" class="input" name="tel">
+          <input type="text" class="input" name="telephone">
        </div> 
       <div class="inputfield">
           <label>Station de police</label>
-          <textarea class="textarea" name="adresse"></textarea>
+          <textarea class="textarea" name="policeStation"></textarea>
        </div> 
  
       <div class="inputfield">
-        <input type="submit" value="Inscription" class="btn">
+        <input type="submit" name="Inscription" value="Inscription" class="btn">
       </div>
 	 </form>
 	 <div class="retourConnexion">
 			<br>
-	      	 <p><a href="gestionadmin.html">Retour à la page de la gestion des administrateurs</a></p>
+	      	 <p><a href="gestionadmin.php">Retour à la page de la gestion des administrateurs</a></p>
 	 </div>
     </div>
 </div>	

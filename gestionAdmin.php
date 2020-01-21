@@ -46,7 +46,7 @@
 					<br>
 					<a href="forumPourAdmin.php" class="btngerer">Gérer le forum</a>
 					<br>
-					<a href="rechercheadmin.html" class="btngerer">Statistiques</a>
+					<a href="rechercheAdmin.php" class="btngerer">Statistiques</a>
 
 				</div>
 
