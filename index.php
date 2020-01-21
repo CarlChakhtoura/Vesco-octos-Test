@@ -24,10 +24,7 @@
 			   
 			</form>
 		</div>
-	</body>
 
-	<footer>
-		<p class="infofooter">© Ability Test - Toute reproduction interdite. Propriété intellectuelle de Infinity Mesures.</p>
-	</footer>
+	</body>
 
 </html>

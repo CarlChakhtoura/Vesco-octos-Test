@@ -15,9 +15,9 @@
 					<span class="open-slide">
 						      <a href="#" onclick="openSlideMenu()">
 						        <svg width="30" height="30">
-						            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-						            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-						            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+						            <path d="M0,5 30,5" stroke="black" stroke-width="5"/>
+						            <path d="M0,14 30,14" stroke="black" stroke-width="5"/>
+						            <path d="M0,23 30,23" stroke="black" stroke-width="5"/>
 						        </svg>
 						      </a>
 						    </span>
@@ -45,11 +45,10 @@
 								<th>Adresse</th>
 								<th>Code postal</th>
 								<th>Téléphone</th>
-								<th>Modifier cet utilisateur</th>
 								<th>Supprimer cet utilisateur</th>
 							</tr>
 							<?php
-			$baseDonneeAPP=new PDO('mysql:host=localhost; dbname=app','mathieu','ariane5');
+			$baseDonneeAPP=new PDO('mysql:host=localhost; dbname=app','root','');
 			$tableParticulier=$baseDonneeAPP->query('SELECT * FROM particulier');
 			while($donneeParticulier=$tableParticulier->fetch()){
 				?>
@@ -86,9 +85,6 @@
 					</td>
 					<td>
 					<?php echo $donneeParticulier['telephone']; ?>
-					</td>
-					<td>
-					<a href="detailCompteParticulierPourAdmin.php?Userid=<?php echo $donneeParticulier['Userid']; ?>">Detail</a>
 					</td>
 					<td>
 					<a href="actionSuppresionUtilitaireDeAdmin.php?Userid=<?php echo $donneeParticulier['Userid'];?>">Supprimer cet utilitaire</a>
@@ -155,7 +151,7 @@
 				    <h1>Ability Test</h1>
 				    <ul>
 				      <li><a href="contactnous.html">Contactez-nous</a></li>
-				      <li><a href="cgu.html">CGU</a></li>
+				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

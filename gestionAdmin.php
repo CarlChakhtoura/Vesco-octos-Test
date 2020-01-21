@@ -18,9 +18,9 @@
 					<span class="open-slide">
 						      <a href="#" onclick="openSlideMenu()">
 						        <svg width="30" height="30">
-						            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-						            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-						            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+						            <path d="M0,5 30,5" stroke="black" stroke-width="5"/>
+						            <path d="M0,14 30,14" stroke="black" stroke-width="5"/>
+						            <path d="M0,23 30,23" stroke="black" stroke-width="5"/>
 						        </svg>
 						      </a>
 						    </span>
@@ -46,7 +46,7 @@
 					<br>
 					<a href="forumPourAdmin.php" class="btngerer">Gérer le forum</a>
 					<br>
-					<a href="statistiquePourAdmin.php" class="btngerer">Statistiques</a>
+					<a href="rechercheadmin.html" class="btngerer">Statistiques</a>
 
 				</div>
 
@@ -76,37 +76,13 @@
 
 			</div>
 
-			<div id="side-menu" class="side-nav">
-			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="gestionAdmin.php">Accueil admin</a>
-			    <a href="controle.php">Contrôle</a>
-			    <a href="faq.html">FAQ</a>
-			    <a href="forumPourAdmin.html">Forum</a>
-			    <a href="profile.php">Compte</a>
-			    <a href="faq.html">Recherche</a>
-			    <a href="inscription.html">Inscription policier</a>
-			    <a href="inscription.html">Inscription particulier</a>
-			  </div>
-
-			  <script>
-			    function openSlideMenu(){
-			      document.getElementById('side-menu').style.width = '250px';
-			      document.getElementById('main').style.marginLeft = '250px';
-			    }
-
-			    function closeSlideMenu(){
-			      document.getElementById('side-menu').style.width = '0';
-			      document.getElementById('main').style.marginLeft = '0';
-			    }
-			  </script>
-
 		<div class="footer">
 				<div class="contain">
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
 				      <li><a href="contactnous.html">Contactez-nous</a></li>
-				      <li><a href="cgu.html">CGU</a></li>
+				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

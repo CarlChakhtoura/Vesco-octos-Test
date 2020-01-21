@@ -39,17 +39,17 @@
 				<h2>Edition profil<h2>
 				<div class="card">
 			        <div class="card-header">
-			            <img src="./images/saif.png" alt="Profile Image" class="profile-img">
+			            <img src="./images/avatarprof.png" alt="Profile Image" class="profile-img">
 			        </div>
 			        <div class="card-body">
 					<form method="POST" action="siteProfileModification.php">
-						<label>Nom :</label><input type="text" name="nom" placeholder="<?php echo decryptageDuNom($_SESSION['Lastname']); ?>"/><br>
+						<label>Nom : </label><input type="text" name="nom" placeholder="<?php echo decryptageDuNom($_SESSION['Lastname']); ?>"/><br>
 						<label>Prenom : </label><input type="text" name="prenom" placeholder="<?php echo decryptageDuNom($_SESSION['Firstname']); ?>" /><br>
 						<label>Mot de Passe: </label><input type="password" name="motDePasse1" placeholder="<?php echo $_SESSION['motDePasse']; ?>" /><br>
 						<label>Confirmation du mot de passe: </label><input type="password" name="motDePasse2" placeholder="<?php echo $_SESSION['motDePasse']; ?>" /><br>
-						<label>Email :</label><input type="text" name="email" placeholder="<?php echo $_SESSION['Email']; ?>"/><br>
-						<label>Telephone :</label><input type="text" name="telephone" placeholder="<?php echo $_SESSION['telephone']; ?>"/><br>
-						<label>Sexe :</label>
+						<label>Email : </label><input type="text" name="email" placeholder="<?php echo $_SESSION['Email']; ?>"/><br>
+						<label>Telephone : </label><input type="text" name="telephone" placeholder="<?php echo $_SESSION['telephone']; ?>"/><br>
+						<label>Sexe : </label>
 						<?php
 							if($_SESSION['sexe']==1){
 								?>
@@ -91,7 +91,7 @@
 							}
 						?>
 						
-						<label>Pays de residence :</label>
+						<label>Pays de residence : </label>
 						<?php
 							$paysResidence=decryptageDeLAdresse($_SESSION['pays_residence']);
 							if($paysResidence=="France"){
@@ -113,7 +113,7 @@
 							}
 						?>
 						<br>
-						<label>Adresse :</label><textarea class="textarea" name="adresse"><?php echo $_SESSION['adresse']; ?>></textarea><br>
+						<label>Adresse : </label><textarea class="textarea" name="adresse"><?php echo $_SESSION['adresse']; ?>></textarea><br>
 						<label>Code Postal: </label><input type="text" name="codePostal" value="<?php echo $_SESSION['code_postal']; ?>"/><br>
 						<input type="Submit" value="Confirmer"/>
 					</form>
@@ -126,7 +126,6 @@
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php?cert=5">Controle</a>
 			    <a href="lestests.php?cert=5">Test</a>
 			    <a href="resultats.php?cert=5">Resultats</a>
 			    <a href="statistiques.php?cert=5">Statistiques</a>
@@ -153,7 +152,7 @@
 				    <h1>Ability Test</h1>
 				    <ul>
 				      <li><a href="contactnous.html">Contactez-nous</a></li>
-				      <li><a href="cgu.html">CGU</a></li>
+				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

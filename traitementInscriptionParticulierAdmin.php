@@ -41,22 +41,22 @@
 					)
 				);
 	
-			header('Location: connexion_particulier.html');
+			header('Location: gestionAdmin.php');
 			}
 			else{
 				$_SESSION["echec"]=2;
-				header('Location: inscriptionEchec.php');
+				header('Location: inscriptionparticulieradmin.php');
 			}
 
 		}
 		else{
 			//echo "Pour rappel il doit contenir 8 caractere dont une minuscule, un caractere speciale (@-:!&) ou une majuscule, et un chiffre <br>";
 			$_SESSION["echec"]=1;
-			header('Location: inscriptionEchec.php');
+			header('Location: inscriptionparticulieradmin.php');
 		}
 	}
 	else{
-		header('Location: inscription.html');
+		header('Location: inscriptionparticulieradmin.php');
 	}
 	
 	
