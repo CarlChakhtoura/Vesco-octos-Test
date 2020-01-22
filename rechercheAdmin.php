@@ -27,7 +27,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -318,7 +318,7 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li><a href="contactnous.html">Contactez-nous</a></li>
+				      <li><a href="https://form.jotform.com/200181736367354" target="_blank">Contactez-nous</a></li>
 				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>

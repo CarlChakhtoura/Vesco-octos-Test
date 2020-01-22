@@ -49,12 +49,12 @@
 							$baseDeDonnee=new PDO('mysql:host=localhost; dbname=forum','root','');
 							
 							//******
-							$req1=$baseDeDonnee->prepare('SELECT * FROM conversation WHERE id=?');
-							$req1->execute(array($_GET['id']));
+							$req1=$baseDeDonnee->prepare('SELECT * FROM conversation WHERE idConversation=?');
+							$req1->execute(array($_GET['idConversation']));
 							$donnee=$req1->fetch();
 							$a=$donnee["idConversation"];
 							$req1->closeCursor();
-							$req1=$baseDeDonnee->prepare('SELECT * FROM liste_sujet WHERE id=?');
+							$req1=$baseDeDonnee->prepare('SELECT * FROM liste_sujet WHERE idConversation=?');
 							$req1->execute(array($a));
 							$titre=$req1->fetch();
 							?>
@@ -63,15 +63,15 @@
 								
 							<?php
 							$req1->closeCursor();
-							$req1=$baseDeDonnee->prepare('SELECT * FROM conversation WHERE id=?');
-							$req1->execute(array($_GET['id']));
+							$req1=$baseDeDonnee->prepare('SELECT * FROM conversation WHERE idConversation=?');
+							$req1->execute(array($a));
 							$donnee=$req1->fetch();
 							?>
-								<td><textarea value="<?php echo $donnee["content"];?>"></textarea></td>
+								<td><textarea name="newcontent" placeholder="<?php echo $donnee["content"];?>"></textarea></td>
 							</tr>
 						</tbody>
 					</table>
-					<button class="button-envoyer">Envoyer</button>
+					<button class="button-envoyer"><a href="traitementModifierSuejetForum.php?idConversation=<?php echo $donnee['idConversation'];?>">Envoyer</a></button>
 				</div>
 
 				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
@@ -128,7 +128,7 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li><a href="contactnous.html">Contactez-nous</a></li>
+				      <li><a href="https://form.jotform.com/200181736367354" target="_blank">Contactez-nous</a></li>
 				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>

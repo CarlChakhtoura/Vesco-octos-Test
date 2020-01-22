@@ -122,12 +122,13 @@ body, html {
   top: 40%;
   left: 40%;
   transform: translate(-40%,-40%);
-  background: blue;
-  padding: 14px 0;
+  background-color:#007dc1;
+  padding: 14px 12px;
   color: white;
   text-transform: uppercase;
   cursor: pointer;
   width: auto;
+  border-radius: 8px;
 }
 
 .btn a{
@@ -136,8 +137,8 @@ body, html {
 }
 
 .btn:hover{
-  color: white;
-  background-color: #9c080d;
+  background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+  background-color:#0061a7;
 }
 
 

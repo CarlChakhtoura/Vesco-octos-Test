@@ -15,15 +15,15 @@
 					<span class="open-slide">
 						      <a href="#" onclick="openSlideMenu()">
 						        <svg width="30" height="30">
-						            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-						            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-						            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+						            <path d="M0,5 30,5" stroke="black" stroke-width="5"/>
+						            <path d="M0,14 30,14" stroke="black" stroke-width="5"/>
+						            <path d="M0,23 30,23" stroke="black" stroke-width="5"/>
 						        </svg>
 						      </a>
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -53,12 +53,12 @@
 								?>
 							<tr>
 								
-								<td><?php echo $donnee['id']?></td>
-								<td><?php echo $donnee['content']?></td>
+								<td><?php echo $donnee['idConversation'];?></td>
+								<td><?php echo $donnee['content'];?></td>
 								<td><?php echo $donnee['author'];?></td>
 								<td><?php echo $donnee['datePost'];?></td>
-								<td><a href="supprimerSujetForum.php?id=<?php echo $donnee['id'];?>">Supprimer</a></td>
-								<td><a href="modifierSujetsForum.php?id=<?php echo $donnee['id'];?>">Modifier</a></td>
+								<td><a href="supprimerSujetForum.php?idConversation=<?php echo $donnee['idConversation'];?>">Supprimer</a></td>
+								<td><a href="modifierSujetsForum.php?idConversation=<?php echo $donnee['idConversation'];?>">Modifier</a></td>
 							<?php }
 							?>
 							</tr>
@@ -92,17 +92,6 @@
 
 			</div>
 
-			<div id="side-menu" class="side-nav">
-			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php?cert=5">Controle</a>
-			    <a href="lestests.php?cert=5">Test</a>
-			    <a href="resultats.php?cert=5">Resultats</a>
-			    <a href="statistiques.php?cert=5">Statistiques</a>
-			    <a href="sujetsforum.php?cert=5">Forum</a>
-			    <a href="faq.php?cert=5">F.A.Q</a>
-			    <a href="profile.php?cert=5">Mon Profile</a>
-			  </div>
-
 			  <script>
 			    function openSlideMenu(){
 			      document.getElementById('side-menu').style.width = '250px';
@@ -120,7 +109,7 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li><a href="contactnous.html">Contactez-nous</a></li>
+				      <li><a href="https://form.jotform.com/200181736367354" target="_blank">Contactez-nous</a></li>
 				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>
