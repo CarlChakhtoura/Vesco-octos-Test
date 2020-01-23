@@ -13,7 +13,8 @@
 			<div class="header">
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
+
 					</div>
 				</div>
 
@@ -42,12 +43,12 @@
 			        Ces données sont nécessaires au bon fonctionnement de nos services.
 			    Lors de votre inscription nous aurons besoin des données suivantes:</br>
 			    <ul>
-			        <li>Nom </li>
-			        <li>Prenom</li>
-			        <li>Date de naissance</li>
-			        <li>Une adresse mail valide</li>
-			        <li>Mot de passe</li>
-			        <li>Eventuel handicap</li>
+			        <li>• Nom </li>
+			        <li>• Prenom</li>
+			        <li>• Date de naissance</li>
+			        <li>• Une adresse mail valide</li>
+			        <li>• Mot de passe</li>
+			        <li>• Eventuel handicap</li>
 			    </ul>
 
 			    Ces données ne sont pas revendus et restent anonymes. Vous pouvez procéder à d'éventuelles modifications
@@ -59,27 +60,50 @@
 			    <p>
 			    Pour pouvoir disposer des tests en intégralité de l'Ability Test l'utilisateur doit:</p>
 			    <ul>
-			       <li>disposer d'un plateau-test</li>
-			       <li>disposer d'une adresse mail valide</li>
+			       <li>• disposer d'un plateau-test</li>
+			       <li>• disposer d'une adresse mail valide</li>
 			    </ul>
 
 
 			    <p>
 			    L'utilisateur s'engage:</p>
 			    <ul>
-			        <li>à ne faire usage d'aucun logiciel malveillant</li>
-			        <li>à ne pas utiliser de techiques d'envoi massif</li>
+			        <li>• à ne faire usage d'aucun logiciel malveillant</li>
+			        <li>• à ne pas utiliser de techiques d'envoi massif</li>
 
 			    </ul>
 			</div>
+
+			<div id="side-menu" class="side-nav">
+			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+			    <a href="controle.php?cert=5">Controle</a>
+			    <a href="lestests.php?cert=5">Test</a>
+			    <a href="resultats.php?cert=5">Resultats</a>
+			    <a href="statistiques.php?cert=5">Statistiques</a>
+			    <a href="sujetsforum.php?cert=5">Forum</a>
+			    <a href="faq.php?cert=5">F.A.Q</a>
+			    <a href="profile.php?cert=5">Mon Profile</a>
+			  </div>
+
+			  <script>
+			    function openSlideMenu(){
+			      document.getElementById('side-menu').style.width = '250px';
+			      document.getElementById('main').style.marginLeft = '250px';
+			    }
+
+			    function closeSlideMenu(){
+			      document.getElementById('side-menu').style.width = '0';
+			      document.getElementById('main').style.marginLeft = '0';
+			    }
+			  </script>
 
 			<div class="footer">
 				<div class="contain">
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contactez-nous</li>
-				      <li>CGU</li>
+				      <li><a href="https://form.jotform.com/200181736367354" target="_blank">Contactez-nous</a></li>
+				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

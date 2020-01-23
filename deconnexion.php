@@ -1,4 +1,6 @@
 <?php
-	session_destroy();
-	header("Location: choixrole.html");
+session_start();
+$_SESSION = array();
+session_destroy();
+header("Location: choixrole.php");
 ?>

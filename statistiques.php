@@ -34,7 +34,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -56,13 +56,12 @@
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
-            label: 'My First dataset',
+            label: 'Nombre mort sur les routes',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            data: [8508, 5008, 1500, 1874,4897, 300, 1500]
         }]
     },
-
     // Configuration options go here
     options: {}
 });
@@ -70,42 +69,7 @@
 	</canvas>
 				</div>
 			
-			
-				<div class="stats">
-					<canvas id="myChart">
-			<script>
-				var myContext = document.getElementById("myChart");
-				var myChartConfig = {
-				type: 'bar',
-				data: {
-				labels: ["Statistiques de controles attendues"],
-				datasets: [
-				{
-				label: "Personnes testees au seuil de 75%",
-				data: [204]
-				//pour la couleur
-				},{
-				label: "Personnes testees au seuil de 75%",
-				data: [504]
-				},{
-				label: "Personnes testes au seuil de 50%",
-				data: [307]
-				},{
-				label: "Personnes testes au seul de 25%",
-				data: [120]
-				},{
-				label: "Personnes testes au seul de 0%",
-				data: [45]
-				}
-				]
-				}
-				}
-			var myChart = new Chart(myContext, myChartConfig);
-			</script>
-			</canvas>
-
 				</div>
-			</div>
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
@@ -134,8 +98,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <a href="contactnous.html"><li>Contactez-nous</li></a>
-				      <a href="cgu.html"><li>CGU</li></a>
+				      <li><a href="https://form.jotform.com/200181736367354" target="_blank">Contactez-nous</a></li>
+				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

@@ -122,17 +122,23 @@ body, html {
   top: 40%;
   left: 40%;
   transform: translate(-40%,-40%);
-  background: #9b59b6;
-  padding: 14px 0;
+  background-color:#007dc1;
+  padding: 14px 12px;
   color: white;
   text-transform: uppercase;
   cursor: pointer;
   width: auto;
+  border-radius: 8px;
+}
+
+.btn a{
+  color: white;
+  text-decoration: none;
 }
 
 .btn:hover{
-  color: white;
-  background-color: #9c080d;
+  background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+  background-color:#0061a7;
 }
 
 
@@ -256,12 +262,11 @@ input[name="r"]{
   -webkit-transition: .2s;
   -moz-transition: .2s;
 }
-.social ul li {
-  display: inline-block;
-  padding-right: 5px !important;
+.footer .col ul a{
+  color: #999999;
+  text-decoration: none;
 }
-
-.footer .col ul li:hover {
+.footer .col ul a:hover{
   color: #ffffff;
   transition: .1s;
   -webkit-transition: .1s;

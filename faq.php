@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php session_start();
+	
 ?>
 <html>
 	<head>
@@ -31,7 +32,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -116,20 +117,6 @@
 							<i class="icon ion-md-remove"></i>
 						</a>
 						<div class="reponse">
-							<p>Réponse4
-							Pour lancer une session de test veuillez d’abord vous connecter puis cliquer dans le menu déroulant sur Test.<br>
-							Cliquer alors sur « Lancer une session » de test.Il est nécessaire d’avoir son boitier allumé. Celui-ci enverra les résultats fournis.<br>
-							Une fois que la session est fini cliquez sur « Test suivant ». Une fois que les tests sont terminés vous pourrez alors voir vos résultats.</p>
-						</div>
-					</div>
-
-					<div class="accordion-item" id="question5">
-						<a class="accordion-link" href="#question5">
-							Comment lancer une session de test ?
-							<i class="icon ion-md-add"></i>
-							<i class="icon ion-md-remove"></i>
-						</a>
-						<div class="reponse">
 							<p>Réponse5
 							Pour lancer une session de test veuillez d’abord vous connecter puis cliquer dans le menu déroulant sur Test.<br>
 							Cliquer alors sur « Lancer une session » de test.Il est nécessaire d’avoir son boitier allumé. Celui-ci enverra les résultats fournis.<br>
@@ -139,38 +126,52 @@
 
 					<div class="accordion-item" id="question6">
 						<a class="accordion-link" href="#question6">
-							Puis je voir mes résultats ?
+							Comment lancer une session de test ?
 							<i class="icon ion-md-add"></i>
 							<i class="icon ion-md-remove"></i>
 						</a>
 						<div class="reponse">
 							<p>Réponse6
-							Vous pouvez voir vos résultats ainsi que les résultats généraux sur la page statistique.</p>
+							Pour lancer une session de test veuillez d’abord vous connecter puis cliquer dans le menu déroulant sur Test.<br>
+							Cliquer alors sur « Lancer une session » de test.Il est nécessaire d’avoir son boitier allumé. Celui-ci enverra les résultats fournis.<br>
+							Une fois que la session est fini cliquez sur « Test suivant ». Une fois que les tests sont terminés vous pourrez alors voir vos résultats.</p>
 						</div>
 					</div>
 
 					<div class="accordion-item" id="question7">
 						<a class="accordion-link" href="#question7">
-							A qui puis je m’adressez en cas de problème ?
+							Puis je voir mes résultats ?
 							<i class="icon ion-md-add"></i>
 							<i class="icon ion-md-remove"></i>
 						</a>
 						<div class="reponse">
 							<p>Réponse7
+							Vous pouvez voir vos résultats ainsi que les résultats généraux sur la page statistique.</p>
+						</div>
+					</div>
+
+					<div class="accordion-item" id="question8">
+						<a class="accordion-link" href="#question8">
+							A qui puis je m’adressez en cas de problème ?
+							<i class="icon ion-md-add"></i>
+							<i class="icon ion-md-remove"></i>
+						</a>
+						<div class="reponse">
+							<p>Réponse8
 							En cas de problème vous pouvez vous rendre sur le forum d’Ability Test et posez vos questions.<br>
 							Sinon vous pouvez vous rendre sur la page blba et nous serons alors ravi de vous répondre. 
 							</p>
 						</div>
 					</div>
 
-					<div class="accordion-item" id="question8">
-						<a class="accordion-link" href="#question8">
+					<div class="accordion-item" id="question9">
+						<a class="accordion-link" href="#question9">
 							Que faites-vous de mes données ?
 							<i class="icon ion-md-add"></i>
 							<i class="icon ion-md-remove"></i>
 						</a>
 						<div class="reponse">
-							<p>Réponse8
+							<p>Réponse9
 							Vos données ne sont pas revendues. Nous collectons vos données pour des analyses de mesures,<br>7
 							et afin d’améliorer nos produits.
 							</p>
@@ -182,8 +183,7 @@
 			</div>
 
 			<div id="side-menu" class="side-nav">
-			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controle.php?cert=5">Controle</a>
+			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a> 
 			    <a href="lestests.php?cert=5">Test</a>
 			    <a href="resultats.php?cert=5">Resultats</a>
 			    <a href="statistiques.php?cert=5">Statistiques</a>
@@ -209,8 +209,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <a href="contactnous.html"><li>Contactez-nous</li></a>
-				      <a href="cgu.html"><li>CGU</li></a>
+				      <li><a href="https://form.jotform.com/200181736367354" target="_blank">Contactez-nous</a></li>
+				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

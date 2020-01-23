@@ -154,7 +154,6 @@ body, html {
   position: relative;
   background-color: #212838;
   transition: max-height 650ms;
-  text-align:left;
 }
 
 .reponse::before{
@@ -166,14 +165,12 @@ body, html {
   top: 50%;
   left: 0;
   transform: translate(-50%);
-  text-align:left;
 }
 
 .reponse p{
   color: rgba(255,255,255,.6);
   font-size: 1.4rem;
   padding: -1rem;
-  text-align:left;
 }
 
 .accordion-item:target .reponse{
@@ -292,12 +289,11 @@ input[name="r"]{
   -webkit-transition: .2s;
   -moz-transition: .2s;
 }
-.social ul li {
-  display: inline-block;
-  padding-right: 5px !important;
+.footer .col ul a{
+  color: #999999;
+  text-decoration: none;
 }
-
-.footer .col ul li:hover {
+.footer .col ul a:hover{
   color: #ffffff;
   transition: .1s;
   -webkit-transition: .1s;

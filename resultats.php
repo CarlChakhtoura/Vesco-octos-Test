@@ -29,7 +29,7 @@
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
@@ -44,37 +44,13 @@
 							<tr>
 								<th>Nom</th>
 								<th>Prénom</th>
-								<th>Adresse mail</th>
+								<th>Date de test</th>
 								<th>Résultats</th>
 							</tr>
 							<tr>
-								<td>El Ouazzani</td>
-								<td>Saifeddine</td>
-								<td>saifouazzani2k18@gmail.com</td>
-								<td>Positif</td>
-							</tr>
-							<tr>
-								<td>Chakhtoura</td>
-								<td>Carl</td>
-								<td>carlchakhtoura@gmail.com</td>
-								<td>Positif</td>
-							</tr>
-							<tr>
-								<td>Brisse</td>
-								<td>Clément</td>
-								<td>brisseclement@gmail.com</td>
-								<td>Positif</td>
-							</tr>
-							<tr>
-								<td>Pavaut</td>
-								<td>Mathieu</td>
-								<td>pavautmathieu@gmail.com</td>
-								<td>Positif</td>
-							</tr>
-							<tr>
-								<td>Faure</td>
-								<td>Gustave</td>
-								<td>fauregustave@gmail.com</td>
+								<td><?php echo decryptageDuNom($_SESSION["Lastname"]);?></td>
+								<td><?php echo decryptageDuNom($_SESSION["Firstname"]);?></td>
+								<td>22/01/2020</td>
 								<td>Positif</td>
 							</tr>
 						</tbody>
@@ -134,8 +110,8 @@
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contactez-nous</li>
-				      <li>CGU</li>
+				      <li><a href="https://form.jotform.com/200181736367354" target="_blank">Contactez-nous</a></li>
+				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>
@@ -145,6 +121,39 @@
 			}
 		?>
 	</body>
-
+	<?php
+	function decryptageDuNom($motAConvertir){
+			$monArray=array();
+			for( $i=0; $i<strlen($motAConvertir);$i++){
+				if(ord($motAConvertir[$i])==97){
+					array_push($monArray,122);//on met un a minuscule si on a v
+				}
+				else if(ord($motAConvertir[$i])==98){
+					array_push($monArray,121);
+				}
+				else if(ord($motAConvertir[$i])==99){
+					array_push($monArray,120);
+				}
+				else if(ord($motAConvertir[$i])==65){//on met un A maj en cas de V maj
+					array_push($monArray,98);
+				}
+				else if(ord($motAConvertir[$i])==66){
+					array_push($monArray,99);
+				}
+				else if(ord($motAConvertir[$i])==67){
+					array_push($monArray,100);
+				}
+				else{
+					array_push($monArray,ord($motAConvertir[$i])-3);
+				}
+			}
+			$mot="";
+			$mot="";
+			for($j=0;$j<strlen($motAConvertir);$j++){
+				$mot=$mot.chr($monArray[$j]);
+			}
+			return $mot;
+		}
+	?>
 </html>
 

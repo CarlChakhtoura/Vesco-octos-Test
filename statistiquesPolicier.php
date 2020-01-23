@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<?php session_start();
-if(is_null($_SESSION["certificat"])==false){
-		header("Location: connexion_policier.html");
-} ?>
+<?php session_start(); 
+?>
 <html>
 	<head>
 		<meta charset="utf-8/">
@@ -10,6 +8,9 @@ if(is_null($_SESSION["certificat"])==false){
 		<link media="screen" rel="stylesheet" href="css/statistiques.css" >
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--C est pour utiliser chart.js-->
+		 <script src="chart.min.js"></script>
+		 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 		<title>Ability Test </title>
 	</head>
 
@@ -33,57 +34,60 @@ if(is_null($_SESSION["certificat"])==false){
 						    </span>
 					<div class="contenudulogo">
 						<h1>ABILITY TEST</h1>
-						<a href="">Déconnexion</a>
+						<a href="deconnexion.php">Déconnexion</a>
 					</div>
 				</div>
 			</div>
 
 			<div class="contenusite">
 
-				<div class="stats-form">
-					<h1>Les statistiques</h1>
 
-					<p> Les statistiques s'affichent içi..</p>
-					<p> Les statistiques s'affichent içi..</p>
-					<p> Les statistiques s'affichent içi..</p>
+							
+				
+				<div class="stats-form">
+				<canvas id="myChart">
+				<script>
+	var ctx = document.getElementById('myChart').getContext('2d');
+	var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Nombre mort sur les routes',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [8508, 5008, 1500, 1874,4897, 300, 1500]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+// </script>
+	</canvas>
+				</div>
+			
+			
+				<div class="stats">
+					<canvas id="myChart">
+		
+			</canvas>
 
 				</div>
-
-				<!--<div class="slidershow middle"> #Slideshow, on le rajoute après
-
-			      <div class="slides">
-			        <input type="radio" name="r" id="r1" checked>
-			        <input type="radio" name="r" id="r2">
-			        <input type="radio" name="r" id="r3">
-			        <div class="slide s1">
-			          <img src="images/1.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/2.jpg" alt="">
-			        </div>
-			        <div class="slide">
-			          <img src="images/3.jpg" alt="">
-			        </div>
-			      </div>
-
-			      <div class="navigation">
-			        <label for="r1" class="bar"></label>
-			        <label for="r2" class="bar"></label>
-			        <label for="r3" class="bar"></label>
-			      </div>
-			    </div>--> 
-
 			</div>
 
 			<div id="side-menu" class="side-nav">
 			    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			    <a href="controlePolicier.php">Controle</a>
-			    <a href="lestestsPolicier.php">Test</a>
-			    <a href="resultatsPolicier.php">Resultats</a>
-			    <a href="statistiquesPolicier.php">Statistiques</a>
-			    <a href="sujetsforumPolicier.php">Forum</a>
-			    <a href="faqPolicier.php">F.A.Q</a>
-			    <a href="profilePolicier.php">Mon Profil</a>
+			    <a href="controlePolicier.php?cert=5">Controle</a>
+			    <a href="lestestsPolicier.php?cert=5">Test</a>
+			    <a href="resultatsPolicier.php?cert=5">Resultats</a>
+			    <a href="statistiquesPolicier.php?cert=5">Statistiques</a>
+			    <a href="sujetsforumPolicier.php?cert=5">Forum</a>
+			    <a href="faqPolicier.php?cert=5">F.A.Q</a>
+			    <a href="profilePolicier.php?cert=5">Mon Profil</a>
 			  </div>
 
 			  <script>
@@ -97,14 +101,14 @@ if(is_null($_SESSION["certificat"])==false){
 			      document.getElementById('main').style.marginLeft = '0';
 			    }
 			  </script>
-
+			
 			<div class="footer">
 				<div class="contain">
 				  <div class="col">
 				    <h1>Ability Test</h1>
 				    <ul>
-				      <li>Contactez-nous</li>
-				      <li>CGU</li>
+				      <li><a href="https://form.jotform.com/200181736367354" target="_blank">Contactez-nous</a></li>
+				      <li><a href="cgu.html" target="_blank">CGU</a></li>
 				    </ul>
 				  </div>
 				<div class="clearfix"></div>

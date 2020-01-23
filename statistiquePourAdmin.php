@@ -307,7 +307,7 @@
 		<table>
 				<tr>
 				<td>
-					<a href="administrateur_gestion.php">Retour au menu principal</a>
+					<a href="gestionAdmin.php">Retour au menu principal</a>
 				</td>
 				</tr>
 			</tr>

@@ -1,5 +1,5 @@
 <?php
-	$baseDeDonnee=new PDO('mysql:host=localhost;dbname=APP;charset=utf8', 'mathieu','ariane5');
+	$baseDeDonnee=new PDO('mysql:host=localhost;dbname=APP;charset=utf8', 'root','');
 	//header("Location:connexion_administrateur.html");
 	if((isset($_POST['motDePasse']) && isset($_POST['eMail'])) && (!empty($_POST['motDePasse']) && !empty($_POST['eMail']))){
 		$req=$baseDeDonnee->prepare("SELECT emailAdmin, password FROM administrateur WHERE emailAdmin=?");
@@ -8,7 +8,7 @@
 		
 		if($donnee['password']==$_POST["motDePasse"]){
 			//echo "Connexion reussie";
-			header("Location:administrateur_gestion.php");
+			header("Location:gestionAdmin.php");
 		}
 		else{
 			//echo "echec";

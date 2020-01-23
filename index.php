@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
 		<title> Ability Test </title>
@@ -16,20 +15,16 @@
 		<h2>Se connecter en tant que</h2>
 		<div class="box">
 			<form method="POST" action="choixrole.php">
-			<select name="role">
-				<option value="particulier">Particulier</option>
-				<option value="policier">Policier</option>
-				<option value="administrateur">Administrateur</option>
+			<select id="selectbox" name="role" onchange="javascript:location.href = this.value;">
+				<option value="choixrole.html"></option>
+				<option value="connexion_particulier.html">Particulier</option>
+				<option value="connexion_policier.html">Policier</option>
+				<option value="connexion_administrateur.html">Administrateur</option>
 			</select>
-			    
-                <input type="submit"  value="envoyer">
-                <p class="GO" type="submit"  value="envoyer"> <strong>GO</strong></p>
+			   
 			</form>
 		</div>
-	</body>
 
-	<footer>
-		<p class="infofooter">© Ability Test - Toute reproduction interdite. Propriété intellectuelle de Infinity Mesures.</p>
-	</footer>
+	</body>
 
 </html>

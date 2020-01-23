@@ -12,7 +12,7 @@
 		<table>
 
 		<?php
-			$baseDonneeAPP=new PDO('mysql:host=localhost; dbname=app','mathieu','ariane5');
+			$baseDonneeAPP=new PDO('mysql:host=localhost; dbname=app','root','');
 			
 			$tableParticulier=$baseDonneeAPP->prepare('SELECT * FROM particulier WHERE Userid=?');
 			$tableParticulier->execute(array($_GET['Userid']));
